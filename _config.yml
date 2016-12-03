@@ -1,0 +1,112 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 任玉祥
+subtitle: Accompany is the longest confession of love. #行颖不离
+description: Accompany is the longest confession of love.
+author: 任玉祥
+language: zh-Hans
+timezone:
+since: 2016
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://yuxiang.ren
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 5
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+#theme: next
+#theme: yilia
+#theme: hexo-theme-cyanstyle
+theme: huno
+
+
+# Social
+social:
+  github: https://github.com/shlyren
+  twitter: https://twitter.com/shlyren
+  weibo: http://weibo.com/shlyjen
+  mail: mailto:mail@yuxiang.ren
+
+
+# 头像
+#avatar: /images/avatar.jpg
+
+#apple_touch_icon: images/apple-touch-icon.png
+
+baidushare: true
+baidu_analytics: e8f9e28039f9f75405d07e7e7bbad3b6
+
+# Swiftype Search Key 站内搜索
+swiftype_key: 1HyZsRUzgLxzb7SHNe6j
+
+duoshuo_shortname: shlyren
+#disqus_shortname: shlyren
+#多说热评
+#duoshuo_hotartical: true
+
+
+# hexo sitemap网站地图
+#sitemap:
+#path: sitemap.xml
+#baidusitemap:
+#path: baidusitemap.xml
+
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+#deploy:
+#  type: git
+#  repo: root@45.32.249.14:repos/yuxiang.ren.git
+# branch: master
+#  Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+

@@ -1,0 +1,31 @@
+# Header
+menu:
+  博客: /#blog
+  归档: /archive
+  关于: /about
+  主页: https://shlyren.com
+  #相册: https://zy.shlyren.com
+
+# open style
+target: 
+  博客: self
+  归档: self
+  关于: self
+  主页: blank
+
+# Site favicon
+favicon: /images/favicon.ico
+# 头像
+avatar: https://p1.bqimg.com/524586/9a758b84bb168fea.jpg
+
+appleTouchIcon: https://p1.bqimg.com/524586/50522ec5e93f16be.png
+
+
+# Enable Mathjax
+mathjax: true
+
+# Enable awesome-toc
+awesome_toc: true
+
+# Enable githubRepoWidget
+github_repo_widget: false
