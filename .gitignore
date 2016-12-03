@@ -6,7 +6,6 @@
 # node.js
 #
 node_modules/
-#.git/
 # source/
 
 debug.log
