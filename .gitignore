@@ -1,0 +1,15 @@
+# OSX
+#
+.DS_Store
+
+
+# node.js
+#
+node_modules/
+.git/
+# source/
+
+debug.log
+
+#other theme
+
