@@ -2,7 +2,7 @@
 title: hexo安装huno主题
 date: 2016-12-02 09:40:39
 categories: 教程
-tags: [huno, hexo, theme]
+tags: blog
 ---
 
 # Huno
