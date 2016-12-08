@@ -29,4 +29,6 @@ tags: [OC, error]
 
 重新运行程序, 问题解决.
 
+然而, 又有新的问题出现, 就是通知移除的问题, 为了彻底解决自己写了个.
+代码地址:https://github.com/shlyren/ZYScaleHeader
 
