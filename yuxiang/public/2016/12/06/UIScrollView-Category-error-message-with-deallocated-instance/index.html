@@ -15,7 +15,7 @@
     
 
     <title>
-      &lt;UIScrollView _systemGestureStateChanged&gt; | 任玉祥 
+      重写UIScrollView分类dealloc错误 | 任玉祥 
     </title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -29,7 +29,7 @@
 
 今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="<UIScrollView _systemGestureStateChanged> | 任玉祥">
+<meta property="og:title" content="重写UIScrollView分类dealloc错误 | 任玉祥">
 <meta property="og:url" content="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html">
 <meta property="og:site_name" content="任玉祥">
 <meta property="og:description" content="[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
@@ -39,9 +39,9 @@
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagslu9vecj20zk0ba41t.jpg">
-<meta property="og:updated_time" content="2016-12-07T07:53:10.000Z">
+<meta property="og:updated_time" content="2016-12-18T07:11:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="<UIScrollView _systemGestureStateChanged> | 任玉祥">
+<meta name="twitter:title" content="重写UIScrollView分类dealloc错误 | 任玉祥">
 <meta name="twitter:description" content="[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
 
 今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:就">
@@ -285,7 +285,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">&lt;UIScrollView _systemGestureStateChanged&gt;</h1>
+    <h1 class="post-title">重写UIScrollView分类dealloc错误</h1>
 
     
 
@@ -304,7 +304,7 @@ classes that you can use:
           
              &#8226; 标签:
             <font class="tags">
-              <a class="tags-link" href="/tags/OC/">OC</a>, <a class="tags-link" href="/tags/error/">error</a>
+              <a class="tags-link" href="/tags/Objc/">Objc</a>, <a class="tags-link" href="/tags/Xcode/">Xcode</a>, <a class="tags-link" href="/tags/error/">error</a>
             </font>
           
 
@@ -322,9 +322,9 @@ classes that you can use:
 <p>今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width="600"><br>就是普通的僵尸对象错误, 可是解决就不是那么简单了…</p>
 <a id="more"></a>
 <p>我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在<code>UIScrollView</code>分类重写了<code>dealloc</code>方法导致.</p>
-<p>于是我去项目里看一下<code>UIScrollView</code>的分类. 果真, 这个第三方重写了<code>dealoc</code>, 把它注销掉果然没有出现僵尸对象了.</p>
-<p>可是问题又来了,这个分类是再<code>dealloc</code>里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg" width="500"></p>
-<p>我想到了<code>MJrefresh</code>使用的也是同样的原理, 于是我去看了他的代码,他是再这里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg" width="500"></p>
+<p>于是我去项目里看一下<code>UIScrollView</code>的分类. 果真, 这个第三方重写了<code>dealoc</code>, 把它注释掉果然没有出现僵尸对象了.</p>
+<p>可是问题又来了,这个分类是在<code>dealloc</code>里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg" width="500"></p>
+<p>我想到了<code>MJRefresh</code>使用的也是同样的原理, 于是我去看了他的代码,他是再这里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg" width="500"></p>
 <p>那我们就学着他<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagslu9vecj20zk0ba41t.jpg" width="500"></p>
 <p>重新运行程序, 问题解决.</p>
 <p>然而, 又有新的问题出现, 就是通知移除的问题, 为了彻底解决自己写了个.<br>代码地址:<a href="https://github.com/shlyren/ZYScaleHeader" target="_blank" rel="external">https://github.com/shlyren/ZYScaleHeader</a></p>
@@ -362,8 +362,8 @@ classes that you can use:
     	<a href="https://yuxiang.ren" target="_blank">本站</a> 由 
     	<a href="https://hexo.io/" target="_blank">Hexo</a> 生成，
         <a href="https://shlyren.com" target="_blank">任玉祥</a> 创建，采用 
-    	<a href="https://github.com/someus/huno" target="_blank">Huno</a> 为主题，您可以查看本站 
-        <a href="https://github.com/shlyren/blog" target="_blank">源代码</a> .
+    	<a href="https://github.com/someus/huno" target="_blank">Huno</a> 为主题，您可以在GitHub查看 
+        <a href="https://github.com/shlyren/newBlog" target="_blank">本站代码</a>。
     </span>
 
      <span class="footer__copyright">
