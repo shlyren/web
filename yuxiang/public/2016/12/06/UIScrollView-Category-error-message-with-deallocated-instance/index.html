@@ -27,24 +27,24 @@
 
     <meta name="description" content="[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
 
-今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:就">
+今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重写UIScrollView分类dealloc错误 | 任玉祥">
 <meta property="og:url" content="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html">
 <meta property="og:site_name" content="任玉祥">
 <meta property="og:description" content="[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
 
-今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:就">
+今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagslu9vecj20zk0ba41t.jpg">
-<meta property="og:updated_time" content="2016-12-18T07:11:35.000Z">
+<meta property="og:updated_time" content="2016-12-24T12:05:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重写UIScrollView分类dealloc错误 | 任玉祥">
 <meta name="twitter:description" content="[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
 
-今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:就">
+今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:">
 <meta name="twitter:image" content="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg">
     
     
@@ -319,8 +319,9 @@ classes that you can use:
     <blockquote>
 <p>[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&gt; 错误解决方法<br>[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此</p>
 </blockquote>
-<p>今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width="600"><br>就是普通的僵尸对象错误, 可是解决就不是那么简单了…</p>
+<p>今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:</p>
 <a id="more"></a>
+<p><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width="600"><br>就是普通的僵尸对象错误, 可是解决就不是那么简单了…</p>
 <p>我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在<code>UIScrollView</code>分类重写了<code>dealloc</code>方法导致.</p>
 <p>于是我去项目里看一下<code>UIScrollView</code>的分类. 果真, 这个第三方重写了<code>dealoc</code>, 把它注释掉果然没有出现僵尸对象了.</p>
 <p>可是问题又来了,这个分类是在<code>dealloc</code>里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg" width="500"></p>

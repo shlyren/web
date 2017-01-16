@@ -9,10 +9,11 @@ tags: [Xcode, Objc, error]
 > [UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此
 
 今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:
-<img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width = "600"/>
-就是普通的僵尸对象错误, 可是解决就不是那么简单了...
 
 <!-- more -->
+
+<img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width = "600"/>
+就是普通的僵尸对象错误, 可是解决就不是那么简单了...
 
 我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在`UIScrollView`分类重写了`dealloc`方法导致.
 
