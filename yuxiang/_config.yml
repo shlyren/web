@@ -4,7 +4,7 @@
 
 # Site
 title: 任玉祥
-subtitle: 行颖不离
+subtitle: 一名iOS开发者, 就职于杭州某一科技公司.
 description: Welcome to my Blog.
 author: 任玉祥
 language: zh-Hans
@@ -64,9 +64,6 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: next
-#theme: yilia
-#theme: hexo-theme-cyanstyle
 theme: huno
 
 

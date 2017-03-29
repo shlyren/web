@@ -4,7 +4,6 @@ menu:
   归档: /archive
   关于: /about
   主页: https://shlyren.com
-  #相册: https://zy.shlyren.com
 
 # open style
 target: 
@@ -16,10 +15,9 @@ target:
 # Site favicon
 favicon: /images/favicon.ico
 # 头像
-avatar: https://p1.bqimg.com/524586/9a758b84bb168fea.jpg
+avatar: https://ww2.sinaimg.cn/large/006tNc79gy1fe3u2wyrx0j30c80c8jsd.jpg
 
-appleTouchIcon: https://p1.bqimg.com/524586/50522ec5e93f16be.png
-
+appleTouchIcon: https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg
 
 # Enable Mathjax
 mathjax: true
