@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>安装shadowsocks · 任玉祥</title><meta name="description" content="安装shadowsocks - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">谷歌搜索</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">安装shadowsocks</h1><div class="tags"><a href="/tags/教程/" class="tag-title">#教程</a></div><div class="post-info">Mar 30, 2017</div><div class="post-content"><h2 id="一-安装"><a href="#一-安装" class="headerlink" title="一. 安装"></a>一. 安装</h2><ol>
+<li><p>登录你的vps</p>
+</li>
+<li><p>安装PIP环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install python-gevent python-pip</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装<code>shadowsocks</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<p>##2.  配置信息</p>
+<ol>
+<li>创建<code>config.json</code>文件<ul>
+<li>进入shadowsocks文件夹: <code>cd /etc/shadowsocks</code></li>
+<li>创建配置文件: <code>touch config.json</code></li>
+</ul>
+</li>
+<li><p>编辑<code>config.json</code></p>
+<ul>
+<li>打开vi编辑器: <code>vi config.json</code></li>
+<li><p>按照下列格式填写配置信息</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">"server":"123.123.123.123", # 服务器地址</div><div class="line">"server_port":9000, #端口号</div><div class="line">"local_port":9000, # 本地端口号</div><div class="line">"password":"123456", # 密码</div><div class="line">"timeout":600, # 超时时间</div><div class="line">"method":"rc4-md5" # 密码类型</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保存并且退出</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="三-开启服务"><a href="#三-开启服务" class="headerlink" title="三. 开启服务"></a>三. 开启服务</h2><ol>
+<li>执行启动服务器: <code>nohup ssserver -c /etc/shadowsocks/config.json &gt; log &amp;</code></li>
+<li>设置开机启动: <code>/usr/local/bin/ssserver -c /etc/shadowsocks/config.json</code></li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/03/30/OC基本概念/" class="prev">PREV</a><a href="/2017/03/24/Android-fragment/" class="next">NEXT</a></div><div data-thread-key="2017/03/30/install-shadowsocks-in-your-vpn/" data-title="安装shadowsocks" data-url="https://yuxiang.ren/2017/03/30/install-shadowsocks-in-your-vpn/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a></p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

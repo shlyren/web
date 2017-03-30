@@ -7,8 +7,7 @@ tags: [git, blog]
 
 
 ## 一、准备工作
-
-### VPS&域名
+#### VPS&域名
 请自行购买服务器以及域名.
 
 ## 二、搭建过程
@@ -16,29 +15,29 @@ tags: [git, blog]
 
 <!-- more -->
 
-### 本地电脑配置
+#### 本地电脑配置
 1. 安装Homebrew
- * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 2. 安装Node.js
- * `brew install node`
+* `brew install node`
 3. 创建网站目录
- * 在任意位置创建一个文件夹，作为网站目录，并通过 cd 命令进入文件夹。
+* 在任意位置创建一个文件夹，作为网站目录，并通过 cd 命令进入文件夹。
 4. 本地电脑安装hexo
- * `npm install -g hexo-cli`
- * `hexo init`
- * `npm install`
- * `hexo d -fg`s
- * `hexo serve` *简洁写法:`hexo s`*
- 
+* `npm install -g hexo-cli`
+* `hexo init`
+* `npm install`
+* `hexo d -fg`s
+* `hexo serve` *简洁写法:`hexo s`*
+
 然后访问 http://localhost:4000 如果看到网页表示Hexo配置成功
 
-### 远程服务器配置(VPS)
+#### 远程服务器配置(VPS)
 **下文中的`yuxiang.ren(这是我的域名)`,`45.32.249.14(这是我的主机ip)`...请自行替换**
 
 1. 此处为Debian/Ubuntu在root用户下的操作:
- * 执行`ssh root@你的vps地址`进入主机
- * 依次执行以下命令 (安装hexo服务)
-            
+*  执行`ssh root@你的vps地址`进入主机
+* 依次执行以下命令 (安装hexo服务)
+    ​          
     ```bash
      $apt-get update && apt-get upgrade -y
      $apt-get install git-core -y
@@ -104,29 +103,28 @@ tags: [git, blog]
     exit
 ```
 5. 依次执行下面命令
- * `chmod +x post-receive`
- * `cd ~`
- * `service nginx restart`
+* `chmod +x post-receive`
+* `cd ~`
+* `service nginx restart`
 
-### 回到本地电脑
+#### 回到本地电脑
 1. 首先进入网站根目录。
 2. 执行以下命令, 注意替换
- * `git clone root@45.32.249.14:repos/yuxiang.ren.git`; 把之前再服务器创建的仓库clone到本地
- * `git add .`
- * `git commit -m "commit message"`
- * `push`
+* `git clone root@45.32.249.14:repos/yuxiang.ren.git`; 把之前再服务器创建的仓库clone到本地
+* `git add .`
+* `git commit -m "commit message"`
+* `push`
 
 ## 三、Blog更新
-### 创建`.m`文件
+#### 1. 创建`.m`文件
 有两种方法
-
 1. 直接创建
 2. 通过命令(推荐)
- * 进入网站目录
- * `hexo new 文章名字`
- * 用MarkDown编辑器编辑创建的文件(`/source/_posts/`下)
+* 进入网站目录
+* `hexo new 文章名字`
+* 用MarkDown编辑器编辑创建的文件(`/source/_posts/`下)
 
-```
+```markdown
     title: title  #文章的标题
     date: yyyy-mm-dd #创建时间
     categories: category #分类
@@ -142,7 +140,6 @@ tags: [git, blog]
       
     #正文
 ```
-
 ### 发布
 进入网站根目录
 ```ruby
@@ -151,5 +148,3 @@ git add .
 git commit -m "操作内容"
 git push
 ```
-
-

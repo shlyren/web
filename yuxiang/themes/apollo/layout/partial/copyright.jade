@@ -1,0 +1,6 @@
+.copyright
+    - var webSource = "https://github.com/shlyren/newBlog";
+    - var year = new Date().getFullYear();
+    - year = year == theme.startyear ? year : theme.startyear + ' - ' + year;
+    p © #{year} #[a(href=config.url)!= config.author]
+    p View the source code in #[a(href=webSource, target="_blank") GitHub]

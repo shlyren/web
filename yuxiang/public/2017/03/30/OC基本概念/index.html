@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>OC学习 · 任玉祥</title><meta name="description" content="OC学习 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">谷歌搜索</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">OC学习</h1><div class="tags"><a href="/tags/Objc/" class="tag-title">#Objc</a></div><div class="post-info">Mar 30, 2017</div><div class="post-content"><ol>
+<li><p><code>+load</code>和<code>+initialize</code>区别</p>
+<ul>
+<li><code>+load</code>: 是在类加载到内存的时候调用, 仅调用一次</li>
+<li><code>+initialize</code>: 是在第一次使用类或者子类的时候调用,会调用多次</li>
+</ul>
+</li>
+<li><p>runtime</p>
+<ul>
+<li><p>runtime实现的机制是运行时机制,</p>
+</li>
+<li><p>用法:</p>
+<ul>
+<li>遍历类中所有属性和方法,可以自己写一套字典转模型工具类</li>
+<li>动态给分类添加属性,需求:当想把一个属性保存系统的类中交换方法,系统方法达不到我们需求,想给系统的方法扩充一些功能</li>
+<li>动态添加方法</li>
+</ul>
+<a id="more"></a>
+</li>
+</ul>
+</li>
+<li><p><code>bounds</code>理解</p>
+<ul>
+<li><code>frame</code>: 控件可视范围 相对于 父控件</li>
+<li><code>bounds</code>: 也是指的是范围 指的是 控件可视范围 在 ‘内容中’ 区域 . 控件可视范围相对于内容</li>
+<li><code>内容</code>:每个控件都有自己内容,而且是无限大,而且这个控件的所有子控件都是相对于内容</li>
+</ul>
+</li>
+<li><p>数据传值</p>
+<ul>
+<li>顺传:直接定义属性传值</li>
+<li>逆传:代理,block,通知</li>
+<li>通知传值:当谁也拿不到谁的事情,可以采取使用通知传值</li>
+</ul>
+</li>
+<li><p>KVC</p>
+<p>KVC全称为<code>key value coding</code>即<strong>键值编码</strong>:运行时动态的给对象发送setValue:forKey消息 设置数据;</p>
+<ul>
+<li>当第一次观察一个对象时,Runtime会动态的创建一个继承自该对象所属类的子类 NSKVONotifying_(父类的名字)</li>
+<li>这个新创建的子类重写了所有被观察属性的 setter 方法，并且在内部给观察者发送通知，通知所有观察对象值的更改</li>
+<li>最后把这个对象所在类的 isa指针 指向这个新创建的子类</li>
+</ul>
+</li>
+<li><p>简述项目开发的步骤</p>
+<ul>
+<li><strong>独立开发:</strong><ul>
+<li>需求文档:描述下应用功能</li>
+<li>查看原型图:描述app每个界面 和 怎么与用户交互</li>
+<li>根据原型图搭建基本项目结构,开始按模块去开发</li>
+<li>界面搭建完,再去查看接口文档,请求数据,然后展示</li>
+</ul>
+</li>
+<li><strong>迭代开发:</strong><ul>
+<li>根据组长,项目经理提供excel去做,这里就有每月的任务</li>
+<li>需要去寻找找到对应的类做事情,1.根据类名,去猜 2.通过断点去调试,一层一层去寻找</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如何做一个新的模块</p>
+<ul>
+<li>根据原型图,划分结构</li>
+<li>搭建界面</li>
+<li>参照接口文档,请求数据,展示数据</li>
+<li>调整界面细节,提高用户体验</li>
+<li>处理界面业务逻辑(功能)</li>
+</ul>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/03/30/在Mac上配置Rect-Native开发环境/" class="prev">PREV</a><a href="/2017/03/30/install-shadowsocks-in-your-vpn/" class="next">NEXT</a></div><div data-thread-key="2017/03/30/OC基本概念/" data-title="OC学习" data-url="https://yuxiang.ren/2017/03/30/OC基本概念/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a></p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

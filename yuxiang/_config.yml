@@ -4,8 +4,8 @@
 
 # Site
 title: 任玉祥
-subtitle: 一名iOS开发者, 就职于杭州某一科技公司.
-description: Welcome to my Blog.
+subtitle: An iOS developer from China.
+description: 任玉祥-博客.
 author: 任玉祥
 language: zh-Hans
 timezone:
@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: huno
+theme: apollo
 
 
 # Social
@@ -91,6 +91,11 @@ duoshuo_shortname: shlyren
 #多说热评
 #duoshuo_hotartical: true
 
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
 
 # hexo sitemap网站地图
 #sitemap:
