@@ -13,7 +13,7 @@ since: 2016
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://yuxiang.ren
+url: https://www.yuxiang.ren
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -98,15 +98,15 @@ archive_generator:
     daily: false
 
 # hexo sitemap网站地图
-#sitemap:
-#path: sitemap.xml
+sitemap:
+path: sitemap.xml
 #baidusitemap:
 #path: baidusitemap.xml
 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
+# deploy:
 #  type: git
 #  repo: root@45.32.249.14:repos/yuxiang.ren.git
 # branch: master
