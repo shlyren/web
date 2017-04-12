@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-04-12T03:22:26.000Z</updated>
+  <updated>2017-04-12T03:34:25.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yuxiang.ren/2017/04/12/%E5%91%BD%E4%BB%A4%E7%BB%99%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/"/>
     <id>https://yuxiang.ren/2017/04/12/命令给安卓程序打包/</id>
     <published>2017-04-12T03:05:07.000Z</published>
-    <updated>2017-04-12T03:22:26.000Z</updated>
+    <updated>2017-04-12T03:34:25.000Z</updated>
     
     <content type="html"><![CDATA[<p>在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。</p>
 <ol>
@@ -34,14 +34,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb install &lt;apk路径&gt;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-]]></content>
+<a id="more"></a>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;先执行改变gradle的权限。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;chmod +x gradlew&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后运行打包&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./gradlew assembleRelease&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;出现&lt;code&gt;BUILD SUCCESSFUL&lt;/code&gt;后安装到手机&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;adb install &amp;lt;apk路径&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
