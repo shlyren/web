@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>利用pods给你的程序添加第三方库 · 任玉祥</title><meta name="description" content="利用pods给你的程序添加第三方库 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">利用pods给你的程序添加第三方库</h1><div class="tags"></div><div class="post-info">Mar 21, 2016</div><div class="post-content"><h2 id="CocoaPods的安装"><a href="#CocoaPods的安装" class="headerlink" title="CocoaPods的安装"></a>CocoaPods的安装</h2><ul>
+<li>打开Terminal执行:<br><code>$ sudo gem install cocoapods</code></li>
+<li><p>执行完这句如果报告以下错误：</p>
+<pre><code>ERROR: Could not find a valid gem &apos;cocoapods&apos; (&gt;= 0), here is why:
+Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT: Operation timed out - connect(2) (https://rubygems.org/latest_specs.4.8.gz)
+ERROR: Possible alternatives: cocoapods
+</code></pre></li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>这是因为ruby的软件源rubygems.org因为使用亚马逊的云服务，被我天朝屏蔽了，需要更新一下ruby的源，过程如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ gem sources -l (查看当前ruby的源)</div><div class="line">$ gem sources --remove https://rubygems.org/</div><div class="line">$ gem sources -a https://ruby.taobao.org/</div><div class="line">$ gem sources -l</div></pre></td></tr></table></figure>
+<ul>
+<li>如果gem太老，可以尝试用如下命令升级gem<br>  <code>$ sudo gem update --system</code></li>
+<li>升级成功后会提示:<strong>RubyGems system software updated</strong></li>
+<li>然后重新执行安装下载命令:<br><code>$ sudo gem install cocoapods</code></li>
+<li>接下来进行安装，执行：:<br><code>$ pod setup</code></li>
+<li>Terminal会停留在 Setting up CocoaPods master repo 这个状态一段时间,是因为要进行下载安装,而且目录比较大,需要耐心等待一下.如果想加快速度,可使用cocoapods的镜像索引.</li>
+<li>至此,cocoapods已经成功</li>
+</ul>
+<h2 id="利用cocoapods给你的程序添加第三方库"><a href="#利用cocoapods给你的程序添加第三方库" class="headerlink" title="利用cocoapods给你的程序添加第三方库"></a>利用cocoapods给你的程序添加第三方库</h2><ul>
+<li>打开Terminal,cd到你程序目录</li>
+<li>创建<strong>Podfile</strong>文件(一定要创建在跟.xcodeproj同级的目录下):<br><code>$ touch Podfile</code></li>
+<li>以安装AFN为例:<br><code>$ pod search AFNetWorking</code></li>
+<li><p>找到<strong>-&gt; AFNetworking</strong>,如下显示,复制<code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.0.4&#39;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-&gt; AFNetworking (3.0.4)</div><div class="line">A delightful iOS and OS X networking framework.</div><div class="line">pod &apos;AFNetworking&apos;, &apos;~&gt; 3.0.4&apos;</div><div class="line">- Homepage: https://github.com/AFNetworking/AFNetworking</div><div class="line">- Source:   https://github.com/AFNetworking/AFNetworking.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑Podfile文件,推荐使用<code>vi</code>命令或Xcode编辑。不建议其他编辑器编辑，不然后面更新pods会有警告的。Terminal命令 :<br>　　<code>$ vim Podfile</code></p>
+</li>
+<li><p>将下面代码粘进去,然后保存退出 ,<code>#</code>为注释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use_frameworks! #用于swift</div><div class="line">platform :ios, &apos;8.0&apos; # 支持的ios版本</div><div class="line">#下面放需要导入的第三方库的名字</div><div class="line">pod &apos;AFNetworking&apos;, &apos;~&gt; 3.0.4&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装:<br><code>pod install --verbose --no-repo-update</code></p>
+</li>
+<li>安装成功后项目文件夹里会出现<code>.xcwoekspace</code>的文件.以后只要写代码就打开xcworkspace这个文件写就好了。 打开之前的那个xocdeproj写的话会出现问题。</li>
+<li>新建的项目添加的话 会遇到搜索不到头文件。。需要配置点东西<br>　　点击项目-&gt;Build-&gt;Settings,搜索<code>header</code>,找到<code>User Header Search Patchs</code>,添加参数<strong>${SRCROOT}</strong>并将后边的属性改为<strong>recursive</strong>。</li>
+<li>或者通过<code>#import &lt;&gt;</code>导入
+　　</li>
+</ul>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><ul>
+<li>卸载原有的CocoaPod:<br><code>sudo gem uninstall cocoapods</code></li>
+<li>重新安装cocoapod:<br><code>sudo gem install -n /usr/local/bin cocoapods</code></li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ol>
+<li>卡在Updating local specs repositories:<strong>pod install</strong>被墙了，请大家换成:<br> <code>pod install --verbose --no-repo-update</code><br> <code>pod update --verbose --no-repo-update</code></li>
+<li><p>出现这种警告:</p>
+<pre><code>Your Podfile has had smart quotes sanitised. To avoid issues in the future, you should not use TextEdit for editing it. If you are not using TextEdit, you should turn off smart quotes in your editor of choice.
+</code></pre><ul>
+<li><strong>解决方法</strong>:不要使用文本编辑去编辑Podfile，使用Xcode编辑，或者使用终端敲命令去编辑。或者输入格式错误，没输入运行版本：<code>$platform:ios, ‘8.0‘</code></li>
+</ul>
+</li>
+<li>使用cocoapods导入第三方类库后头文件没有代码提示<strong>解决方法</strong>:<br> 选择Target -&gt; Build Settings 菜单，找到<code>User Header Search Paths</code>设置项，新增一个值<strong>${SRCROOT}</strong>，并且选择<strong>Recursive</strong></li>
+<li><code>pod setup</code> 报<strong>CocoaPods was not able to update the <code>master</code> repo</strong> 错误<strong>解决方法</strong><ul>
+<li>先删除全局的缓存：<br><code>$ sudo rm -fr ~/Library/Caches/CocoaPods/</code><br><code>$ sudo rm -fr ~/.cocoapods/repos/master/</code></li>
+<li>还不行的话就把当前 Pods 目录清空：<br><code>$ sudo rm -fr Pods/</code></li>
+<li>再执行<br><code>$ sudo gem install cocoapods</code></li>
+<li>重新执行<br><code>$ pod setup</code></li>
+</ul>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/03/18/多线程/" class="prev">PREV</a><a href="/2016/03/21/命令行安装Mac系统/" class="next">NEXT</a></div><div data-thread-key="2016/03/21/利用pods给你的程序添加第三方库/" data-title="利用pods给你的程序添加第三方库" data-url="https://yuxiang.ren/2016/03/21/利用pods给你的程序添加第三方库/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2016/03/21/利用pods给你的程序添加第三方库/';
+var disqus_title = '利用pods给你的程序添加第三方库';
+var disqus_url = 'https://yuxiang.ren/2016/03/21/利用pods给你的程序添加第三方库/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

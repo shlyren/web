@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>install VPN on your vps · 任玉祥</title><meta name="description" content="install VPN on your vps - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">install VPN on your vps</h1><div class="tags"><a href="/tags/VPN/" class="tag-title">#VPN</a><a href="/tags/VPS/" class="tag-title">#VPS</a></div><div class="post-info">Jan 16, 2017</div><div class="post-content"><h3 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h3><ol>
+<li>ubuntu 14.04</li>
+</ol>
+<h3 id="二、检查ppp-tun环境"><a href="#二、检查ppp-tun环境" class="headerlink" title="二、检查ppp/tun环境"></a>二、检查ppp/tun环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /dev/net/tun</div></pre></td></tr></table></figure>
+<ul>
+<li>必须返回是:<code>cat: /dev/net/tun: File descriptor in bad state</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /dev/ppp</div></pre></td></tr></table></figure>
+<ul>
+<li>必须返回是<code>cat: /dev/ppp: No such device or address</code></li>
+</ul>
+<p>如果不是, 请联系你的vps提供商</p>
+<a id="more"></a>
+<h3 id="三、安装脚本"><a href="#三、安装脚本" class="headerlink" title="三、安装脚本"></a>三、安装脚本</h3><ol>
+<li><p>下载脚本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://raw.githubusercontent.com/quericy/one-key-ikev2-vpn/master/one-key-ikev2.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod +x one-key-ikev2.sh</div><div class="line">bash one-key-ikev2.sh</div></pre></td></tr></table></figure>
+<p>这里需要注意的是让你选择vpn类型: <strong>OpenVZ还是Xen、KVM</strong>, 自己可询问vps提供商, 或者通过其他途径, 其他选项 一路回车就可以.</p>
+<p>如图情况表示配置完成, 可根据自身情况修改用户名、密码、密钥等</p>
+<p><img src="https://ww2.sinaimg.cn/large/006y8lVagw1fbsi9xr8x7j30w6092adm.jpg" alt="installed"></p>
+</li>
+<li><p>修改/添加用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /usr/local/etc/ipsec.secrets</div></pre></td></tr></table></figure>
+<p>内容如下:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">: RSA server.pem </div><div class="line">: PSK <span class="string">"myPSKkey"</span> <span class="comment">#表示贡献密钥</span></div><div class="line">: XAUTH <span class="string">"myXAUTHPass"</span></div><div class="line">myUserName1 %any : EAP <span class="string">"myUserPass1"</span> <span class="comment">#用户名以及密码</span></div><div class="line">myUserName2 %any : EAP <span class="string">"myUserPass2"</span> <span class="comment">#用户名以及密码</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="四、开机启动-ubuntu"><a href="#四、开机启动-ubuntu" class="headerlink" title="四、开机启动(ubuntu)"></a>四、开机启动(ubuntu)</h3><ol>
+<li><p>ubuntu系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod +x /etc/rc.local &amp;&amp; echo &quot;/usr/local/sbin/ipsec start&quot; &gt;&gt; /etc/rc.local</div></pre></td></tr></table></figure>
+</li>
+<li><p>打开sysctl文件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysctl.conf</div></pre></td></tr></table></figure>
+<ul>
+<li>找到 <code>net.ipv4.ip_forward=1</code>，删除前面的“#”注释符（按<code>I键</code>进入编辑模式），并保存退出（按<code>Esc键</code>退出编辑模式，然后输入<code>:wq</code>保存并退出）。</li>
+</ul>
+</li>
+<li><p>使用以下指令刷新sysctl：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sysctl -p</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="五、卸载"><a href="#五、卸载" class="headerlink" title="五、卸载"></a>五、卸载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /root/strongswan-5.3.5</div><div class="line">make uninstall</div></pre></td></tr></table></figure>
+<h3 id="六、其他命令"><a href="#六、其他命令" class="headerlink" title="六、其他命令"></a>六、其他命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ipsec start # 启动pvn</div><div class="line">ipsec status #vpn状态</div><div class="line">ipsec restart #重启vpn</div><div class="line">ipsec stop #停止vpn</div></pre></td></tr></table></figure>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/12/08/short-haired-girl-is-also-good/" class="prev">PREV</a><a href="/2017/01/28/2017/" class="next">NEXT</a></div><div data-thread-key="2017/01/16/install-VPN-on-your-vps/" data-title="install VPN on your vps" data-url="https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2017/01/16/install-VPN-on-your-vps/';
+var disqus_title = 'install VPN on your vps';
+var disqus_url = 'https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

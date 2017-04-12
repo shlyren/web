@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>重写UIScrollView分类dealloc错误 · 任玉祥</title><meta name="description" content="重写UIScrollView分类dealloc错误 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">重写UIScrollView分类dealloc错误</h1><div class="tags"><a href="/tags/Objc/" class="tag-title">#Objc</a><a href="/tags/Xcode/" class="tag-title">#Xcode</a><a href="/tags/error/" class="tag-title">#error</a></div><div class="post-info">Dec 6, 2016</div><div class="post-content"><blockquote>
+<p>[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&gt; 错误解决方法<br>[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此</p>
+</blockquote>
+<p>今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:</p>
+<p><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width="600"><br>就是普通的僵尸对象错误, 可是解决就不是那么简单了…</p>
+<p>我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在<code>UIScrollView</code>分类重写了<code>dealloc</code>方法导致.</p>
+<a id="more"></a>
+<p>于是我去项目里看一下<code>UIScrollView</code>的分类. 果真, 这个第三方重写了<code>dealoc</code>, 把它注释掉果然没有出现僵尸对象了.</p>
+<p>可是问题又来了,这个分类是在<code>dealloc</code>里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg" width="500"></p>
+<p>我想到了<code>MJRefresh</code>使用的也是同样的原理, 于是我去看了他的代码,他是再这里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg" width="500"></p>
+<p>那我们就学着他<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagslu9vecj20zk0ba41t.jpg" width="500"></p>
+<p>重新运行程序, 问题解决.</p>
+<p>然而, 又有新的问题出现, 就是通知移除的问题, 为了彻底解决自己写了个.<br>代码地址:<a href="https://github.com/shlyren/ZYScaleHeader" target="_blank" rel="external">https://github.com/shlyren/ZYScaleHeader</a></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/12/02/use-gem-update-with-error/" class="prev">PREV</a><a href="/2016/12/08/short-haired-girl-is-also-good/" class="next">NEXT</a></div><div data-thread-key="2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/" data-title="重写UIScrollView分类dealloc错误" data-url="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/';
+var disqus_title = '重写UIScrollView分类dealloc错误';
+var disqus_url = 'https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

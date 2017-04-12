@@ -1,0 +1,20 @@
+extends partial/layout
+
+block container
+    include mixins/post
+    .archive
+        h2(class='archive-year tagcloud')= 'Tags'
+        script(type='text/javascript', charset='utf-8', src='../js/tagcloud.js')
+        script(type='text/javascript', charset='utf-8', src='../js/tagcanvas.js')
+        #myCanvasContainer.widget.tagcloud(align='center')
+            canvas#resCanvas(width='0', height='0', align=center)
+                !=tagcloud()
+            !=tagcloud()
+    +postList()
+
+block pagination
+    include mixins/paginator
+    +home()
+
+block copyright
+    include partial/copyright
