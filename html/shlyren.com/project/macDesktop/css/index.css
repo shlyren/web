@@ -1,0 +1,97 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../images/desk.jpg");
+    background-size: cover;
+    font-family: "Apple Braille";
+}
+
+#header {
+    background-color: white;
+    opacity: 0.9;
+    width: 100%;
+    color: black;
+    line-height: 25px;
+    /*相对浏览器定位*/
+    position: fixed;
+}
+
+#header a {
+    margin: 0 5px;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#header img {
+    width: 18px;
+    vertical-align: middle;
+}
+
+
+#header .header-left {
+    float: left;
+}
+
+
+#header .header-right{
+    float: right;
+}
+
+#content {
+    padding-top: 100px;
+}
+
+
+#content .file img {
+    width: 60px;
+    margin: 0 10px;
+
+}
+
+#content .file p {
+    color: white;
+    width: 60px;
+    margin: 0 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+#footer {
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.9;
+}
+
+#footer .dock {
+    border-radius: 5px;
+    display: inline-block;
+    background: url("../images/dock_bg.png");
+    box-shadow:  0 0 15px #ddd;
+}
+
+#footer img {
+    margin: 0 5px;
+    width: 50px;
+}
+
+#footer img:hover {
+    /*设置x轴和y轴的位置*/
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+
+    /*缩放*/
+    transform:scale(1.3);
+}

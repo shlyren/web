@@ -1,0 +1,111 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+
+a {
+    color: black;
+}
+
+body {
+    text-align: center;
+}
+
+
+#header {
+    text-align: right;
+    line-height: 38px;
+    height: 38px;
+    font-family: Arial;
+}
+
+#header a {
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#header a.no-weight{
+    font-weight: normal;
+}
+
+#header a.more-product {
+    background-color: #3385ff;
+    color: white;
+
+    text-decoration: none;
+    padding: 5px;
+}
+
+.content-top img{
+    width: 270px;
+}
+
+.content-bottom {
+    width: 600px;
+    height: 38px;
+    margin: 30px auto 30px;
+}
+
+.content-bottom input {
+    width: 500px;
+    height: 38px;
+    border: 1px solid #dddddd;
+
+    box-sizing: border-box;
+    padding-left: 8px;
+    font-size: 15px;
+}
+
+.content-bottom input:focus{
+    outline: none;
+    border: 1px solid #3385ff;
+}
+
+.content-bottom a{
+    background-color: #3385ff;
+    color: white;
+    font-weight: bolder;
+    display: inline-block;
+    text-decoration: none;
+    float: right;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.content-img {
+    display: inline-block;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+.content-img img{
+    width: 130px;
+    margin: 0 5px;
+    box-shadow: 0px 0px 15px gray;
+}
+.content-img img:hover{
+    opacity: 0.5;
+}
+
+#footer {
+
+    width: 100%;
+    padding: 50px 0;
+    color: darkgray;
+    font-size: 12px;
+}
+
+#footer a {
+    margin: 5px;
+}
+
+.footer-top {
+    margin-bottom: 8px;
+}
+
+.footer-top img{
+    width: 10px;
+}

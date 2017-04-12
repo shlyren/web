@@ -1,0 +1,110 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../images/bg.png") no-repeat;
+    text-align: center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#panel {
+    background-color: white;
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 10%;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/*头部*/
+.panel-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    /*下边距*/
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 20px;
+}
+/*内容*/
+.user-pwd {
+    margin-bottom: 15px;
+    height: 38px;
+
+    position: relative;
+}
+
+.user-pwd img {
+    position: absolute;
+    left: 6px;
+    top: 7px;
+}
+
+.user-pwd input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    padding-left: 38px;
+    border-radius: 5px;
+}
+
+
+.user-pwd input:focus {
+    outline: none;
+    border: 1px solid orangered;
+    box-shadow: 0 0 5px orange;
+}
+
+.setting a {
+    color: darkgray;
+}
+
+.pull-right {
+    float: right;
+}
+
+.loginBtn {
+    width: 100%;
+    height: 38px;
+    margin: 15px 0;
+    border: 0;
+    background-color: orangered;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+}
+
+.loginBtn:focus {
+    outline: none;
+}
+
+.reg {
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 15px;
+    /*线条*/
+    border-bottom: 1px solid #dddddd;
+}
+
+.reg a {
+    color: orangered;
+}
+
+.panel-footer {
+    height: 38px;
+    line-height: 38px;
+}
+
+.panel-footer img{
+    width: 25px;
+    vertical-align: middle;
+}
