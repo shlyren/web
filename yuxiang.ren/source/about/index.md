@@ -15,10 +15,9 @@ date: 2016-12-02 09:52:46
 ### 以下是我的一些个人信息
 
 GitHub : https://github.com/shlyren
-邮箱: [mailto:mail@yuxiang.ren]()
+邮箱: <a href="mailto:mail@yuxiang.ren">mail@yuxiang.ren</a>
 微博: http://weibo.com/shlyjen
-
-简历: https://resumu.yuxiang.ren (好久没更新了...)
+简历: https://resume.yuxiang.ren (好久没更新了...)
 
 
 最后给大家一个代理Google的网址(给那些无法翻墙的童鞋展示使用的)
