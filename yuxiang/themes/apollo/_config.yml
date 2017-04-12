@@ -6,14 +6,14 @@ menu:
   微博: http://weibo.com/shlyjen  
   关于: /about/
   邮箱: mailto:mail@yuxiang.ren
-  谷歌搜索: https://google.yuxiang.ren
+  Google: https://google.yuxiang.ren
 
 favicon: https://source.yuxiang.ren/favicon_yuxiang.ico
 logo: https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg
 
 # Comment
 # e.g disqus: seansun
-disqus:
+disqus: shlyren
 duoshuo: shlyren
 
 # Analytics

@@ -13,7 +13,7 @@ since: 2016
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.yuxiang.ren
+url: https://yuxiang.ren
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -84,12 +84,7 @@ baidushare: true
 baidu_analytics: e8f9e28039f9f75405d07e7e7bbad3b6
 
 # Swiftype Search Key 站内搜索
-swiftype_key: 1HyZsRUzgLxzb7SHNe6j
-
-duoshuo_shortname: shlyren
-#disqus_shortname: shlyren
-#多说热评
-#duoshuo_hotartical: true
+#swiftype_key: 1HyZsRUzgLxzb7SHNe6j
 
 archive_generator:
     per_page: 0
@@ -103,12 +98,4 @@ path: sitemap.xml
 #baidusitemap:
 #path: baidusitemap.xml
 
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-#  type: git
-#  repo: root@45.32.249.14:repos/yuxiang.ren.git
-# branch: master
-#  Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
 

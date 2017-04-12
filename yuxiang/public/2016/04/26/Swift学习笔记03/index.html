@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Swift学习笔记03 · 任玉祥</title><meta name="description" content="Swift学习笔记03 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Swift学习笔记03</h1><div class="tags"><a href="/tags/Swift/" class="tag-title">#Swift</a></div><div class="post-info">Apr 26, 2016</div><div class="post-content"><h2 id="一、三大特性"><a href="#一、三大特性" class="headerlink" title="一、三大特性"></a>一、三大特性</h2><h3 id="1-封装，继承，-多态"><a href="#1-封装，继承，-多态" class="headerlink" title="1. 封装，继承， 多态"></a>1. 封装，继承， 多态</h3><ul>
+<li>多态产生的三大条件<ul>
+<li>必须有继承</li>
+<li>必须有重写</li>
+<li>父类指针指向子类对象</li>
+</ul>
+</li>
+<li>如果子类对父类的方法不满意， 可以对福列的方法进行重写<ul>
+<li>在Swift中如果对弗雷德方法进行个重写,必须在<code>func</code>前加<code>override</code></li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="2-重载"><a href="#2-重载" class="headerlink" title="2. 重载"></a>2. 重载</h3><ul>
+<li>重载的使用场景<ul>
+<li>参数的类型不同</li>
+<li>参数的个数不同</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="二、自动引用计数"><a href="#二、自动引用计数" class="headerlink" title="二、自动引用计数"></a>二、自动引用计数</h2><h3 id="1-工作机制"><a href="#1-工作机制" class="headerlink" title="1. 工作机制"></a>1. 工作机制</h3><ul>
+<li>当有一个强指针指向某一个对象是, 该对象的引用计数会+1</li>
+<li>当该强指针消失时,引用计数会-1</li>
+<li>当引用计数为0时,该对象会被系统回收</li>
+</ul>
+<h3 id="2-循环引用"><a href="#2-循环引用" class="headerlink" title="2. 循环引用"></a>2. 循环引用</h3><ul>
+<li>与OC一样,Swift在开发中经常会出现循环引用的问题</li>
+<li>解决方法,Swift提供了两种方法<ul>
+<li><code>weak</code>: 和OC中的<code>__weak</code>一样,当指向的对象销毁时,会自动将指针指向<code>nil</code></li>
+<li><code>unowned</code>: 和OC中的<code>__unsafe_unretained</code>一样,当指向的对象销毁时,指针依然指向之前的对象,会导致野指针错误</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="三、可选链"><a href="#三、可选链" class="headerlink" title="三、可选链"></a>三、可选链</h2><h3 id="1-可选链的概念"><a href="#1-可选链的概念" class="headerlink" title="1. 可选链的概念"></a>1. 可选链的概念</h3><ul>
+<li>它的可选性体现于请求或调用的目标当前可能为空<ul>
+<li>如果可选的目标有值，那么调用就会成功</li>
+<li>如果可选的目标为空，则这种调用会返回空</li>
+</ul>
+</li>
+<li>多次调用被链接在一起形成一个链，如果任何一个节点为空将导致整个链失效。</li>
+</ul>
+<h3 id="2-可选链的使用"><a href="#2-可选链的使用" class="headerlink" title="2. 可选链的使用"></a>2. 可选链的使用</h3><ul>
+<li>在可选类型后面放一个问号,可以定义一个可选链</li>
+<li>这一点很像在可选值后面放一个叹号来强制解包<ul>
+<li>他们的主要区别在于当可选值为空时可选链即刻失效</li>
+<li>然而一般的强制解析将会引发运行时的错误</li>
+</ul>
+</li>
+<li>因为可选链的结果可能为空,也可能有值,因此它的返回值是一个可选类型<ul>
+<li>可以通过判断返回值是否有值来判断是否调用成功<ul>
+<li>有值,表示调用成功</li>
+<li>为空,表示调用失败</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="四、协议"><a href="#四、协议" class="headerlink" title="四、协议"></a>四、协议</h2><h3 id="1-协议的格式"><a href="#1-协议的格式" class="headerlink" title="1. 协议的格式"></a>1. 协议的格式</h3><ul>
+<li>协议的定义与类,结构体,枚举的定义都非常相似</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SomeProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 协议方法</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>遵守协议的格式</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>: <span class="title">SomeSuperClass</span>, <span class="title">FirstProtocol</span>,  <span class="title">AnotherProtocol</span> </span>&#123;</div><div class="line">    <span class="comment">// 类的内容</span></div><div class="line">    <span class="comment">// 实现协议中的方法</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-协议的基本使用"><a href="#2-协议的基本使用" class="headerlink" title="2. 协议的基本使用"></a>2. 协议的基本使用</h3><ul>
+<li>定义协议和遵守协议</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.定义协议</span></div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SportProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playBasketball</span><span class="params">()</span></span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playFootball</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"><span class="comment">// 2.遵守协议 注意:默认情况下在swift中所有的协议方法都是必须实现的,如果不实现,则编译器会报错</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> : <span class="title">SportProtocol</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> name : <span class="type">String</span>?</div><div class="line">    <span class="keyword">var</span> age : <span class="type">Int</span> = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="comment">// 实现协议中的方法</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playBasketball</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"人在打篮球"</span>)</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playFootball</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"人在踢足球"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>协议之间的继承</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">CrazySportProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">jumping</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SportProtocol</span> : <span class="title">CrazySportProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playBasketball</span><span class="params">()</span></span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playFootball</span><span class="params">()</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-代理设计模式"><a href="#3-代理设计模式" class="headerlink" title="3. 代理设计模式"></a>3. 代理设计模式</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">BuyTicketProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">buyTicket</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">    <span class="comment">// 1.定义协议属性</span></div><div class="line">    <span class="keyword">var</span> delegate : <span class="type">BuyTicketProtocol</span></div><div class="line">    <span class="comment">// 2.自定义构造函数</span></div><div class="line">    <span class="keyword">init</span> (delegate : <span class="type">BuyTicketProtocol</span>) &#123;</div><div class="line">        <span class="keyword">self</span>.delegate = delegate</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 3.行为</span></div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">goToBeijing</span><span class="params">()</span></span> &#123;</div><div class="line">        delegate.buyTicket()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HuangNiu</span>: <span class="title">BuyTicketProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">buyTicket</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"买了一张火车票"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> p = <span class="type">Person</span>(delegate: <span class="type">HuangNiu</span>())</div><div class="line">p.goToBeijing()</div></pre></td></tr></table></figure>
+<h3 id="4-协议中方法的可选"><a href="#4-协议中方法的可选" class="headerlink" title="4. 协议中方法的可选"></a>4. 协议中方法的可选</h3><ul>
+<li>Swift中的协议默认为必须实现,如果不实现则直接报错</li>
+<li>要想跟OC一样将协议中的方法设置为可选,则需要特殊操作</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.定义协议</span></div><div class="line"><span class="meta">@objc</span> </div><div class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">SportProtocol</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">playBasketball</span><span class="params">()</span></span></div><div class="line">    <span class="keyword">optional</span> <span class="function"><span class="keyword">func</span> <span class="title">playFootball</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2.遵守协议</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> : <span class="title">SportProtocol</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> name : <span class="type">String</span>?</div><div class="line">    <span class="keyword">var</span> age : <span class="type">Int</span> = <span class="number">0</span></div><div class="line"></div><div class="line">    <span class="comment">// 实现协议中的方法</span></div><div class="line">    <span class="meta">@objc</span> <span class="function"><span class="keyword">func</span> <span class="title">playBasketball</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="built_in">print</span>(<span class="string">"人在打篮球"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="五、闭包"><a href="#五、闭包" class="headerlink" title="五、闭包"></a>五、闭包</h2><h3 id="1-闭包的介绍"><a href="#1-闭包的介绍" class="headerlink" title="1. 闭包的介绍"></a>1. 闭包的介绍</h3><ul>
+<li>闭包和OC中的block非常相似<ul>
+<li>OC中的block是匿名的函数</li>
+<li>Swift中的闭包是特殊的函数</li>
+<li>block和闭包都经常用于回调</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-闭包的写法"><a href="#2-闭包的写法" class="headerlink" title="2. 闭包的写法"></a>2. 闭包的写法</h3><ul>
+<li>类型:<strong>(形参列表)-&gt;(返回值)</strong></li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">test</span><span class="params">(finished : <span class="params">(parameter : String)</span></span></span> -&gt; ())&#123;</div><div class="line">   finished(parameter : <span class="string">"block参数"</span>)</div><div class="line">&#125;</div><div class="line">   </div><div class="line"><span class="comment">// 调用</span></div><div class="line">test(&#123; (parameter) -&gt; () <span class="keyword">in</span></div><div class="line">    <span class="built_in">print</span>(<span class="string">"block传过来的参数:<span class="subst">\(parameter)</span>"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="3-闭包的简写"><a href="#3-闭包的简写" class="headerlink" title="3. 闭包的简写"></a>3. 闭包的简写</h3><ul>
+<li>如果闭包没有写参数, 没有返回值,闭包的参数可以不写</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">test(&#123;</div><div class="line">    <span class="comment">// 代码块</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>尾随闭包写法:<ul>
+<li>如果闭包是函数的最后一个参数,则可以将闭包卸载()后面</li>
+<li>如果函数只有一个参数,并且这个参数是闭包,那么()可以不写</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 闭包是函数的最后一个参数</span></div><div class="line">test()&#123;</div><div class="line">    <span class="comment">// 代码块</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//函数只有一个参数,并且这个参数是闭包</span></div><div class="line">test &#123;</div><div class="line">    <span class="comment">// 代码块</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-闭包导致的循环引用解决方案"><a href="#4-闭包导致的循环引用解决方案" class="headerlink" title="4. 闭包导致的循环引用解决方案"></a>4. 闭包导致的循环引用解决方案</h3><ul>
+<li>方案一:<ul>
+<li>使用<code>weak</code> 对当前控制器使用弱引用</li>
+<li>但是因为<code>self</code>可能有值也可能没有值,因此<code>weakSelf</code>是一个可选类型,在真正使用时可以对其强制解包(该处强制解包没有问题,因为控制器一定存在,否则无法调用所在函数)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">weak</span> <span class="keyword">var</span> weakSelf = <span class="keyword">self</span></div></pre></td></tr></table></figure>
+<ul>
+<li>方案二(常用):<ul>
+<li>和方案一类型,只是书写方式更加简单</li>
+<li>可以写在闭包中,并且在闭包中用到的self都是弱引用</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">test(&#123;[<span class="keyword">weak</span> <span class="keyword">self</span>] (parameter) -&gt; () <span class="keyword">in</span></div><div class="line">    <span class="built_in">print</span>(<span class="string">"block传过来的参数:<span class="subst">\(parameter)</span>"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>方案三:<ul>
+<li>使用关键字<code>unowned</code></li>
+<li>从行为上来说 <code>unowned</code> 更像OC中的 <code>unsafe_unretained</code></li>
+<li><code>unowned</code>表示:即使它原来引用的对象被释放了，仍然会保持对被已经释放了的对象的一个 “无效的” 引用，它不能是<code>Optional</code>值，也不会被指向nil</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">test(&#123;[<span class="keyword">unowned</span> <span class="keyword">self</span>] (parameter) -&gt; () <span class="keyword">in</span></div><div class="line">    <span class="built_in">print</span>(<span class="string">"block传过来的参数:<span class="subst">\(parameter)</span>"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="六、懒加载"><a href="#六、懒加载" class="headerlink" title="六、懒加载"></a>六、懒加载</h2><h3 id="1-懒加载的介绍"><a href="#1-懒加载的介绍" class="headerlink" title="1. 懒加载的介绍"></a>1. 懒加载的介绍</h3><ul>
+<li>苹果的设计思想:希望所有的对象在使用时才真正加载到内存中)</li>
+<li>和OC不同的是Swift有专门的关键字来实现懒加载</li>
+<li><code>lazy</code>关键字可以用于定义某一个属性懒加载</li>
+</ul>
+<h3 id="2-懒加载的使用"><a href="#2-懒加载的使用" class="headerlink" title="2. 懒加载的使用"></a>2. 懒加载的使用</h3><ul>
+<li>格式: 在属性前用<code>lazy</code>修饰</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 苹果官方写法: 创建的时候可以设置一些属性</span></div><div class="line"><span class="built_in">lazy</span> <span class="keyword">var</span> btn1 : <span class="type">UIButton</span> = &#123;</div><div class="line">    <span class="keyword">let</span> tempBtn = <span class="type">UIButton</span>()</div><div class="line">    tempBtn.setTitle(<span class="string">"按钮"</span> forState:.<span class="type">Normal</span>)</div><div class="line">    <span class="keyword">return</span> tmpBtn</div><div class="line">&#125;()</div><div class="line">    </div><div class="line"><span class="comment">// 简单写法: 只是创建对象</span></div><div class="line"><span class="built_in">lazy</span> <span class="keyword">var</span> btn1 : <span class="type">UIButton</span> = <span class="type">UIButton</span>()</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="七、常见注释"><a href="#七、常见注释" class="headerlink" title="七、常见注释"></a>七、常见注释</h2><h3 id="1-单行注释"><a href="#1-单行注释" class="headerlink" title="1. 单行注释"></a>1. 单行注释</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注释</span></div></pre></td></tr></table></figure>
+<h3 id="2-多行行注释"><a href="#2-多行行注释" class="headerlink" title="2. 多行行注释"></a>2. 多行行注释</h3><ul>
+<li>Swift中<code>/* */</code>可以嵌套使用</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">  注释</div><div class="line">   <span class="comment">/* 注释 */</span></div><div class="line">*/</div></pre></td></tr></table></figure>
+<h3 id="3-文档注释"><a href="#3-文档注释" class="headerlink" title="3. 文档注释"></a>3. 文档注释</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 注释</span></div></pre></td></tr></table></figure>
+<h3 id="4-分组注释"><a href="#4-分组注释" class="headerlink" title="4. 分组注释"></a>4. 分组注释</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// MARK:- 带有分割线</span></div><div class="line"><span class="comment">// MARK: 不带分割线</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="八、访问权限"><a href="#八、访问权限" class="headerlink" title="八、访问权限"></a>八、访问权限</h2><h3 id="1-Swift中的访问权限"><a href="#1-Swift中的访问权限" class="headerlink" title="1. Swift中的访问权限"></a>1. Swift中的访问权限</h3><ul>
+<li>Swift中的访问控制模型基于模块的源文件这两个概念<ul>
+<li><code>internal</code>: 在本模块中可以进行访问</li>
+<li><code>private</code>: 在当前源文件(项目)可以访问</li>
+<li><code>public</code>: 在其他模块中可以访问</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="九、异常处理"><a href="#九、异常处理" class="headerlink" title="九、异常处理"></a>九、异常处理</h2><h3 id="1-异常的介绍"><a href="#1-异常的介绍" class="headerlink" title="1. 异常的介绍"></a>1. 异常的介绍</h3><ul>
+<li>只要在编程,就一定会遇到错误处理的问题</li>
+<li>Swift在设计的时候就尽可能的让开发者感知错误,明确处理错误<ul>
+<li>比如: 只有使用个<code>Optional</code>才能处理空值</li>
+</ul>
+</li>
+<li>描述一个错误<ul>
+<li>在Swift中, 任何一个遵守<code>ErrorType protocol</code>的类型，都可以用于描述错误。</li>
+<li><code>ErrorType</code>是一个空的<code>protocol</code>, 它唯一的功能，就是告诉Swift编译器，某个类型用来表示一个错误。</li>
+<li>通常，我们使用一个<code>enum</code>来定义各种错误的可能性</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-异常的示例"><a href="#2-异常的示例" class="headerlink" title="2. 异常的示例"></a>2. 异常的示例</h3><ul>
+<li>假如想要读取一个文件中的内容,按照OC的逻辑我们可以这样来模拟<ul>
+<li>当调用方法获取结果为<code>nil</code>时,你并不能确定到底参数了什么错误得到了<code>nil</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">readFileContent</span><span class="params">(filePath : String)</span></span> -&gt; <span class="type">String</span>? &#123;</div><div class="line">    <span class="comment">// 1.filePath为""</span></div><div class="line">    <span class="keyword">if</span> filePath == <span class="string">""</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 2.filePath有值,但是没有对应的文件</span></div><div class="line">    <span class="keyword">if</span> filePath != <span class="string">"/User/Desktop/123.plist"</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 3.取出其中的内容</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"123"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">readFileContent(<span class="string">"abc"</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>使用异常对上述方法的改进</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.定义异常</span></div><div class="line"><span class="class"><span class="keyword">enum</span> <span class="title">FileReadError</span> : <span class="title">ErrorType</span> </span>&#123;</div><div class="line">    <span class="keyword">case</span> <span class="type">FileISNull</span></div><div class="line">    <span class="keyword">case</span> <span class="type">FileNotFound</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2.改进方法,让方法抛出异常</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">readFileContent</span><span class="params">(filePath : String)</span></span> <span class="keyword">throws</span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="comment">// 1.filePath为""</span></div><div class="line">    <span class="keyword">if</span> filePath == <span class="string">""</span> &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="type">FileReadError</span>.<span class="type">FileISNull</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 2.filepath有值,但是没有对应的文件</span></div><div class="line">    <span class="keyword">if</span> filePath != <span class="string">"/User/Desktop/123.plist"</span> &#123;</div><div class="line"></div><div class="line">        <span class="keyword">throw</span> <span class="type">FileReadError</span>.<span class="type">FileISNull</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 3.取出其中的内容</span></div><div class="line">    <span class="keyword">return</span> <span class="string">"123"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-异常处理的三种方式"><a href="#3-异常处理的三种方式" class="headerlink" title="3. 异常处理的三种方式"></a>3. 异常处理的三种方式</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. try方式,需要手动处理异常</span></div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    <span class="keyword">let</span> result = <span class="keyword">try</span> readFileContent(<span class="string">"abc"</span>)</div><div class="line">&#125; <span class="keyword">catch</span> &#123;</div><div class="line">    <span class="built_in">print</span>(error)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 2. try?方式,不处理异常,如果出现了异常,则返回一个nil.没有异常,则返回对应的值</span></div><div class="line"><span class="comment">// 最终返回结果为一个可选类型</span></div><div class="line"><span class="keyword">let</span> result = <span class="keyword">try</span>? readFileContent(<span class="string">"abc"</span>)</div><div class="line"></div><div class="line"><span class="comment">// 3. try!方法,告诉系统该方法没有异常.</span></div><div class="line"><span class="comment">// 注意:如果出现了异常,则程序会崩溃</span></div><div class="line"><span class="keyword">try</span>! readFileContent(<span class="string">"abc"</span>)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="十、OC、Swift混编"><a href="#十、OC、Swift混编" class="headerlink" title="十、OC、Swift混编"></a>十、OC、Swift混编</h2><h3 id="1-Swift调用OC"><a href="#1-Swift调用OC" class="headerlink" title="1. Swift调用OC"></a>1. Swift调用OC</h3><ul>
+<li>创建桥接文件</li>
+<li>配置桥接文件<ul>
+<li>步骤图<br><img src="https://yuxiang.ren/images/images/配置桥接文件.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-OC调用Swift代码"><a href="#2-OC调用Swift代码" class="headerlink" title="2. OC调用Swift代码"></a>2. OC调用Swift代码</h3><ul>
+<li>导入<strong>项目名称-Swift.h</strong></li>
+<li>Swift中的所有类以及方法和属性必须使用<code>public</code>修饰</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/04/24/Swift学习笔记02/" class="prev">PREV</a><a href="/2016/05/23/面试题-01/" class="next">NEXT</a></div><div data-thread-key="2016/04/26/Swift学习笔记03/" data-title="Swift学习笔记03" data-url="https://yuxiang.ren/2016/04/26/Swift学习笔记03/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2016/04/26/Swift学习笔记03/';
+var disqus_title = 'Swift学习笔记03';
+var disqus_url = 'https://yuxiang.ren/2016/04/26/Swift学习笔记03/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

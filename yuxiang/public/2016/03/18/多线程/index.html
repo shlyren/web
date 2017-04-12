@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>多线程 · 任玉祥</title><meta name="description" content="多线程 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="https://home.yuxiang.ren" target="_blank" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">多线程</h1><div class="tags"><a href="/tags/多线程/" class="tag-title">#多线程</a><a href="/tags/单例/" class="tag-title">#单例</a></div><div class="post-info">Mar 18, 2016</div><div class="post-content"><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">异步函数+主队列    不会开线程,串行执行</div><div class="line">异步函数+并发队列  开多条线程,并发执行</div><div class="line">异步函数+串行队列  开一条线程,串行执行</div><div class="line">同步函数+并发队列  不会开线程,串行执行</div><div class="line">同步函数+串行执行  不会开线程,串行执行</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="一、容易混淆的俗语"><a href="#一、容易混淆的俗语" class="headerlink" title="一、容易混淆的俗语"></a>一、容易混淆的俗语</h2><p>　　有四个术语比较容易混淆：<code>同步</code>、<code>异步</code>、<code>并发</code>、<code>串行</code>.</p>
+<ol>
+<li>同步和异步主要影响有:能不能开启新线程<ul>
+<li>同步: 只能在当前线程中执行任务, 不具备开启新线程的能力</li>
+<li>异步: 可以在新的线程中执行任务, 具备开启新线程的能力</li>
+</ul>
+</li>
+<li>并发金和串行的只要影响: 任务的执行方式<ul>
+<li>并发: 允许多个任务并发(同事执行)</li>
+<li>串行: 一个任务执行完毕后,在执行下一个任务</li>
+</ul>
+</li>
+</ol>
+<h2 id="二、执行任务"><a href="#二、执行任务" class="headerlink" title="二、执行任务"></a>二、执行任务</h2><p> 1、GCD中有2个用来执行任务的常用函数<br>     　用同步的方式执行任务<br> 　    <code>dispatch_sync(dispatch_queue_t queue, dispatch_block_t block);</code><br>        　• queue  队列<br>        　• block  任务<br>    　用异步的方式执行任务<br>    　<code>dispatch_async(dispatch_queue_t queue, dispatch_block_t block);</code><br> 2、GCD中还有个用来执行任务的函数：<br> 　　<code>dispatch_barrier_async(dispatch_queue_t queue, dispatch_block_t block);</code><br> 　　在前面的任务执行结束后它才执行，而且它后面的任务执行完成后才会执行<br>    <strong>注意</strong>：这个<code>queue</code>不能是全局的并发列队</p>
+<h2 id="三、列队的类型"><a href="#三、列队的类型" class="headerlink" title="三、列队的类型"></a>三、列队的类型</h2><p> 1、并发列队<br>    　　可以让并发任务并发(同时)执行(自动开启多个线程同时执行任务)<br>    　　并发功能只有在异步(<code>dispatch_async</code>) 函数下才有效<br>    使用 <code>dispatch_queue_create</code> 函数创建队列<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dispatch_queue_t </div><div class="line">dispatch_queue_create(const char *label, //队列名称</div><div class="line">dispatch_queue_attr_t attr); //队列的类型</div><div class="line">dispatch_queue_t queue = dispatch_queue_create(&quot;re.yuxiang&quot;,  DISPATCH_QUEUE_CONCURRENT); //  创建并发队列</div></pre></td></tr></table></figure></p>
+<p>GCD默认已经提供了全局的并发队列,供整个应用使用, 可以无需受用创建<br>使用<code>dispatch_get_global_queue</code>函数获得全局的并发队列<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dispatch_queue_t dispatch_get_global_queue(</div><div class="line">dispatch_queue_priority_t priority, //队列的优先级</div><div class="line">long flags); //此参数暂时无用 用0即可</div><div class="line">dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0); //获得全局并发队列</div></pre></td></tr></table></figure></p>
+<ul>
+<li>全局并发队列的优先级  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#define DISPATCH_QUEUE_PRIORITY_HIGH 2     // 高</div><div class="line">#define DISPATCH_QUEUE_PRIORITY_DEFAULT 0  //默认(中)</div><div class="line">#define DISPATCH_QUEUE_PRIORITY_LOW (-2)   // 低</div><div class="line">#define DISPATCH_QUEUE_PRIORITY_BACKGROUND INT16_MIN // 后台</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2、串行列队<br>　　让任务一个接着一个执行(一个任务执行完毕后,在执行下一个任务)<br>　　GCD中获得串行有2种途径<br>        使用<code>dispatch_queue_creat</code>函数创建串行队列</p>
+<pre><code>dispatch_queue_creat queue = dispatch_queue_creat(&quot;yuxiang.ren&quot;, NULL); // 队列类型传递NULL或者DISPATCH_QUEUE_SERIAL 
+</code></pre><p>3、主队列(跟主线程相关联的队列)<br>　　主队列是GCD自带的一种特殊的串行队列<br>　　放在主队列中的任务, 都会返回主线程中执行<br>　　使用<code>dispatch_get_main_queue()</code>获得主队列</p>
+<blockquote>
+<p><code>dispatch_queue_t queue = dispatch_get_main_queue();</code></p>
+</blockquote>
+<h2 id="四、NSOperation"><a href="#四、NSOperation" class="headerlink" title="四、NSOperation"></a>四、NSOperation</h2><ol>
+<li>相关概念<br>NSOperation是对<strong>GCD的包装</strong><br>两个核心概念[<strong>队列</strong>+<strong>操作</strong>]</li>
+<li>基本使用<br> <code>NSOperation</code>本身是抽象类,只能只有他的子类<pre><code>三个子类分别是:`NSBlockOperation`,`NSInvocationOperation`,以及自定义继承自`NSOperation`的类
+</code></pre> <code>NSOperation</code>和<code>NSOperationQueue</code>结合使用实现多线程开发</li>
+<li><code>NSoperationQueue</code></li>
+</ol>
+<ul>
+<li><code>NSOperation</code>中的两种队列  <ul>
+<li>主队列: 通过mainQueue获得,凡是放到主队列中的人物都将在主线程中完成</li>
+<li>非主队列: 直接[alloc init]出来的队列, 非主队列同时具备了并发和串行的功能, 通过设置最大并发数属性来控制任务是并发执行还是串行执行</li>
+</ul>
+</li>
+</ul>
+<h2 id="五、GCD和NSOperation的对比"><a href="#五、GCD和NSOperation的对比" class="headerlink" title="五、GCD和NSOperation的对比"></a>五、GCD和NSOperation的对比</h2><ol>
+<li><strong>GCD</strong>和<strong>NSOperation</strong>的区别<ul>
+<li><code>GCD</code>是<strong>纯C语言的API</strong>，而<code>操作队列</code>则是<strong>OC对象</strong></li>
+<li>在GCD中,任务用快(<code>block</code>)来表示, 而块是轻量级的数据结构;相反操作队列中的[操作]<code>NSOperation</code>则是个更加重量级的OC对象</li>
+<li>具体该使用<code>GCD</code>还是使用<code>NSOperation</code>需要看具体情况</li>
+</ul>
+</li>
+<li><code>NSOperation</code>和<code>NSoperationQueue</code>相对<code>GCD</code>的好处<ul>
+<li><code>NSOperationQueue</code>可以方便的调用<code>cancel</code>方法来取消某个操作, 而<strong>GCD</strong>中的任务是无法取消的</li>
+<li><code>NSOperation</code>可以方便的制定操作间的依赖关系</li>
+<li><code>NSOperation</code>可以通<strong>KVO</strong>提供对<code>NSOperation</code>对象的精细控制(比如监听当前的操作是否取消)</li>
+<li><code>NSOperation</code>可以方便的制定操作的优先级,操作优先级表示此操作与队列中其他操作间的优先关系</li>
+<li>通过自定义<code>NSOperation</code>的子类可以实现操作重用</li>
+</ul>
+</li>
+</ol>
+<h2 id="六、单例"><a href="#六、单例" class="headerlink" title="六、单例"></a>六、单例</h2><ol>
+<li>基本概念<ul>
+<li>单利模式<br>在程序运行过程中,一个类只有一个实例</li>
+<li>使用场合<br>在整个应用程序中,功效一份资源(这份资源只需要创建初始化一次)</li>
+</ul>
+</li>
+<li>ARC实现单利<ul>
+<li>在类的内部提供一个<code>static</code>修饰的全局变量</li>
+<li>提供一个类方法, 方便外接访问</li>
+<li>重写<code>+allocWithZone</code>方法,保证永远只为单例对象分配一次内存空间</li>
+<li>严谨写法, 重写<code>-CopyWithZone</code>方法和<code>-MutableCopyWithZone</code>方法</li>
+</ul>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2016/03/21/利用pods给你的程序添加第三方库/" class="next">NEXT</a></div><div data-thread-key="2016/03/18/多线程/" data-title="多线程" data-url="https://yuxiang.ren/2016/03/18/多线程/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2016/03/18/多线程/';
+var disqus_title = '多线程';
+var disqus_url = 'https://yuxiang.ren/2016/03/18/多线程/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/newBlog" target="_blank">GitHub</a></p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

@@ -4,9 +4,9 @@
   <subtitle>An iOS developer from China.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.yuxiang.ren/"/>
-  <updated>2017-03-31T07:46:12.000Z</updated>
-  <id>https://www.yuxiang.ren/</id>
+  <link href="https://yuxiang.ren/"/>
+  <updated>2017-04-12T03:22:26.000Z</updated>
+  <id>https://yuxiang.ren/</id>
   
   <author>
     <name>任玉祥</name>
@@ -16,9 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>命令给安卓程序打包</title>
+    <link href="https://yuxiang.ren/2017/04/12/%E5%91%BD%E4%BB%A4%E7%BB%99%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/"/>
+    <id>https://yuxiang.ren/2017/04/12/命令给安卓程序打包/</id>
+    <published>2017-04-12T03:05:07.000Z</published>
+    <updated>2017-04-12T03:22:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。</p>
+<ol>
+<li><p>先执行改变gradle的权限。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod +x gradlew</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后运行打包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./gradlew assembleRelease</div></pre></td></tr></table></figure>
+</li>
+<li><p>出现<code>BUILD SUCCESSFUL</code>后安装到手机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb install &lt;apk路径&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;先执行改变gradle的权限。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://yuxiang.ren/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="https://yuxiang.ren/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux常用命令</title>
-    <link href="https://www.yuxiang.ren/2017/03/31/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://www.yuxiang.ren/2017/03/31/linux常用命令/</id>
+    <link href="https://yuxiang.ren/2017/03/31/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://yuxiang.ren/2017/03/31/linux常用命令/</id>
     <published>2017-03-31T06:32:42.000Z</published>
     <updated>2017-03-31T07:46:12.000Z</updated>
     
@@ -109,8 +146,8 @@
   
   <entry>
     <title>C语言的几种排序方法</title>
-    <link href="https://www.yuxiang.ren/2017/03/30/C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95/"/>
-    <id>https://www.yuxiang.ren/2017/03/30/C语言的几种排序方法/</id>
+    <link href="https://yuxiang.ren/2017/03/30/C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%87%A0%E7%A7%8D%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95/"/>
+    <id>https://yuxiang.ren/2017/03/30/C语言的几种排序方法/</id>
     <published>2017-03-30T07:38:24.000Z</published>
     <updated>2017-03-30T07:44:25.000Z</updated>
     
@@ -166,17 +203,17 @@
     
     </summary>
     
-      <category term="C语言" scheme="https://www.yuxiang.ren/categories/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="C语言" scheme="https://yuxiang.ren/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-      <category term="C语言" scheme="https://www.yuxiang.ren/tags/C%E8%AF%AD%E8%A8%80/"/>
+      <category term="C语言" scheme="https://yuxiang.ren/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu更新Nginx服务</title>
-    <link href="https://www.yuxiang.ren/2017/03/30/Ubuntu%E6%9B%B4%E6%96%B0Nginx%E6%9C%8D%E5%8A%A1/"/>
-    <id>https://www.yuxiang.ren/2017/03/30/Ubuntu更新Nginx服务/</id>
+    <link href="https://yuxiang.ren/2017/03/30/Ubuntu%E6%9B%B4%E6%96%B0Nginx%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://yuxiang.ren/2017/03/30/Ubuntu更新Nginx服务/</id>
     <published>2017-03-30T07:25:03.000Z</published>
     <updated>2017-03-30T07:36:47.000Z</updated>
     
@@ -246,17 +283,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>在Mac上配置Rect Native开发环境</title>
-    <link href="https://www.yuxiang.ren/2017/03/30/%E5%9C%A8Mac%E4%B8%8A%E9%85%8D%E7%BD%AERect-Native%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    <id>https://www.yuxiang.ren/2017/03/30/在Mac上配置Rect-Native开发环境/</id>
+    <link href="https://yuxiang.ren/2017/03/30/%E5%9C%A8Mac%E4%B8%8A%E9%85%8D%E7%BD%AERect-Native%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://yuxiang.ren/2017/03/30/在Mac上配置Rect-Native开发环境/</id>
     <published>2017-03-30T07:06:25.000Z</published>
     <updated>2017-03-30T07:22:10.000Z</updated>
     
@@ -330,17 +367,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>OC学习</title>
-    <link href="https://www.yuxiang.ren/2017/03/30/OC%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>https://www.yuxiang.ren/2017/03/30/OC基本概念/</id>
+    <link href="https://yuxiang.ren/2017/03/30/OC%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>https://yuxiang.ren/2017/03/30/OC基本概念/</id>
     <published>2017-03-30T06:53:12.000Z</published>
     <updated>2017-03-30T07:05:39.000Z</updated>
     
@@ -437,17 +474,17 @@
     
     </summary>
     
-      <category term="笔记" scheme="https://www.yuxiang.ren/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://yuxiang.ren/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Objc" scheme="https://www.yuxiang.ren/tags/Objc/"/>
+      <category term="Objc" scheme="https://yuxiang.ren/tags/Objc/"/>
     
   </entry>
   
   <entry>
     <title>安装shadowsocks</title>
-    <link href="https://www.yuxiang.ren/2017/03/30/install-shadowsocks-in-your-vpn/"/>
-    <id>https://www.yuxiang.ren/2017/03/30/install-shadowsocks-in-your-vpn/</id>
+    <link href="https://yuxiang.ren/2017/03/30/install-shadowsocks-on-your-vps/"/>
+    <id>https://yuxiang.ren/2017/03/30/install-shadowsocks-on-your-vps/</id>
     <published>2017-03-30T06:39:09.000Z</published>
     <updated>2017-03-30T06:51:10.000Z</updated>
     
@@ -501,17 +538,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Android-fragment</title>
-    <link href="https://www.yuxiang.ren/2017/03/24/Android-fragment/"/>
-    <id>https://www.yuxiang.ren/2017/03/24/Android-fragment/</id>
+    <link href="https://yuxiang.ren/2017/03/24/Android-fragment/"/>
+    <id>https://yuxiang.ren/2017/03/24/Android-fragment/</id>
     <published>2017-03-24T03:03:01.000Z</published>
     <updated>2017-03-24T04:02:59.000Z</updated>
     
@@ -525,17 +562,17 @@
     
     </summary>
     
-      <category term="Android" scheme="https://www.yuxiang.ren/categories/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://www.yuxiang.ren/tags/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>android-基本概念</title>
-    <link href="https://www.yuxiang.ren/2017/03/24/android-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
-    <id>https://www.yuxiang.ren/2017/03/24/android-基本概念/</id>
+    <link href="https://yuxiang.ren/2017/03/24/android-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+    <id>https://yuxiang.ren/2017/03/24/android-基本概念/</id>
     <published>2017-03-24T01:23:22.000Z</published>
     <updated>2017-03-30T05:26:59.000Z</updated>
     
@@ -590,17 +627,17 @@
     
     </summary>
     
-      <category term="Android" scheme="https://www.yuxiang.ren/categories/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://www.yuxiang.ren/tags/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Android Activity</title>
-    <link href="https://www.yuxiang.ren/2017/02/10/Android-Activity/"/>
-    <id>https://www.yuxiang.ren/2017/02/10/Android-Activity/</id>
+    <link href="https://yuxiang.ren/2017/02/10/Android-Activity/"/>
+    <id>https://yuxiang.ren/2017/02/10/Android-Activity/</id>
     <published>2017-02-10T01:01:47.000Z</published>
     <updated>2017-02-10T07:15:13.000Z</updated>
     
@@ -614,17 +651,17 @@
     
     </summary>
     
-      <category term="Android" scheme="https://www.yuxiang.ren/categories/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://www.yuxiang.ren/tags/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>learn Android</title>
-    <link href="https://www.yuxiang.ren/2017/02/09/learn-Android/"/>
-    <id>https://www.yuxiang.ren/2017/02/09/learn-Android/</id>
+    <link href="https://yuxiang.ren/2017/02/09/learn-Android/"/>
+    <id>https://yuxiang.ren/2017/02/09/learn-Android/</id>
     <published>2017-02-09T08:59:49.000Z</published>
     <updated>2017-02-09T09:01:37.000Z</updated>
     
@@ -638,17 +675,17 @@
     
     </summary>
     
-      <category term="Android" scheme="https://www.yuxiang.ren/categories/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://www.yuxiang.ren/tags/Android/"/>
+      <category term="Android" scheme="https://yuxiang.ren/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>愿被这个世界温柔以待</title>
-    <link href="https://www.yuxiang.ren/2017/01/28/2017/"/>
-    <id>https://www.yuxiang.ren/2017/01/28/2017/</id>
+    <link href="https://yuxiang.ren/2017/01/28/2017/"/>
+    <id>https://yuxiang.ren/2017/01/28/2017/</id>
     <published>2017-01-27T16:19:56.000Z</published>
     <updated>2017-03-30T05:20:08.000Z</updated>
     
@@ -671,17 +708,17 @@
     
     </summary>
     
-      <category term="情感语录" scheme="https://www.yuxiang.ren/categories/%E6%83%85%E6%84%9F%E8%AF%AD%E5%BD%95/"/>
+      <category term="情感语录" scheme="https://yuxiang.ren/categories/%E6%83%85%E6%84%9F%E8%AF%AD%E5%BD%95/"/>
     
     
-      <category term="情感" scheme="https://www.yuxiang.ren/tags/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="https://yuxiang.ren/tags/%E6%83%85%E6%84%9F/"/>
     
   </entry>
   
   <entry>
     <title>install VPN on your vps</title>
-    <link href="https://www.yuxiang.ren/2017/01/16/install-VPN-on-your-vps/"/>
-    <id>https://www.yuxiang.ren/2017/01/16/install-VPN-on-your-vps/</id>
+    <link href="https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/"/>
+    <id>https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/</id>
     <published>2017-01-16T07:25:07.000Z</published>
     <updated>2017-01-16T07:56:53.000Z</updated>
     
@@ -749,19 +786,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="VPN" scheme="https://www.yuxiang.ren/tags/VPN/"/>
+      <category term="VPN" scheme="https://yuxiang.ren/tags/VPN/"/>
     
-      <category term="VPS" scheme="https://www.yuxiang.ren/tags/VPS/"/>
+      <category term="VPS" scheme="https://yuxiang.ren/tags/VPS/"/>
     
   </entry>
   
   <entry>
     <title>短发姑娘也很美</title>
-    <link href="https://www.yuxiang.ren/2016/12/08/short-haired-girl-is-also-good/"/>
-    <id>https://www.yuxiang.ren/2016/12/08/short-haired-girl-is-also-good/</id>
+    <link href="https://yuxiang.ren/2016/12/08/short-haired-girl-is-also-good/"/>
+    <id>https://yuxiang.ren/2016/12/08/short-haired-girl-is-also-good/</id>
     <published>2016-12-08T05:52:20.000Z</published>
     <updated>2017-03-30T05:21:03.000Z</updated>
     
@@ -787,17 +824,17 @@
     
     </summary>
     
-      <category term="情感" scheme="https://www.yuxiang.ren/categories/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="https://yuxiang.ren/categories/%E6%83%85%E6%84%9F/"/>
     
     
-      <category term="情感" scheme="https://www.yuxiang.ren/tags/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="https://yuxiang.ren/tags/%E6%83%85%E6%84%9F/"/>
     
   </entry>
   
   <entry>
     <title>重写UIScrollView分类dealloc错误</title>
-    <link href="https://www.yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/"/>
-    <id>https://www.yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/</id>
+    <link href="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/"/>
+    <id>https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/</id>
     <published>2016-12-06T01:25:01.000Z</published>
     <updated>2017-03-30T05:21:12.000Z</updated>
     
@@ -827,21 +864,21 @@
     
     </summary>
     
-      <category term="错误解决" scheme="https://www.yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="https://yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
     
-      <category term="Objc" scheme="https://www.yuxiang.ren/tags/Objc/"/>
+      <category term="Objc" scheme="https://yuxiang.ren/tags/Objc/"/>
     
-      <category term="Xcode" scheme="https://www.yuxiang.ren/tags/Xcode/"/>
+      <category term="Xcode" scheme="https://yuxiang.ren/tags/Xcode/"/>
     
-      <category term="error" scheme="https://www.yuxiang.ren/tags/error/"/>
+      <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
     
   </entry>
   
   <entry>
     <title>使用gem更新报错的问题</title>
-    <link href="https://www.yuxiang.ren/2016/12/02/use-gem-update-with-error/"/>
-    <id>https://www.yuxiang.ren/2016/12/02/use-gem-update-with-error/</id>
+    <link href="https://yuxiang.ren/2016/12/02/use-gem-update-with-error/"/>
+    <id>https://yuxiang.ren/2016/12/02/use-gem-update-with-error/</id>
     <published>2016-12-02T06:01:01.000Z</published>
     <updated>2016-12-12T01:50:13.000Z</updated>
     
@@ -857,21 +894,21 @@
     
     </summary>
     
-      <category term="错误解决" scheme="https://www.yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="https://yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
     
-      <category term="error" scheme="https://www.yuxiang.ren/tags/error/"/>
+      <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
     
-      <category term="terminal" scheme="https://www.yuxiang.ren/tags/terminal/"/>
+      <category term="terminal" scheme="https://yuxiang.ren/tags/terminal/"/>
     
-      <category term="gem" scheme="https://www.yuxiang.ren/tags/gem/"/>
+      <category term="gem" scheme="https://yuxiang.ren/tags/gem/"/>
     
   </entry>
   
   <entry>
     <title>在vps上安装hexo并且使用git更新</title>
-    <link href="https://www.yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/"/>
-    <id>https://www.yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</id>
+    <link href="https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/"/>
+    <id>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</id>
     <published>2016-12-02T03:28:17.000Z</published>
     <updated>2017-03-30T05:26:27.000Z</updated>
     
@@ -970,25 +1007,25 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="git" scheme="https://www.yuxiang.ren/tags/git/"/>
+      <category term="blog" scheme="https://yuxiang.ren/tags/blog/"/>
     
-      <category term="blog" scheme="https://www.yuxiang.ren/tags/blog/"/>
+      <category term="git" scheme="https://yuxiang.ren/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>hexo安装huno主题</title>
-    <link href="https://www.yuxiang.ren/2016/12/02/install-huno-theme/"/>
-    <id>https://www.yuxiang.ren/2016/12/02/install-huno-theme/</id>
+    <link href="https://yuxiang.ren/2016/12/02/install-huno-theme/"/>
+    <id>https://yuxiang.ren/2016/12/02/install-huno-theme/</id>
     <published>2016-12-02T01:40:39.000Z</published>
     <updated>2016-12-06T01:33:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Huno"><a href="#Huno" class="headerlink" title="Huno"></a>Huno</h1><p>Huno是为<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>编写的一个响应式的主题，该主题基于<a href="https://github.com/daleanthony/uno/" target="_blank" rel="external">Uno</a>。</p>
 <a id="more"></a>
-<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="https://yuxiang.ren" target="_blank" rel="external">Huno’s demo</a></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="https://yuxiang.ren">Huno’s demo</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone git://github.com/someus/huno.git themes/huno</div></pre></td></tr></table></figure>
 <p>修改Hexo的配置文件<code>_config.xml</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: huno</div></pre></td></tr></table></figure>
@@ -1060,17 +1097,17 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="blog" scheme="https://www.yuxiang.ren/tags/blog/"/>
+      <category term="blog" scheme="https://yuxiang.ren/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.yuxiang.ren/2016/12/02/hello-world/"/>
-    <id>https://www.yuxiang.ren/2016/12/02/hello-world/</id>
+    <link href="https://yuxiang.ren/2016/12/02/hello-world/"/>
+    <id>https://yuxiang.ren/2016/12/02/hello-world/</id>
     <published>2016-12-02T00:50:11.000Z</published>
     <updated>2016-12-02T02:36:15.000Z</updated>
     
@@ -1093,6 +1130,42 @@
 &lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
     
     </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>撩妹招数</title>
+    <link href="https://yuxiang.ren/2016/06/05/%E6%92%A9%E5%A6%B9%E6%8B%9B%E6%95%B0/"/>
+    <id>https://yuxiang.ren/2016/06/05/撩妹招数/</id>
+    <published>2016-06-05T11:26:22.000Z</published>
+    <updated>2016-06-05T11:32:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>江山如此多娇,而我…只为你折腰</li>
+<li>比起欧洲大陆,我更想征服的是你的心</li>
+<li>给我一个支点,让我撬动你的心</li>
+<li>感谢万有引力,将我拉向你</li>
+<li>爱你,还是更改你,这是一个值得深思的问题</li>
+<li>我曾十步杀一人,却败给你的眼神</li>
+</ol>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;江山如此多娇,而我…只为你折腰&lt;/li&gt;
+&lt;li&gt;比起欧洲大陆,我更想征服的是你的心&lt;/li&gt;
+&lt;li&gt;给我一个支点,让我撬动你的心&lt;/li&gt;
+&lt;li&gt;感谢万有引力,将我拉向你&lt;/li&gt;
+&lt;li&gt;爱你,还是更改你,这是一个值得深思的问题&lt;/li&gt;
+&lt;li&gt;我曾十步杀一人,却败给你的眼神&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="杂碎" scheme="https://yuxiang.ren/categories/%E6%9D%82%E7%A2%8E/"/>
     
     
   </entry>
