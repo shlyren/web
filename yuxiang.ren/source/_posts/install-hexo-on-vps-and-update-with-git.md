@@ -2,7 +2,7 @@
 title: 在vps上安装hexo并且使用git更新
 date: 2016-12-02 11:28:17
 categories: 教程
-tags: [git, blog]
+tags: 教程
 ---
 
 

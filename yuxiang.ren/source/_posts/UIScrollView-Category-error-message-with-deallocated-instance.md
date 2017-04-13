@@ -1,8 +1,8 @@
 ---
 title: 重写UIScrollView分类dealloc错误
 date: 2016-12-06 09:25:01
-categories: 错误解决
-tags: [Xcode, Objc, error]
+categories: error
+tags: [Xcode, error]
 ---
 
 > [UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance> 错误解决方法

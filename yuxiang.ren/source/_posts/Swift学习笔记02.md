@@ -1,7 +1,7 @@
 ---
 title: Swift学习笔记02
 date: 2016-04-24 15:34:28
-categories: IOS_Swift
+categories: Swift
 tags: [Swift]
 ---
 
@@ -13,7 +13,7 @@ tags: [Swift]
 #### 2. as? as!
 * as?: 将AnyObject转成可选类型,通过判断可选类型是否有值,来决定是否转换成功
 * as!: 将AngObject转成具体类型,但是如果不是该类型程勋会崩溃
-<!-- more -->
+  <!-- more -->
 
 ```swift
 let arr : [AnyObject] = ["ren", 20, 1.77]
@@ -33,7 +33,7 @@ let name1 = objc as! String
 * func 是关键字, 多个参数列表之间可以使用逗号分开,没有参数之间写()
 * 使用箭头`->`指向返回值类型
 * 如果没有返回值类型,返回值类型写`Void` 也可以不写
-  
+
 ```swift  
    func 函数名(参数列表) -> 返回值类型 {
         代码块...
@@ -116,13 +116,13 @@ func sum(num1 : Int, num2 : Int) -> Int {
     return num1 + num2
 }
 ```
- * 注意二: 默认参数
+* 注意二: 默认参数
      * 某些情况,如果没有传入具体的参数可以使用默认参数
 
 ```swift
 func demo(name : String = "默认参数") {}
 ```
- * 注意三: 可变参数
+* 注意三: 可变参数
      * swift中函数的参数可以变化, 它可以接受不确定数量的参数
      * 这些参数的类型必须相同
      * 在参数类型后面加`...` 即可表示可变参数
@@ -247,7 +247,7 @@ tmpFunc(20, 30) // 50
         case West
    }
    ```
-  
+
 * 方式二: 多个陈远志可以出现在同一行上
 
    ```swift
@@ -286,7 +286,7 @@ tmpFunc(20, 30) // 50
     * 结构体指的是一种数据结构
     * 结构体是值类型,在方法中传递时是值传递
 * 结构体的定义格式
- 
+
  ```swift
  struct Location {
       var x : Double
@@ -301,7 +301,7 @@ tmpFunc(20, 30) // 50
      * 扩充的注意点
          * 在扩充的构造函数中必须保证成员变量是有值的
          * 扩充的构造函数会覆盖原有的构造函数
-          
+
  ```swift
  struct Location {
       var x : Double
@@ -319,7 +319,7 @@ tmpFunc(20, 30) // 50
  }
  let location = Location(x: 100, y: 100)
  ```
- 
+
 * 扩充方法
      * 为了让结构体使用更加灵活,swift的结构体中可以扩充方法
      * 例子:为了Location结构体扩充两个方法
@@ -346,14 +346,14 @@ tmpFunc(20, 30) // 50
    }
  ```
  ---
- 
+
 ### 五、类的使用
 #### 1. 类的介绍和定义
 * `class`是Swift中的关键字,用于定义类
 * 注意:
     * 定义的类可以没有父类,那么该类是rootClass
     * 通常情况下,定义类是,继承NSObject
-        
+
     ```swift
     class 类名 : superClass {
         // 类的属性和方法
@@ -380,7 +380,7 @@ tmpFunc(20, 30) // 50
         * `didSet`：在新属性值被存储后立即调用。与`willSet`相同，此时传入的是属性的旧值，默认参数名为`oldValue`
         * `willSet`与`didSet`只有在属性第一次被设置时才会调用，在初始化时，不会去调用这些监听方法
     * 监听的方式如下:
-   
+
    ```swift
    class Person : NSObject {
       var name : String? {
@@ -395,7 +395,7 @@ tmpFunc(20, 30) // 50
       }
    }
    ```
-        
+
 #### 3. 类的构造函数
 * 构造函数的介绍
     * 构造函数类似于OC中的初始化方法:`init`方法
@@ -414,7 +414,7 @@ tmpFunc(20, 30) // 50
     * 注意
         * 去字典中取出的是`NSObject`,任意类型.
         * 可以通过`as!`转成需要的类型,再赋值(不可以直接赋值)
- 
+
      ```swift
       class Person: NSObject {
               var name : String
@@ -426,12 +426,12 @@ tmpFunc(20, 30) // 50
                   age = dict["age"] as! Int
               }
        }
-    
+
           // 创建一个Person对象
           let dict = ["name" : "why", "age" : 18]
           let p = Person(dict: dict)
      ```
-   
+
 * 字典转模型(KVC)
     * 利用KVC字典转模型会更加方便
     * 注意
@@ -439,7 +439,7 @@ tmpFunc(20, 30) // 50
         * 因此属性需要有默认值
             * 基本数据类型默认值设置为0
             * 对象或者结构体类型定义为可选类型即可(可选类型没有赋值前为nil)
-      
+
       ```swift
        class Person: NSObject {
             // 结构体或者类的类型,必须是可选类型.因为不能保证一定会赋值
@@ -462,14 +462,14 @@ tmpFunc(20, 30) // 50
        let dict = ["name" : "why", "age" : 18]
        let p = Person(dict: dict)
       ```
-      
+
 #### 4. 类的析构函数
 * Swift 会自动释放不再需要的实例以释放资源
     * Swift 通过自动引用计数（ARC）处理实例的内存管理
     * 当引用计数为0时,系统会自动调用析构函数(不可以手动调用)
     * 通常在析构函数中释放一些资源(如移除通知等操作)
 * 析构函数的写法
-    
+
 ```swift
 deinit {
 // 执行析构过程

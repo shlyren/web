@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-04-12T03:34:25.000Z</updated>
+  <updated>2017-04-13T08:08:45.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://yuxiang.ren/2017/04/12/%E5%91%BD%E4%BB%A4%E7%BB%99%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/"/>
     <id>https://yuxiang.ren/2017/04/12/命令给安卓程序打包/</id>
     <published>2017-04-12T03:05:07.000Z</published>
-    <updated>2017-04-12T03:34:25.000Z</updated>
+    <updated>2017-04-13T08:08:45.000Z</updated>
     
     <content type="html"><![CDATA[<p>在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。</p>
 <ol>
@@ -29,12 +29,13 @@
 </li>
 <li><p>然后运行打包</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./gradlew assembleRelease</div></pre></td></tr></table></figure>
+<a id="more"></a>
 </li>
 <li><p>出现<code>BUILD SUCCESSFUL</code>后安装到手机</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adb install &lt;apk路径&gt;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<a id="more"></a>]]></content>
+]]></content>
     
     <summary type="html">
     
@@ -45,11 +46,6 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;然后运行打包&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./gradlew assembleRelease&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;出现&lt;code&gt;BUILD SUCCESSFUL&lt;/code&gt;后安装到手机&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;adb install &amp;lt;apk路径&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     
@@ -65,7 +61,7 @@
     <link href="https://yuxiang.ren/2017/03/31/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://yuxiang.ren/2017/03/31/linux常用命令/</id>
     <published>2017-03-31T06:32:42.000Z</published>
-    <updated>2017-03-31T07:46:12.000Z</updated>
+    <updated>2017-04-13T07:49:15.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-系统清理命令"><a href="#一-系统清理命令" class="headerlink" title="一. 系统清理命令"></a>一. 系统清理命令</h3><ol>
 <li><p>clean命令删除所有的软件安装包</p>
@@ -126,6 +122,23 @@
 <p>​</p>
 </li>
 </ol>
+<h2 id="三-GIT相关"><a href="#三-GIT相关" class="headerlink" title="三.  GIT相关"></a>三.  GIT相关</h2><ol>
+<li><p>创建一个tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag &lt;标签名&gt; -m &quot;commit message&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git push ---tags #将本地所有标签一次性提交到git服务器</div><div class="line">git push &lt;标签名&gt; #将指定标签提交到git服务器</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -d &lt;标签名&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除远程标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin :&lt;标签名&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看所有标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
     
     <summary type="html">
@@ -149,6 +162,10 @@
     
     </summary>
     
+      <category term="命令" scheme="https://yuxiang.ren/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="命令" scheme="https://yuxiang.ren/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
@@ -387,7 +404,7 @@
     <link href="https://yuxiang.ren/2017/03/30/OC%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
     <id>https://yuxiang.ren/2017/03/30/OC基本概念/</id>
     <published>2017-03-30T06:53:12.000Z</published>
-    <updated>2017-03-30T07:05:39.000Z</updated>
+    <updated>2017-04-13T07:53:00.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li><p><code>+load</code>和<code>+initialize</code>区别</p>
@@ -482,10 +499,10 @@
     
     </summary>
     
-      <category term="笔记" scheme="https://yuxiang.ren/categories/%E7%AC%94%E8%AE%B0/"/>
+      <category term="OC" scheme="https://yuxiang.ren/categories/OC/"/>
     
     
-      <category term="Objc" scheme="https://yuxiang.ren/tags/Objc/"/>
+      <category term="OC" scheme="https://yuxiang.ren/tags/OC/"/>
     
   </entry>
   
@@ -728,7 +745,7 @@
     <link href="https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/"/>
     <id>https://yuxiang.ren/2017/01/16/install-VPN-on-your-vps/</id>
     <published>2017-01-16T07:25:07.000Z</published>
-    <updated>2017-01-16T07:56:53.000Z</updated>
+    <updated>2017-04-13T07:50:23.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h3><ol>
 <li>ubuntu 14.04</li>
@@ -797,9 +814,7 @@
       <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="VPN" scheme="https://yuxiang.ren/tags/VPN/"/>
-    
-      <category term="VPS" scheme="https://yuxiang.ren/tags/VPS/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -844,7 +859,7 @@
     <link href="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/"/>
     <id>https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/</id>
     <published>2016-12-06T01:25:01.000Z</published>
-    <updated>2017-03-30T05:21:12.000Z</updated>
+    <updated>2017-04-13T07:51:46.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&gt; 错误解决方法<br>[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此</p>
@@ -872,10 +887,8 @@
     
     </summary>
     
-      <category term="错误解决" scheme="https://yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="error" scheme="https://yuxiang.ren/categories/error/"/>
     
-    
-      <category term="Objc" scheme="https://yuxiang.ren/tags/Objc/"/>
     
       <category term="Xcode" scheme="https://yuxiang.ren/tags/Xcode/"/>
     
@@ -888,7 +901,7 @@
     <link href="https://yuxiang.ren/2016/12/02/use-gem-update-with-error/"/>
     <id>https://yuxiang.ren/2016/12/02/use-gem-update-with-error/</id>
     <published>2016-12-02T06:01:01.000Z</published>
-    <updated>2016-12-12T01:50:13.000Z</updated>
+    <updated>2017-04-13T08:01:14.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="gem-install-cocoapods"><a href="#gem-install-cocoapods" class="headerlink" title="gem install cocoapods"></a>gem install cocoapods</h2><p>使用<code>gem install cocoapods</code>更新报<code>You don&#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory</code>错.<br>解决方法: 使用<code>sudo gem install cocoapods</code> 更新</p>
 <a id="more"></a>
@@ -902,14 +915,12 @@
     
     </summary>
     
-      <category term="错误解决" scheme="https://yuxiang.ren/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="error" scheme="https://yuxiang.ren/categories/error/"/>
     
     
       <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
     
-      <category term="terminal" scheme="https://yuxiang.ren/tags/terminal/"/>
-    
-      <category term="gem" scheme="https://yuxiang.ren/tags/gem/"/>
+      <category term="命令" scheme="https://yuxiang.ren/tags/%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
@@ -918,7 +929,7 @@
     <link href="https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/"/>
     <id>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</id>
     <published>2016-12-02T03:28:17.000Z</published>
-    <updated>2017-03-30T05:26:27.000Z</updated>
+    <updated>2017-04-13T07:50:08.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h4 id="VPS-amp-域名"><a href="#VPS-amp-域名" class="headerlink" title="VPS&amp;域名"></a>VPS&amp;域名</h4><p>请自行购买服务器以及域名.</p>
 <h2 id="二、搭建过程"><a href="#二、搭建过程" class="headerlink" title="二、搭建过程"></a>二、搭建过程</h2><blockquote>
@@ -1018,9 +1029,7 @@
       <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="blog" scheme="https://yuxiang.ren/tags/blog/"/>
-    
-      <category term="git" scheme="https://yuxiang.ren/tags/git/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -1029,7 +1038,7 @@
     <link href="https://yuxiang.ren/2016/12/02/install-huno-theme/"/>
     <id>https://yuxiang.ren/2016/12/02/install-huno-theme/</id>
     <published>2016-12-02T01:40:39.000Z</published>
-    <updated>2016-12-06T01:33:12.000Z</updated>
+    <updated>2017-04-13T07:50:15.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Huno"><a href="#Huno" class="headerlink" title="Huno"></a>Huno</h1><p>Huno是为<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>编写的一个响应式的主题，该主题基于<a href="https://github.com/daleanthony/uno/" target="_blank" rel="external">Uno</a>。</p>
 <a id="more"></a>
@@ -1108,7 +1117,7 @@
       <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="blog" scheme="https://yuxiang.ren/tags/blog/"/>
+      <category term="教程" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   

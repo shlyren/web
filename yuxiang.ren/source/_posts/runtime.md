@@ -1,8 +1,8 @@
 ---
 title: runtime
 date: 2016-03-26 21:19:40
-categories: IOS_OC
-tags: 
+categories: OC
+tags: OC
 ---
 
 ## runtime简介
@@ -10,18 +10,18 @@ tags:
 2. 对于C语言,`函数的调用在编译的时候回决定调用哪个函数`.
 3. 对于OC的函数,属于`动态调用过程`,在编译的时候并不能决定真正调用哪个函数,只要在真正运行的时候才会根据函数的名称找到对应的函数来调用.
 4. 事实证明:
- * 在编译阶段,CO可以`调用任何函数`,即使这个函数未实现,只要声明过就不会报错.
- * 在编译阶段,C语言调用`未实现的函数就会报错`.
+* 在编译阶段,CO可以`调用任何函数`,即使这个函数未实现,只要声明过就不会报错.
+* 在编译阶段,C语言调用`未实现的函数就会报错`.
 
 <!-- more -->
 ## runtime作用
 ### 发送消息
- * 方法调用的本质,就是让对象发送消息.
- * `objc_msgSeng`:只有对象才能发送消息,因此以`objc`开头.
- * 使用`消息机制`前提,必须要导入`<objc/message.h>`文件.
- * 消息机制的简单使用
+*  方法调用的本质,就是让对象发送消息.
+*  `objc_msgSeng`:只有对象才能发送消息,因此以`objc`开头.
+*  使用`消息机制`前提,必须要导入`<objc/message.h>`文件.
+*  消息机制的简单使用
   * clang -rewrite-objc main.m 查看最终生成代码
-  
+
    ```objc
      Person *p = [[Person alloc] init];
      // 调用对象方法
@@ -38,13 +38,13 @@ tags:
      // 本质：让类对象发送消息
      objc_msgSend([Person class], @selector(eat));
    ```
-   * 消息机制原理:对象根据方法编号`SEL`去映射表查找对应的方法实现
+  * 消息机制原理:对象根据方法编号`SEL`去映射表查找对应的方法实现
 
 ### 交换方法
- * 开发使用场景:系统自带的方法功能不够,给系统自带的方法扩张一些功能,并且保持原有的功能.
- * 方式一:继承系统的类,重写方法.
- * 方式二:使用runtime,交换方法
- 
+*  开发使用场景:系统自带的方法功能不够,给系统自带的方法扩张一些功能,并且保持原有的功能.
+*  方式一:继承系统的类,重写方法.
+*  方式二:使用runtime,交换方法
+
   ```objc
   @implementation ViewController
   - (void)viewDidLoad 
@@ -57,6 +57,7 @@ tags:
      UIImage *image = [UIImage imageNamed:@"123"];
   }
   @end
+  ```
  ```
 
  ```objc
@@ -88,10 +89,10 @@ tags:
  ```
 
 ### 动态添加方法
- * 开发使用场景:如果一个类方法非常多,加载类到内存的时候也比较耗费资源,需给每个方法生成映射表,可以使用动态给某个类添加方法解决.
- * 经典面试题:有没有使用过performSelector,其实主要实现问你有没有动态添加过方法.
- * 简单使用.
- 
+*  开发使用场景:如果一个类方法非常多,加载类到内存的时候也比较耗费资源,需给每个方法生成映射表,可以使用动态给某个类添加方法解决.
+*  经典面试题:有没有使用过performSelector,其实主要实现问你有没有动态添加过方法.
+*  简单使用.
+
   ```objc
   - (void)viewDidLoad {
     [super viewDidLoad];
@@ -130,11 +131,11 @@ tags:
         return [super resolveInstanceMethod:sel];
      }
      @end
-    ```
+  ```
 
 ### 给分类添加属性
-  * 原理:给一个类声明属性,其实本质就是给这个类添加关联,并不是直接把这个值得内存空间添加到类的空间.
- 
+*   原理:给一个类声明属性,其实本质就是给这个类添加关联,并不是直接把这个值得内存空间添加到类的空间.
+
   ```objc
   - (void)viewDidLoad 
   {
@@ -144,6 +145,7 @@ tags:
         objc.name = @"jen";
         NSLog(@"%@",objc.name);
   }
+  ```
  ```
  ```objc
  @implementation NSObject (Property)
@@ -166,12 +168,12 @@ tags:
  ```
 
 ### 字典转模型
- * 设计模型:字典转模型的第一步
+*  设计模型:字典转模型的第一步
   * 模型属性,通常需要跟字典中的key一一对应
   * 问题:一个一个的生成模型属性?很慢!
   * 需求:能不能自动根据一个字典,生成对应的属性.
   * 解决:提供一个分类,专门根据字典生成对应属性的字符串.
-    
+
    ```objc
     // 自动打印属性字符串
     + (void)resolveDict:(NSDictionary *)dict
@@ -215,8 +217,8 @@ tags:
         }];
         NSLog(@"%@",strM);
     }
-    ```
-    
+   ```
+
 #### 字典转模型的方式一:KVC    
 ```objc
 + (instancetype)statusWithDict:(NSDictionary *)dict
@@ -227,20 +229,20 @@ tags:
 }
 ```
 * KVC字典转模型的弊端:必须保证模型中的属性和字典中的key一一对应
- * 如果不一致,就会调用`[<Status 0x7fa74b545d60> setValue:forUndefinedKey:]`方法,报`key`找不到
- * 分析:模型中的属性和字典的key不一一对应,系统就会调用`setValue:forUndefinedKey:`报错.
- * 解决:重写对象的`setValue:forUndefinedKey:`把系统的方法覆盖,就能继续使用KVC字典转模型了
- 
-      ```objc
-        - (void)setValue:(id)value forUndefinedKey:(NSString *)key
-        {
-        }
-      ```
-      
+*  如果不一致,就会调用`[<Status 0x7fa74b545d60> setValue:forUndefinedKey:]`方法,报`key`找不到
+*  分析:模型中的属性和字典的key不一一对应,系统就会调用`setValue:forUndefinedKey:`报错.
+*  解决:重写对象的`setValue:forUndefinedKey:`把系统的方法覆盖,就能继续使用KVC字典转模型了
+
+     ```objc
+       - (void)setValue:(id)value forUndefinedKey:(NSString *)key
+       {
+       }
+     ```
+
 #### 字典转模型方式二:runtime
-  * 思路:利用运行时 便利模型中所有属性,根据属性名,去字典中查找key,取出对应的值,给模型属性赋值.
+*   思路:利用运行时 便利模型中所有属性,根据属性名,去字典中查找key,取出对应的值,给模型属性赋值.
   * 步骤:提供一个`NSObject`分类,专门字典转模型,以后所有模型都可以通过这个分类转.
-        
+    ​    
    ```objc
    - (void)viewDidLoad 
    {
@@ -266,7 +268,7 @@ tags:
         // 测试数据
         NSLog(@"%@ %@",_statuses,[_statuses[0] user]);
     }
-    ```
+   ```
     ```objc
     @implementation NSObject (Model)
       // 思路：遍历模型中所有属性-> 使用运行时

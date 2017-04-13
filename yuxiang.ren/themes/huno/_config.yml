@@ -1,7 +1,7 @@
 # Header
 menu:
   博客: /#blog
-  归档: /archive
+  归档: /archives
   关于: /about
   主页: https://shlyren.com
 
@@ -13,7 +13,7 @@ target:
   主页: blank
 
 # Site favicon
-favicon: /images/favicon.ico
+favicon: https://source.yuxiang.ren/favicon_yuxiang.ico
 # 头像
 avatar: https://ww2.sinaimg.cn/large/006tNc79gy1fe3u2wyrx0j30c80c8jsd.jpg
 

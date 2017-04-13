@@ -1,8 +1,8 @@
 ---
 title: 使用gem更新报错的问题
 date: 2016-12-02 14:01:01
-categories: 错误解决
-tags: [terminal, gem, error]
+categories: error
+tags: [命令, error]
 ---
 
 ## gem install cocoapods

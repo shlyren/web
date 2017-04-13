@@ -1,8 +1,8 @@
 ---
 title: linux常用命令
 date: 2017-03-31 14:32:42
-categories:
-tags:
+categories: 命令
+tags: 命令
 ---
 
 
@@ -77,3 +77,37 @@ tags:
    ```
 
    ​
+
+## 三.  GIT相关
+
+1. 创建一个tag
+
+   ```shell
+   git tag <标签名> -m "commit message"
+   ```
+
+2. 提交tag
+
+   ```Shell
+   git push ---tags #将本地所有标签一次性提交到git服务器
+   git push <标签名> #将指定标签提交到git服务器
+   ```
+
+3. 删除一个tag
+
+   ```shell
+   git tag -d <标签名>
+   ```
+
+4. 删除远程标签
+
+   ```shell
+   git push origin :<标签名>
+   ```
+
+5. 查看所有标签
+
+   ```shell
+   git tag
+   ```
+

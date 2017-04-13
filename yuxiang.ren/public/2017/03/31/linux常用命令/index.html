@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>linux常用命令 · 任玉祥</title><meta name="description" content="linux常用命令 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/shlyren" target="_blank" class="nav-list-link">推特</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">linux常用命令</h1><div class="tags"></div><div class="post-info">Mar 31, 2017</div><div class="post-content"><h3 id="一-系统清理命令"><a href="#一-系统清理命令" class="headerlink" title="一. 系统清理命令"></a>一. 系统清理命令</h3><ol>
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>linux常用命令 · 任玉祥</title><meta name="description" content="linux常用命令 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">linux常用命令</h1><div class="tags"><a href="/tags/命令/" class="tag-title">#命令</a></div><div class="post-info">Mar 31, 2017</div><div class="post-content"><h3 id="一-系统清理命令"><a href="#一-系统清理命令" class="headerlink" title="一. 系统清理命令"></a>一. 系统清理命令</h3><ol>
 <li><p>clean命令删除所有的软件安装包</p>
 <ul>
 <li><p>在网络连接正常的情况下，我们执行软件安装命令，软件安装结束后，以 .deb 为后缀的软件包就不再需要了。所以要对他定期清理</p>
@@ -55,6 +55,23 @@
 <li><p>查看某一目录大小:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -sh</div></pre></td></tr></table></figure>
 <p>​</p>
+</li>
+</ol>
+<h2 id="三-GIT相关"><a href="#三-GIT相关" class="headerlink" title="三.  GIT相关"></a>三.  GIT相关</h2><ol>
+<li><p>创建一个tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag &lt;标签名&gt; -m &quot;commit message&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>提交tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git push ---tags #将本地所有标签一次性提交到git服务器</div><div class="line">git push &lt;标签名&gt; #将指定标签提交到git服务器</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个tag</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag -d &lt;标签名&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除远程标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin :&lt;标签名&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看所有标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
 </li>
 </ol>
 </div></article></div></main><footer><div class="paginator"><a href="/2017/03/30/C语言的几种排序方法/" class="prev">PREV</a><a href="/2017/04/12/命令给安卓程序打包/" class="next">NEXT</a></div><div data-thread-key="2017/03/31/linux常用命令/" data-title="linux常用命令" data-url="https://yuxiang.ren/2017/03/31/linux常用命令/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};

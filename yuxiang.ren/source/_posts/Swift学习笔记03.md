@@ -1,7 +1,7 @@
 ---
 title: Swift学习笔记03
 date: 2016-04-26 18:08:29
-categories: IOS_Swift
+categories: Swift
 tags: [Swift]
 ---
 
@@ -240,7 +240,7 @@ test({[unowned self] (parameter) -> () in
 })
 ```
 
---- 
+---
 
 ## 六、懒加载
 ### 1. 懒加载的介绍
@@ -386,7 +386,7 @@ try! readFileContent("abc")
 * 创建桥接文件
 * 配置桥接文件
     * 步骤图
-    ![](https://yuxiang.ren/images/images/配置桥接文件.png)
+      ![](https://yuxiang.ren/images/images/配置桥接文件.png)
 
 ### 2. OC调用Swift代码
 * 导入**项目名称-Swift.h**

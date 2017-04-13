@@ -2,7 +2,7 @@
 title: install VPN on your vps
 date: 2017-01-16 15:25:07
 categories: 教程
-tags: [VPN, VPS]
+tags: 教程
 
 ---
 

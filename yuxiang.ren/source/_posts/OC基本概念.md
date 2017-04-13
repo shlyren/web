@@ -1,8 +1,8 @@
 ---
 title: OC学习
 date: 2017-03-30 14:53:12
-categories: 笔记
-tags: Objc
+categories: OC
+tags: OC
 ---
 
 
