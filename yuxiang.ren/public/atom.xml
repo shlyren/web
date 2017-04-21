@@ -61,9 +61,9 @@
     <link href="https://yuxiang.ren/2017/03/31/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://yuxiang.ren/2017/03/31/linux常用命令/</id>
     <published>2017-03-31T06:32:42.000Z</published>
-    <updated>2017-04-13T07:49:15.000Z</updated>
+    <updated>2017-04-14T06:34:47.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="一-系统清理命令"><a href="#一-系统清理命令" class="headerlink" title="一. 系统清理命令"></a>一. 系统清理命令</h3><ol>
+    <content type="html"><![CDATA[<h3 id="一-系统清理"><a href="#一-系统清理" class="headerlink" title="一. 系统清理"></a>一. 系统清理</h3><ol>
 <li><p>clean命令删除所有的软件安装包</p>
 <ul>
 <li><p>在网络连接正常的情况下，我们执行软件安装命令，软件安装结束后，以 .deb 为后缀的软件包就不再需要了。所以要对他定期清理</p>
@@ -119,7 +119,6 @@
 </li>
 <li><p>查看某一目录大小:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -sh</div></pre></td></tr></table></figure>
-<p>​</p>
 </li>
 </ol>
 <h2 id="三-GIT相关"><a href="#三-GIT相关" class="headerlink" title="三.  GIT相关"></a>三.  GIT相关</h2><ol>
@@ -138,12 +137,15 @@
 <li><p>查看所有标签</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
 </li>
+<li><p><code>git warning: LF will be replaced by CRLF in</code>解决办法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config core.autocrlf false</div></pre></td></tr></table></figure>
+</li>
 </ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;一-系统清理命令&quot;&gt;&lt;a href=&quot;#一-系统清理命令&quot; class=&quot;headerlink&quot; title=&quot;一. 系统清理命令&quot;&gt;&lt;/a&gt;一. 系统清理命令&lt;/h3&gt;&lt;ol&gt;
+      &lt;h3 id=&quot;一-系统清理&quot;&gt;&lt;a href=&quot;#一-系统清理&quot; class=&quot;headerlink&quot; title=&quot;一. 系统清理&quot;&gt;&lt;/a&gt;一. 系统清理&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;clean命令删除所有的软件安装包&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;在网络连接正常的情况下，我们执行软件安装命令，软件安装结束后，以 .deb 为后缀的软件包就不再需要了。所以要对他定期清理&lt;/p&gt;
@@ -1122,36 +1124,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://yuxiang.ren/2016/12/02/hello-world/"/>
-    <id>https://yuxiang.ren/2016/12/02/hello-world/</id>
-    <published>2016-12-02T00:50:11.000Z</published>
-    <updated>2016-12-02T02:36:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<a id="more"></a>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>撩妹招数</title>
     <link href="https://yuxiang.ren/2016/06/05/%E6%92%A9%E5%A6%B9%E6%8B%9B%E6%95%B0/"/>
     <id>https://yuxiang.ren/2016/06/05/撩妹招数/</id>
@@ -1179,6 +1151,31 @@
 &lt;li&gt;爱你,还是更改你,这是一个值得深思的问题&lt;/li&gt;
 &lt;li&gt;我曾十步杀一人,却败给你的眼神&lt;/li&gt;
 &lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="杂碎" scheme="https://yuxiang.ren/categories/%E6%9D%82%E7%A2%8E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>很久以前</title>
+    <link href="https://yuxiang.ren/2016/06/05/%E5%BE%88%E4%B9%85%E4%BB%A5%E5%89%8D/"/>
+    <id>https://yuxiang.ren/2016/06/05/很久以前/</id>
+    <published>2016-06-05T08:31:47.000Z</published>
+    <updated>2016-06-05T11:27:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>很久很久以前，我想过很多次以后的情景，我想过有一天我终于放弃你时候的样子。</p><br><p>我以为我会在某个晴朗的早晨,兴国来的霎那间发现我不在喜欢你了,然后开始我的新生活。</p><br><p>然而我发现我错了。<br><br><br><a id="more"></a><br><br>其实是我开始了新生活之后，在潜移默化里，会在某一个品番的时刻里，我乍然发现，我竟然已经忘记你很久了。</p><br><p>这种乍然是哼悲哀的。</p><br><p>我总以为我依你的感情是伟大的，那它的小事也该是意见轰动的事情。<br>然而事实上它的小事是悄然无息的。</p><br><p></p><br><p>现在的某天里，我跟古又说，我好像喜欢上了一个人。</p><br><p>固有也不会提起你的名字，二十安静的听我的新恋。</p><br><p>偶尔会有人问起你——那xxx呢？还有联系么？</p><br><p>然后我才会想起你，一时间会不知道该说什么好了。</p><br><p></p>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=65528&auto=1&height=66"></iframe>
+
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很久很久以前，我想过很多次以后的情景，我想过有一天我终于放弃你时候的样子。&lt;/p&gt;&lt;br&gt;&lt;p&gt;我以为我会在某个晴朗的早晨,兴国来的霎那间发现我不在喜欢你了,然后开始我的新生活。&lt;/p&gt;&lt;br&gt;&lt;p&gt;然而我发现我错了。&lt;br&gt;&lt;br&gt;&lt;br&gt;
     
     </summary>
     

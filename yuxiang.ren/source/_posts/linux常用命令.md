@@ -5,9 +5,7 @@ categories: 命令
 tags: 命令
 ---
 
-
-
-### 一. 系统清理命令
+### 一. 系统清理
 1. clean命令删除所有的软件安装包
 
    * 在网络连接正常的情况下，我们执行软件安装命令，软件安装结束后，以 .deb 为后缀的软件包就不再需要了。所以要对他定期清理
@@ -76,7 +74,6 @@ tags: 命令
    du -sh
    ```
 
-   ​
 
 ## 三.  GIT相关
 
@@ -109,5 +106,11 @@ tags: 命令
 
    ```shell
    git tag
+   ```
+
+6. `git warning: LF will be replaced by CRLF in `解决办法
+
+   ```shell
+   git config core.autocrlf false
    ```
 
