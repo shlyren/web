@@ -34,7 +34,13 @@
 <ul>
 <li>Android 有一套自己的安全模型, 但应用程序(.apk)再安装时系统会分给他一个userid, 当该应用要去访问其他应用资源文件时, 就需要userid匹配. 默认情况下,任何应用穿件的文件 sharedpreferences,数据库,都应该试试有的(位于/data/data/<package name="">/files), 其他程序无法访问, 除非再创建的时指定了<code>Context.MODE_WORLD_READABLE</code>或者<code>Context.MODE_WORLD_WRITEABLE</code>.</package></li>
 </ul>
-</div></article></div></main><footer><div class="paginator"><a href="/2017/02/10/Android-Activity/" class="prev">上一篇</a><a href="/2017/03/24/Android-fragment/" class="next">下一篇</a></div><div data-thread-key="2017/03/24/android-基本概念/" data-title="android-基本概念" data-url="https://yuxiang.ren/2017/03/24/android-基本概念/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+<h2 id="4-四大组件"><a href="#4-四大组件" class="headerlink" title="4. 四大组件"></a>4. 四大组件</h2><ol>
+<li>Activity: 用于表现功能。</li>
+<li>Service: 后台运行服务，不提供界面呈现</li>
+<li>BroadcastReceiver: 用于接收广播。</li>
+<li>内容提供商:支持在多个应用中存储和读取数据，相当于<code>数据库</code></li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/02/10/Android-Activity/" class="prev">PREV</a><a href="/2017/03/24/Android-fragment/" class="next">NEXT</a></div><div data-thread-key="2017/03/24/android-基本概念/" data-title="android-基本概念" data-url="https://yuxiang.ren/2017/03/24/android-基本概念/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
 (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;

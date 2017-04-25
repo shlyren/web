@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在阿里云上使用hexo并且用git更新 · 任玉祥</title><meta name="description" content="在阿里云上使用hexo并且用git更新 - 任玉祥"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="https://source.yuxiang.ren/favicon_yuxiang.ico"><link rel="stylesheet" href="/css/gandalfr.css"><link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-light.css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="https://ww3.sinaimg.cn/large/006tNc79gy1fe3u2mby1ij30400403z5.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/shlyren" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://weibo.com/shlyjen" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://google.yuxiang.ren" target="_blank" class="nav-list-link">GOOGLE</a></li><li class="nav-list-item"><a href="mailto:mail@yuxiang.ren" target="_self" class="nav-list-link">邮箱</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">关于</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在阿里云上使用hexo并且用git更新</h1><div class="tags"><a href="/tags/教程-命令/" class="tag-title">#教程 命令</a></div><div class="post-info">Apr 24, 2017</div><div class="post-content"><p>本文基于<a href="https://hexo.io" target="_blank" rel="external">https://hexo.io</a> 博客框架. 基于Node.js</p>
+<ul>
+<li>本文在<a href="/2016/12/02/install-hexo-on-vps-and-update-with-git/">原文</a>基础上加以修改完善</li>
+<li>本文所使用的阿里云服务器系统为: <code>Ubuntu 16.04.2 LTS</code></li>
+<li>本地测试环境为: <code>MacOS 10.12.4</code></li>
+<li>本文为本人自己搭建博客环境时所记录的步骤, 他人按照此步骤 可能会出现我没有遇到的问题, 请自行百度/google</li>
+<li>本文非图文并茂, 全程都是命令行, 也没有什么图可以贴的</li>
+<li>为了防止命令输入错误, 可以直接<code>command+c</code></li>
+<li>大致为: 在本地电脑上使用hexo撰写文章, 部署并测试成功后, 通过git提交到服务器上.完成博客的更新<ol>
+<li>首先在服务器上部署web环境,以及git等</li>
+<li>然后在本地电脑上安装hexo, git等所需环境</li>
+<li>撰写文章并且更新</li>
+<li>其他完善: 主题, 插件,SEO等…</li>
+</ol>
+</li>
+<li>初来乍到, 勿喷……</li>
+</ul>
+<h1 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一. 准备工作"></a>一. 准备工作</h1><ol>
+<li>云服务器: 这里我使用的阿里云服务器ECS, 需要配置web环境,git等</li>
+<li>本地测试环境: 需要安装hexo, git等</li>
+<li>域名(非必须)</li>
+</ol>
+<a id="more"></a>
+<h1 id="二-配置服务器端"><a href="#二-配置服务器端" class="headerlink" title="二. 配置服务器端"></a>二. 配置服务器端</h1><ul>
+<li>说明: 为方便,<strong>下文中的<code>yuxiang.ren(域名)</code>,<code>106.14.9.43(主机ip)</code>…请自行替换</strong></li>
+</ul>
+<ol>
+<li><p>登录服务器</p>
+<ul>
+<li><code>ssh root@ip</code></li>
+</ul>
+</li>
+<li><p>安装所需服务</p>
+<ul>
+<li><p>依次执行下面命令(过程有点漫长, 耐心等待)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">apt update &amp;&amp; apt upgrade -y # 14.04 使用apt-get</div><div class="line">apt install git -y</div><div class="line">curl -sL https://deb.nodesource.com/setup | bash</div><div class="line">apt install nodejs -y</div><div class="line">apt install nginx -y</div><div class="line">cd /etc/nginx/sites-available</div><div class="line">rm -rf default</div></pre></td></tr></table></figure>
+</li>
+<li><p>访问ip<code>106.14.9.43</code>出现nginx默认页面表示nginx安装成功,后面还需要对ngin进一步配置</p>
+</li>
+</ul>
+</li>
+<li><p>安装git并且初始化git仓库</p>
+<ul>
+<li><p>依次执行一下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">cd ~</div><div class="line">mkdir repos &amp;&amp; cd repos</div><div class="line">mkdir yuxiang.ren.git &amp;&amp; cd yuxiang.ren.git #yuxiang.ren.git 为存放博客的git仓库(.git后缀) 名称并没有什么要求, 我只是为了方便才这样写的</div><div class="line">git init --bare</div><div class="line">cd hooks</div><div class="line">touch post-receive</div><div class="line">vi post-receive #此命令是编辑`post-receive`文件, 也可在本地编辑完上传到对应目录替换</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在出现的编辑页面中输入以下内容,注意<code>yuxiang.ren</code>的替换,然后保存退出。</p>
+<ul>
+<li>这是一个自动更新博客源文件的脚本, 将仓库里的源文件拷贝到对应博客的源文件目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/bash -l</span></div><div class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/yuxiang.ren.git</div><div class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/renyuxiang.ren</div><div class="line">PUBLIC_WWW=/var/www/yuxiang.ren <span class="comment">#网站的根目录 如果`wwww/` 下没有该文件夹 需要手动创建</span></div><div class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></div><div class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></div><div class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</div><div class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/* <span class="variable">$&#123;PUBLIC_WWW&#125;</span></div><div class="line"><span class="built_in">cd</span> ~</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>执行下面命令</p>
+<ul>
+<li><code>chmod +x post-receive</code></li>
+</ul>
+</li>
+<li><p>配置<code>nginx.conf</code>文件(配置nginx服务器)</p>
+<ul>
+<li><p><code>vi /etc/nginx/nginx.conf</code> (也可在本地编辑完上传到对应目录替换)</p>
+</li>
+<li><p>在<code>http</code> 里添加一下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">	 listen 80; <span class="comment"># 监听80端口(http), 如需配置https 可自行百度</span></div><div class="line">     server_name yuxiang.ren www.yuxiang.ren; <span class="comment"># URL名字, 需要去域名服务商解析, 如何解析 自己百度</span></div><div class="line">	 root /var/www/yuxiang.ren/public/; <span class="comment"># 这个是网站的根目录 要与上面`PUBLIC_WWW`一致</span></div><div class="line">	 index index.html index.htm index.txt; <span class="comment">#这个是让nginx默认读取的文件名</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保存退出</p>
+</li>
+<li><p>重启nginx : <code>service nginx restart</code></p>
+<ul>
+<li>如果重启失败 可通过<code>nginx -t</code>错误路径以方便处理错误</li>
+</ul>
+</li>
+<li><p>这时候访问<code>106.14.9.43</code> 出现的应该是nginx 404页面</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三-配置本地环境"><a href="#三-配置本地环境" class="headerlink" title="三. 配置本地环境"></a>三. 配置本地环境</h1><ul>
+<li>可能需要安装Xcode命令行工具, 我也不清楚, 因为我电脑本就安装了Xcode, 所以可以直接使用</li>
+</ul>
+<ol>
+<li><p>安装 <code>Homebrew</code></p>
+<ul>
+<li><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+</ul>
+</li>
+<li><p>安装<code>Node.js</code></p>
+<ul>
+<li><code>brew install node</code></li>
+</ul>
+</li>
+<li><p>选择博客存放目录我放在文档目录下</p>
+<ul>
+<li><code>cd ~/Documents</code></li>
+</ul>
+</li>
+<li><p>将刚刚再服务器上创建的仓库clone到文档目录下</p>
+<ul>
+<li><code>git clone root@106.14.9.43:repos/yuxiang.ren.git</code><ul>
+<li><code>106.14.9.43</code> 为主机ip地址</li>
+<li><code>repos/yuxiang.ren.git</code> 为博客的仓库路径</li>
+</ul>
+</li>
+<li>会让你输入服务器登录密码</li>
+<li>然后clone一份空的git仓库</li>
+</ul>
+</li>
+<li><p>给本地电脑安装<code>Hexo</code></p>
+<ul>
+<li><code>npm install -g hexo-cli</code></li>
+</ul>
+</li>
+<li><p>初始化Hexo</p>
+<ul>
+<li><p>进入刚刚从服务器clone下的<code>yuxiang.ren</code>文件夹</p>
+</li>
+<li><p>依次执行下面命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init #初始化 一个博客环境, 需要下载相关文件,耐心等待</div><div class="line">hexo d -fg #部署</div><div class="line">hexo s #开启本地预览服务</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  (本地的4000端口)如果看到网页表示Hexo配置成功</p>
+</li>
+</ol>
+<h1 id="四-提交到服务器"><a href="#四-提交到服务器" class="headerlink" title="四. 提交到服务器"></a>四. 提交到服务器</h1><ol>
+<li><p>git的更新命令如下</p>
+<ul>
+<li><p>进入博客目录</p>
+</li>
+<li><p>执行以下命令更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add . #把需要更新的所有文件添加到本地仓库</div><div class="line">git commit -m &quot;update message&quot; # 提交到本地仓库</div><div class="line">git push # 提交到远程仓库 这里只服务器</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果提示需要输入密码 输入服务器密码即可</p>
+</li>
+</ul>
+</li>
+<li><p>如果提交的时候提示<code>cp: target &#39;* * *&#39; is not a directory</code>意思是这不是一个目录, 所以要去创建一个目录</p>
+<ul>
+<li>上文<code>PUBLIC_WWW</code>表示网站的根目录, </li>
+<li>直接执行<code>mkdir /var/www/yuxiang.ren</code> 创建网站根目录</li>
+<li>再次提交<ul>
+<li>提示<code>Everything up-to-date</code></li>
+<li>那就随便改一下重新部署并提交呗</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="五-博客的配置-主体更换"><a href="#五-博客的配置-主体更换" class="headerlink" title="五. 博客的配置, 主体更换,"></a>五. 博客的配置, 主体更换,</h1><p> 插件: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></p>
+<p>主题: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
+<p>……</p>
+<p>自行 百度/Google</p>
+<h1 id="六-发布文章"><a href="#六-发布文章" class="headerlink" title="六. 发布文章"></a>六. 发布文章</h1><ol>
+<li><p>进入网站根目录</p>
+</li>
+<li><p><code>hexo new 文章名字</code></p>
+</li>
+<li><p>编辑<code>/source/_posts/文章名字.md</code> 文件使用的是MarkDown语法</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">title: title  #文章的标题</div><div class="line">date: yyyy-mm-dd #创建时间</div><div class="line">   categories: category #分类</div><div class="line">   tags: tag #标签</div><div class="line"><span class="code">      </span></div><div class="line">   #多标签请这样写：tags: [tag1,tag2,tag3]</div><div class="line">   #或者这样写： </div><div class="line"><span class="code">    #tags: </span></div><div class="line"><span class="code">      #- tag1</span></div><div class="line"><span class="code">      #- tag2 </span></div><div class="line"><span class="code">      #- tag3 </span></div><div class="line">   ---  </div><div class="line"><span class="code">     </span></div><div class="line">   #正文</div></pre></td></tr></table></figure>
+</li>
+<li><p>正文写完后可以再本地此时下</p>
+<ul>
+<li><code>hexo d -fg</code></li>
+<li><code>hexo s</code></li>
+<li>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> </li>
+</ul>
+</li>
+<li><p>提交到服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &quot;操作内容&quot;</div><div class="line">git push</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="七-域名绑定"><a href="#七-域名绑定" class="headerlink" title="七. 域名绑定"></a>七. 域名绑定</h1><p>自行 百度/Google</p>
+<h1 id="八-最后"><a href="#八-最后" class="headerlink" title="八. 最后"></a>八. 最后</h1><p>当然你也可以放在Github上, 请自行 百度/Google</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/04/12/命令给安卓程序打包/" class="prev">PREV</a></div><div data-thread-key="2017/04/24/use-hexo-on-aliyun-and-update-with-git/" data-title="在阿里云上使用hexo并且用git更新" data-url="https://yuxiang.ren/2017/04/24/use-hexo-on-aliyun-and-update-with-git/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"shlyren"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div id="disqus_thread"></div><script>var disqus_shortname = 'shlyren';
+var disqus_identifier = '2017/04/24/use-hexo-on-aliyun-and-update-with-git/';
+var disqus_title = '在阿里云上使用hexo并且用git更新';
+var disqus_url = 'https://yuxiang.ren/2017/04/24/use-hexo-on-aliyun-and-update-with-git/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//shlyren.disqus.com/count.js" async></script><div class="copyright"><p>Copyright © 2016 - 2017 <a href="https://yuxiang.ren">任玉祥</a>. All rights reserved.</p><p>View the source code in <a href="https://github.com/shlyren/web/tree/master/yuxiang.ren" target="_blank">GitHub</a></p><p><span> 134 </span></p><p><script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script> &nbsp <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259844339'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259844339%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p></div></footer></div><script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" crossorigin="anonymous"></script><script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js" crossorigin="anonymous"></script><script>$(document).ready(function() { $('pre').each(function(i, block) { hljs.highlightBlock(block); }); });</script></body></html>

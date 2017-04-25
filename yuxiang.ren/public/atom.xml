@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-04-13T08:08:45.000Z</updated>
+  <updated>2017-04-25T08:59:26.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -14,6 +14,222 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在阿里云上使用hexo并且用git更新</title>
+    <link href="https://yuxiang.ren/2017/04/24/use-hexo-on-aliyun-and-update-with-git/"/>
+    <id>https://yuxiang.ren/2017/04/24/use-hexo-on-aliyun-and-update-with-git/</id>
+    <published>2017-04-24T03:28:17.000Z</published>
+    <updated>2017-04-25T08:59:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文基于<a href="https://hexo.io" target="_blank" rel="external">https://hexo.io</a> 博客框架. 基于Node.js</p>
+<ul>
+<li>本文在<a href="/2016/12/02/install-hexo-on-vps-and-update-with-git/">原文</a>基础上加以修改完善</li>
+<li>本文所使用的阿里云服务器系统为: <code>Ubuntu 16.04.2 LTS</code></li>
+<li>本地测试环境为: <code>MacOS 10.12.4</code></li>
+<li>本文为本人自己搭建博客环境时所记录的步骤, 他人按照此步骤 可能会出现我没有遇到的问题, 请自行百度/google</li>
+<li>本文非图文并茂, 全程都是命令行, 也没有什么图可以贴的</li>
+<li>为了防止命令输入错误, 可以直接<code>command+c</code></li>
+<li>大致为: 在本地电脑上使用hexo撰写文章, 部署并测试成功后, 通过git提交到服务器上.完成博客的更新<ol>
+<li>首先在服务器上部署web环境,以及git等</li>
+<li>然后在本地电脑上安装hexo, git等所需环境</li>
+<li>撰写文章并且更新</li>
+<li>其他完善: 主题, 插件,SEO等…</li>
+</ol>
+</li>
+<li>初来乍到, 勿喷……</li>
+</ul>
+<h1 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一. 准备工作"></a>一. 准备工作</h1><ol>
+<li>云服务器: 这里我使用的阿里云服务器ECS, 需要配置web环境,git等</li>
+<li>本地测试环境: 需要安装hexo, git等</li>
+<li>域名(非必须)</li>
+</ol>
+<a id="more"></a>
+<h1 id="二-配置服务器端"><a href="#二-配置服务器端" class="headerlink" title="二. 配置服务器端"></a>二. 配置服务器端</h1><ul>
+<li>说明: 为方便,<strong>下文中的<code>yuxiang.ren(域名)</code>,<code>106.14.9.43(主机ip)</code>…请自行替换</strong></li>
+</ul>
+<ol>
+<li><p>登录服务器</p>
+<ul>
+<li><code>ssh root@ip</code></li>
+</ul>
+</li>
+<li><p>安装所需服务</p>
+<ul>
+<li><p>依次执行下面命令(过程有点漫长, 耐心等待)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">apt update &amp;&amp; apt upgrade -y # 14.04 使用apt-get</div><div class="line">apt install git -y</div><div class="line">curl -sL https://deb.nodesource.com/setup | bash</div><div class="line">apt install nodejs -y</div><div class="line">apt install nginx -y</div><div class="line">cd /etc/nginx/sites-available</div><div class="line">rm -rf default</div></pre></td></tr></table></figure>
+</li>
+<li><p>访问ip<code>106.14.9.43</code>出现nginx默认页面表示nginx安装成功,后面还需要对ngin进一步配置</p>
+</li>
+</ul>
+</li>
+<li><p>安装git并且初始化git仓库</p>
+<ul>
+<li><p>依次执行一下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">cd ~</div><div class="line">mkdir repos &amp;&amp; cd repos</div><div class="line">mkdir yuxiang.ren.git &amp;&amp; cd yuxiang.ren.git #yuxiang.ren.git 为存放博客的git仓库(.git后缀) 名称并没有什么要求, 我只是为了方便才这样写的</div><div class="line">git init --bare</div><div class="line">cd hooks</div><div class="line">touch post-receive</div><div class="line">vi post-receive #此命令是编辑`post-receive`文件, 也可在本地编辑完上传到对应目录替换</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在出现的编辑页面中输入以下内容,注意<code>yuxiang.ren</code>的替换,然后保存退出。</p>
+<ul>
+<li>这是一个自动更新博客源文件的脚本, 将仓库里的源文件拷贝到对应博客的源文件目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/bash -l</span></div><div class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/yuxiang.ren.git</div><div class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/renyuxiang.ren</div><div class="line">PUBLIC_WWW=/var/www/yuxiang.ren <span class="comment">#网站的根目录 如果`wwww/` 下没有该文件夹 需要手动创建</span></div><div class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></div><div class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></div><div class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</div><div class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/* <span class="variable">$&#123;PUBLIC_WWW&#125;</span></div><div class="line"><span class="built_in">cd</span> ~</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>执行下面命令</p>
+<ul>
+<li><code>chmod +x post-receive</code></li>
+</ul>
+</li>
+<li><p>配置<code>nginx.conf</code>文件(配置nginx服务器)</p>
+<ul>
+<li><p><code>vi /etc/nginx/nginx.conf</code> (也可在本地编辑完上传到对应目录替换)</p>
+</li>
+<li><p>在<code>http</code> 里添加一下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">	 listen 80; <span class="comment"># 监听80端口(http), 如需配置https 可自行百度</span></div><div class="line">     server_name yuxiang.ren www.yuxiang.ren; <span class="comment"># URL名字, 需要去域名服务商解析, 如何解析 自己百度</span></div><div class="line">	 root /var/www/yuxiang.ren/public/; <span class="comment"># 这个是网站的根目录 要与上面`PUBLIC_WWW`一致</span></div><div class="line">	 index index.html index.htm index.txt; <span class="comment">#这个是让nginx默认读取的文件名</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保存退出</p>
+</li>
+<li><p>重启nginx : <code>service nginx restart</code></p>
+<ul>
+<li>如果重启失败 可通过<code>nginx -t</code>错误路径以方便处理错误</li>
+</ul>
+</li>
+<li><p>这时候访问<code>106.14.9.43</code> 出现的应该是nginx 404页面</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="三-配置本地环境"><a href="#三-配置本地环境" class="headerlink" title="三. 配置本地环境"></a>三. 配置本地环境</h1><ul>
+<li>可能需要安装Xcode命令行工具, 我也不清楚, 因为我电脑本就安装了Xcode, 所以可以直接使用</li>
+</ul>
+<ol>
+<li><p>安装 <code>Homebrew</code></p>
+<ul>
+<li><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+</ul>
+</li>
+<li><p>安装<code>Node.js</code></p>
+<ul>
+<li><code>brew install node</code></li>
+</ul>
+</li>
+<li><p>选择博客存放目录我放在文档目录下</p>
+<ul>
+<li><code>cd ~/Documents</code></li>
+</ul>
+</li>
+<li><p>将刚刚再服务器上创建的仓库clone到文档目录下</p>
+<ul>
+<li><code>git clone root@106.14.9.43:repos/yuxiang.ren.git</code><ul>
+<li><code>106.14.9.43</code> 为主机ip地址</li>
+<li><code>repos/yuxiang.ren.git</code> 为博客的仓库路径</li>
+</ul>
+</li>
+<li>会让你输入服务器登录密码</li>
+<li>然后clone一份空的git仓库</li>
+</ul>
+</li>
+<li><p>给本地电脑安装<code>Hexo</code></p>
+<ul>
+<li><code>npm install -g hexo-cli</code></li>
+</ul>
+</li>
+<li><p>初始化Hexo</p>
+<ul>
+<li><p>进入刚刚从服务器clone下的<code>yuxiang.ren</code>文件夹</p>
+</li>
+<li><p>依次执行下面命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init #初始化 一个博客环境, 需要下载相关文件,耐心等待</div><div class="line">hexo d -fg #部署</div><div class="line">hexo s #开启本地预览服务</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  (本地的4000端口)如果看到网页表示Hexo配置成功</p>
+</li>
+</ol>
+<h1 id="四-提交到服务器"><a href="#四-提交到服务器" class="headerlink" title="四. 提交到服务器"></a>四. 提交到服务器</h1><ol>
+<li><p>git的更新命令如下</p>
+<ul>
+<li><p>进入博客目录</p>
+</li>
+<li><p>执行以下命令更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add . #把需要更新的所有文件添加到本地仓库</div><div class="line">git commit -m &quot;update message&quot; # 提交到本地仓库</div><div class="line">git push # 提交到远程仓库 这里只服务器</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果提示需要输入密码 输入服务器密码即可</p>
+</li>
+</ul>
+</li>
+<li><p>如果提交的时候提示<code>cp: target &#39;* * *&#39; is not a directory</code>意思是这不是一个目录, 所以要去创建一个目录</p>
+<ul>
+<li>上文<code>PUBLIC_WWW</code>表示网站的根目录, </li>
+<li>直接执行<code>mkdir /var/www/yuxiang.ren</code> 创建网站根目录</li>
+<li>再次提交<ul>
+<li>提示<code>Everything up-to-date</code></li>
+<li>那就随便改一下重新部署并提交呗</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="五-博客的配置-主体更换"><a href="#五-博客的配置-主体更换" class="headerlink" title="五. 博客的配置, 主体更换,"></a>五. 博客的配置, 主体更换,</h1><p> 插件: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></p>
+<p>主题: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
+<p>……</p>
+<p>自行 百度/Google</p>
+<h1 id="六-发布文章"><a href="#六-发布文章" class="headerlink" title="六. 发布文章"></a>六. 发布文章</h1><ol>
+<li><p>进入网站根目录</p>
+</li>
+<li><p><code>hexo new 文章名字</code></p>
+</li>
+<li><p>编辑<code>/source/_posts/文章名字.md</code> 文件使用的是MarkDown语法</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">title: title  #文章的标题</div><div class="line">date: yyyy-mm-dd #创建时间</div><div class="line">   categories: category #分类</div><div class="line">   tags: tag #标签</div><div class="line"><span class="code">      </span></div><div class="line">   #多标签请这样写：tags: [tag1,tag2,tag3]</div><div class="line">   #或者这样写： </div><div class="line"><span class="code">    #tags: </span></div><div class="line"><span class="code">      #- tag1</span></div><div class="line"><span class="code">      #- tag2 </span></div><div class="line"><span class="code">      #- tag3 </span></div><div class="line">   ---  </div><div class="line"><span class="code">     </span></div><div class="line">   #正文</div></pre></td></tr></table></figure>
+</li>
+<li><p>正文写完后可以再本地此时下</p>
+<ul>
+<li><code>hexo d -fg</code></li>
+<li><code>hexo s</code></li>
+<li>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> </li>
+</ul>
+</li>
+<li><p>提交到服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &quot;操作内容&quot;</div><div class="line">git push</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="七-域名绑定"><a href="#七-域名绑定" class="headerlink" title="七. 域名绑定"></a>七. 域名绑定</h1><p>自行 百度/Google</p>
+<h1 id="八-最后"><a href="#八-最后" class="headerlink" title="八. 最后"></a>八. 最后</h1><p>当然你也可以放在Github上, 请自行 百度/Google</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文基于&lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt; 博客框架. 基于Node.js&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本文在&lt;a href=&quot;/2016/12/02/install-hexo-on-vps-and-update-with-git/&quot;&gt;原文&lt;/a&gt;基础上加以修改完善&lt;/li&gt;
+&lt;li&gt;本文所使用的阿里云服务器系统为: &lt;code&gt;Ubuntu 16.04.2 LTS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;本地测试环境为: &lt;code&gt;MacOS 10.12.4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;本文为本人自己搭建博客环境时所记录的步骤, 他人按照此步骤 可能会出现我没有遇到的问题, 请自行百度/google&lt;/li&gt;
+&lt;li&gt;本文非图文并茂, 全程都是命令行, 也没有什么图可以贴的&lt;/li&gt;
+&lt;li&gt;为了防止命令输入错误, 可以直接&lt;code&gt;command+c&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;大致为: 在本地电脑上使用hexo撰写文章, 部署并测试成功后, 通过git提交到服务器上.完成博客的更新&lt;ol&gt;
+&lt;li&gt;首先在服务器上部署web环境,以及git等&lt;/li&gt;
+&lt;li&gt;然后在本地电脑上安装hexo, git等所需环境&lt;/li&gt;
+&lt;li&gt;撰写文章并且更新&lt;/li&gt;
+&lt;li&gt;其他完善: 主题, 插件,SEO等…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;初来乍到, 勿喷……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;一-准备工作&quot;&gt;&lt;a href=&quot;#一-准备工作&quot; class=&quot;headerlink&quot; title=&quot;一. 准备工作&quot;&gt;&lt;/a&gt;一. 准备工作&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;云服务器: 这里我使用的阿里云服务器ECS, 需要配置web环境,git等&lt;/li&gt;
+&lt;li&gt;本地测试环境: 需要安装hexo, git等&lt;/li&gt;
+&lt;li&gt;域名(非必须)&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程 命令" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B-%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>命令给安卓程序打包</title>
@@ -601,7 +817,7 @@
     <link href="https://yuxiang.ren/2017/03/24/android-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
     <id>https://yuxiang.ren/2017/03/24/android-基本概念/</id>
     <published>2017-03-24T01:23:22.000Z</published>
-    <updated>2017-03-30T05:26:59.000Z</updated>
+    <updated>2017-04-21T09:10:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>Android的一些基本的概念, 名词解释等…..</p>
 <h2 id="1-安卓的五种布局"><a href="#1-安卓的五种布局" class="headerlink" title="1. 安卓的五种布局"></a>1. 安卓的五种布局</h2><ol>
@@ -639,6 +855,12 @@
 <ul>
 <li>Android 有一套自己的安全模型, 但应用程序(.apk)再安装时系统会分给他一个userid, 当该应用要去访问其他应用资源文件时, 就需要userid匹配. 默认情况下,任何应用穿件的文件 sharedpreferences,数据库,都应该试试有的(位于/data/data/<package name="">/files), 其他程序无法访问, 除非再创建的时指定了<code>Context.MODE_WORLD_READABLE</code>或者<code>Context.MODE_WORLD_WRITEABLE</code>.</package></li>
 </ul>
+<h2 id="4-四大组件"><a href="#4-四大组件" class="headerlink" title="4. 四大组件"></a>4. 四大组件</h2><ol>
+<li>Activity: 用于表现功能。</li>
+<li>Service: 后台运行服务，不提供界面呈现</li>
+<li>BroadcastReceiver: 用于接收广播。</li>
+<li>内容提供商:支持在多个应用中存储和读取数据，相当于<code>数据库</code></li>
+</ol>
 ]]></content>
     
     <summary type="html">
@@ -931,7 +1153,7 @@
     <link href="https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/"/>
     <id>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</id>
     <published>2016-12-02T03:28:17.000Z</published>
-    <updated>2017-04-13T07:50:08.000Z</updated>
+    <updated>2017-04-25T07:07:41.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h4 id="VPS-amp-域名"><a href="#VPS-amp-域名" class="headerlink" title="VPS&amp;域名"></a>VPS&amp;域名</h4><p>请自行购买服务器以及域名.</p>
 <h2 id="二、搭建过程"><a href="#二、搭建过程" class="headerlink" title="二、搭建过程"></a>二、搭建过程</h2><blockquote>
@@ -963,7 +1185,7 @@
 <li><code>npm install -g hexo-cli</code></li>
 <li><code>hexo init</code></li>
 <li><code>npm install</code></li>
-<li><code>hexo d -fg</code>s</li>
+<li><code>hexo d -fg</code></li>
 <li><code>hexo serve</code> <em>简洁写法:<code>hexo s</code></em></li>
 </ul>
 <p>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 如果看到网页表示Hexo配置成功</p>
@@ -1151,31 +1373,6 @@
 &lt;li&gt;爱你,还是更改你,这是一个值得深思的问题&lt;/li&gt;
 &lt;li&gt;我曾十步杀一人,却败给你的眼神&lt;/li&gt;
 &lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="杂碎" scheme="https://yuxiang.ren/categories/%E6%9D%82%E7%A2%8E/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>很久以前</title>
-    <link href="https://yuxiang.ren/2016/06/05/%E5%BE%88%E4%B9%85%E4%BB%A5%E5%89%8D/"/>
-    <id>https://yuxiang.ren/2016/06/05/很久以前/</id>
-    <published>2016-06-05T08:31:47.000Z</published>
-    <updated>2016-06-05T11:27:08.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>很久很久以前，我想过很多次以后的情景，我想过有一天我终于放弃你时候的样子。</p><br><p>我以为我会在某个晴朗的早晨,兴国来的霎那间发现我不在喜欢你了,然后开始我的新生活。</p><br><p>然而我发现我错了。<br><br><br><a id="more"></a><br><br>其实是我开始了新生活之后，在潜移默化里，会在某一个品番的时刻里，我乍然发现，我竟然已经忘记你很久了。</p><br><p>这种乍然是哼悲哀的。</p><br><p>我总以为我依你的感情是伟大的，那它的小事也该是意见轰动的事情。<br>然而事实上它的小事是悄然无息的。</p><br><p></p><br><p>现在的某天里，我跟古又说，我好像喜欢上了一个人。</p><br><p>固有也不会提起你的名字，二十安静的听我的新恋。</p><br><p>偶尔会有人问起你——那xxx呢？还有联系么？</p><br><p>然后我才会想起你，一时间会不知道该说什么好了。</p><br><p></p>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=65528&auto=1&height=66"></iframe>
-
-
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;很久很久以前，我想过很多次以后的情景，我想过有一天我终于放弃你时候的样子。&lt;/p&gt;&lt;br&gt;&lt;p&gt;我以为我会在某个晴朗的早晨,兴国来的霎那间发现我不在喜欢你了,然后开始我的新生活。&lt;/p&gt;&lt;br&gt;&lt;p&gt;然而我发现我错了。&lt;br&gt;&lt;br&gt;&lt;br&gt;
     
     </summary>
     

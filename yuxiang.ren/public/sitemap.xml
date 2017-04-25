@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxiang.ren/2017/04/24/use-hexo-on-aliyun-and-update-with-git/</loc>
+    
+    <lastmod>2017-04-25T08:59:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</loc>
+    
+    <lastmod>2017-04-25T07:07:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxiang.ren/2017/03/24/android-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2017-04-21T09:10:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxiang.ren/2016/04/01/%E7%9D%80%E6%89%8B%E5%86%99%E4%B8%80%E4%B8%AAAPP/</loc>
     
     <lastmod>2017-04-19T03:55:38.000Z</lastmod>
@@ -114,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</loc>
-    
-    <lastmod>2017-04-13T07:50:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://yuxiang.ren/2016/03/26/const-static-extern%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2017-04-13T07:49:49.000Z</lastmod>
@@ -152,13 +166,6 @@
     <loc>https://yuxiang.ren/2017/03/30/install-shadowsocks-on-your-vps/</loc>
     
     <lastmod>2017-03-30T06:51:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxiang.ren/2017/03/24/android-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
-    
-    <lastmod>2017-03-30T05:26:59.000Z</lastmod>
     
   </url>
   
