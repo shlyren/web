@@ -3,6 +3,7 @@ title: 在vps上安装hexo并且使用git更新
 date: 2016-12-02 11:28:17
 categories: 教程
 tags: 教程
+
 ---
 
 
@@ -26,7 +27,7 @@ tags: 教程
 * `npm install -g hexo-cli`
 * `hexo init`
 * `npm install`
-* `hexo d -fg`s
+* `hexo d -fg`
 * `hexo serve` *简洁写法:`hexo s`*
 
 然后访问 http://localhost:4000 如果看到网页表示Hexo配置成功

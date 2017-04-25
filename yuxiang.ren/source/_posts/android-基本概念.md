@@ -46,3 +46,10 @@ Android的一些基本的概念, 名词解释等.....
      ```
 
 * Android 有一套自己的安全模型, 但应用程序(.apk)再安装时系统会分给他一个userid, 当该应用要去访问其他应用资源文件时, 就需要userid匹配. 默认情况下,任何应用穿件的文件 sharedpreferences,数据库,都应该试试有的(位于/data/data/<package name>/files), 其他程序无法访问, 除非再创建的时指定了`Context.MODE_WORLD_READABLE`或者`Context.MODE_WORLD_WRITEABLE`.
+
+## 4. 四大组件
+
+1. Activity: 用于表现功能。
+2. Service: 后台运行服务，不提供界面呈现
+3. BroadcastReceiver: 用于接收广播。
+4. 内容提供商:支持在多个应用中存储和读取数据，相当于`数据库`
