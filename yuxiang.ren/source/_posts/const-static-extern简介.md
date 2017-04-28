@@ -1,8 +1,8 @@
 ---
 title: 'const,static,extern简介'
 date: 2016-03-26 19:30:15
-categories: OC
-tags: OC
+categories: iOS
+tags: Objective-C
 ---
 
 ## const与宏的区别(面试题):

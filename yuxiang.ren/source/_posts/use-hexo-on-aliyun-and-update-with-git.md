@@ -2,11 +2,9 @@
 title: 在阿里云上使用hexo并且用git更新
 date: 2017-4-24 11:28:17
 categories: 教程
-tags: 教程 命令
+tags: [教程,命令]
 
 ---
-
-
 
 本文基于https://hexo.io 博客框架. 基于Node.js
 

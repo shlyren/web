@@ -1,8 +1,8 @@
 ---
 title: 短发姑娘也很美
 date: 2016-12-08 13:52:20
-categories: 情感
-tags: 情感
+categories: 杂碎
+tags: 杂碎
 ---
 
 > 其实, 短发姑娘也好看...

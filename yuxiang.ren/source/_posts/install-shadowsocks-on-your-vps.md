@@ -2,7 +2,7 @@
 title: 安装shadowsocks
 date: 2017-03-30 14:39:09
 categories: 教程
-tags: 教程
+tags: [教程 翻墙]
 ---
 
 
@@ -31,8 +31,8 @@ tags: 教程
    * 进入shadowsocks文件夹: `cd /etc/shadowsocks`
    * 创建配置文件: `touch config.json`
 2. 编辑`config.json`
- * 打开vi编辑器: `vi config.json`
- * 按照下列格式填写配置信息
+* 打开vi编辑器: `vi config.json`
+* 按照下列格式填写配置信息
  ```json
  {
  "server":"123.123.123.123", # 服务器地址
@@ -45,7 +45,7 @@ tags: 教程
  ```
 
 
- * 保存并且退出
+* 保存并且退出
 
 ## 三. 开启服务
 

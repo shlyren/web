@@ -1,7 +1,7 @@
 ---
 title: Swift学习笔记02
 date: 2016-04-24 15:34:28
-categories: Swift
+categories: iOS
 tags: [Swift]
 ---
 

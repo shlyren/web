@@ -1,8 +1,8 @@
 ---
 title: 着手写一个APP
 date: 2016-04-01 22:31:00
-categories: OC
-tags: OC
+categories: iOS
+tags: [Objective-C]
 ---
 
 

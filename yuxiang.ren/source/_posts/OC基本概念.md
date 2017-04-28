@@ -1,11 +1,9 @@
 ---
 title: OC学习
 date: 2017-03-30 14:53:12
-categories: OC
-tags: OC
+categories: iOS
+tags: Objective-C
 ---
-
-
 
 1. `+load`和`+initialize`区别
 

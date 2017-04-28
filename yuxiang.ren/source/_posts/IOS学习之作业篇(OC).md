@@ -1,8 +1,8 @@
 ---
 title: IOS学习之作业篇(一)
 date: 2016-03-26 13:45:08
-categories: OC
-tags: [OC]
+categories: iOS
+tags: [Objective-C]
 ---
 
 平时学习时的课后作业归纳,仅自己学习使用.

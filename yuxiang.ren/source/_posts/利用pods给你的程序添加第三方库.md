@@ -2,7 +2,7 @@
 title: 利用pods给你的程序添加第三方库
 date: 2016-03-21 14:31:45
 categories: 教程
-tags:
+tags: CocoaPods
 ---
 
 ## CocoaPods的安装
@@ -48,7 +48,7 @@ pod 'AFNetworking', '~> 3.0.4'
 - Source:   https://github.com/AFNetworking/AFNetworking.git
 ```
 * 编辑Podfile文件,推荐使用`vi`命令或Xcode编辑。不建议其他编辑器编辑，不然后面更新pods会有警告的。Terminal命令 :
-　　`$ vim Podfile`
+    `$ vim Podfile`
 * 将下面代码粘进去,然后保存退出 ,`#`为注释
 ```
 use_frameworks! #用于swift
@@ -60,9 +60,9 @@ pod 'AFNetworking', '~> 3.0.4'
   `pod install --verbose --no-repo-update`
 * 安装成功后项目文件夹里会出现`.xcwoekspace`的文件.以后只要写代码就打开xcworkspace这个文件写就好了。 打开之前的那个xocdeproj写的话会出现问题。
 * 新建的项目添加的话 会遇到搜索不到头文件。。需要配置点东西
-　　点击项目->Build->Settings,搜索`header`,找到`User Header Search Patchs`,添加参数**${SRCROOT}**并将后边的属性改为**recursive**。
+    点击项目->Build->Settings,搜索`header`,找到`User Header Search Patchs`,添加参数**${SRCROOT}**并将后边的属性改为**recursive**。
 * 或者通过`#import <>`导入
-　　
+
 
 ## 其他命令
 * 卸载原有的CocoaPod:
@@ -77,15 +77,15 @@ pod 'AFNetworking', '~> 3.0.4'
 2. 出现这种警告:
 
         Your Podfile has had smart quotes sanitised. To avoid issues in the future, you should not use TextEdit for editing it. If you are not using TextEdit, you should turn off smart quotes in your editor of choice.
-  * **解决方法**:不要使用文本编辑去编辑Podfile，使用Xcode编辑，或者使用终端敲命令去编辑。或者输入格式错误，没输入运行版本：`$platform:ios, ‘8.0‘`
+* **解决方法**:不要使用文本编辑去编辑Podfile，使用Xcode编辑，或者使用终端敲命令去编辑。或者输入格式错误，没输入运行版本：`$platform:ios, ‘8.0‘`
 3. 使用cocoapods导入第三方类库后头文件没有代码提示**解决方法**:
     选择Target -> Build Settings 菜单，找到`User Header Search Paths`设置项，新增一个值**${SRCROOT}**，并且选择**Recursive**
 4. `pod setup` 报**CocoaPods was not able to update the `master` repo** 错误**解决方法**
     * 先删除全局的缓存：
-     `$ sudo rm -fr ~/Library/Caches/CocoaPods/`
-     `$ sudo rm -fr ~/.cocoapods/repos/master/`
+       `$ sudo rm -fr ~/Library/Caches/CocoaPods/`
+        `$ sudo rm -fr ~/.cocoapods/repos/master/`
     * 还不行的话就把当前 Pods 目录清空：
-     `$ sudo rm -fr Pods/`
+       `$ sudo rm -fr Pods/`
     * 再执行
       `$ sudo gem install cocoapods`
     * 重新执行

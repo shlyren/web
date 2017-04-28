@@ -2,7 +2,7 @@
 title: Ubuntu更新Nginx服务
 date: 2017-03-30 15:25:03
 categories: 教程
-tags: 教程
+tags: [教程]
 ---
 
 Ubuntu 官方自带的 nginx 版本非常低。我安装的默认版本是1.4.6。如果需要更好的性能和功能，那么需要将 nginx 升级到最新版。目前最新版稳定版为 1.10.1，mainline 开发版是 1.11。

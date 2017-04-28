@@ -2,7 +2,7 @@
 title: 命令安装Mac系统
 date: 2016-03-21 18:12:35
 categories: 教程
-tags:
+tags: [命令, MacOS]
 ---
 
 1. 下载MAC Install OS X El Capitan系统并放到application中
