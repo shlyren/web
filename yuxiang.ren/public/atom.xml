@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>任玉祥</title>
-  <subtitle>An iOS developer from China.</subtitle>
+  <subtitle>iOS developer.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
@@ -298,7 +298,7 @@
     <link href="https://yuxiang.ren/2017/04/12/%E5%91%BD%E4%BB%A4%E7%BB%99%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85/"/>
     <id>https://yuxiang.ren/2017/04/12/命令给安卓程序打包/</id>
     <published>2017-04-12T03:05:07.000Z</published>
-    <updated>2017-04-13T08:08:45.000Z</updated>
+    <updated>2017-04-28T08:36:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>在命令行，进入到项目（project，一定是project，而不是Module）对应的目录。</p>
 <ol>
