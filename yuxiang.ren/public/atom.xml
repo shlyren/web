@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-04-27T08:21:52.000Z</updated>
+  <updated>2017-05-16T01:18:41.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -14,6 +14,86 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SVN常用命令</title>
+    <link href="https://yuxiang.ren/2017/05/16/SVN%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://yuxiang.ren/2017/05/16/SVN常用命令/</id>
+    <published>2017-05-16T00:56:21.000Z</published>
+    <updated>2017-05-16T01:18:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li><p>将文件checkout到本地</p>
+<p><code>svn checkout &lt;path&gt;</code>;</p>
+<p><code>svn co &lt;path&gt;</code></p>
+</li>
+<li><p>添加新的文件</p>
+<p><code>svn add &lt;file&gt;</code>: 添加名为file的文件</p>
+<p><code>svn add *.m</code>: 添加后缀为.m的所有文</p>
+</li>
+<li><p>提交到版本库</p>
+<p><code>svn commit -m &#39;message&#39;</code></p>
+<p><code>svn ci</code></p>
+</li>
+<li><p>更新到某个版本</p>
+<p><code>svn update -r m &lt;path&gt;</code></p>
+<p><code>svn update</code>:将当前目录以及子目录下的所有文件都更新到最新版本。 </p>
+<p><code>svn up</code></p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>查看文件或者目录状态<ul>
+<li><code>svn status</code>: 【?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定】</li>
+<li><code>svn st</code>: 简写</li>
+</ul>
+</li>
+<li>删除文件<ul>
+<li><code>svn delete &lt;file name&gt;</code>: 删除</li>
+<li><code>svn ci &quot;message&quot;</code>: 提交</li>
+</ul>
+</li>
+<li>查看历史<ul>
+<li><code>svn log</code></li>
+</ul>
+</li>
+<li>查看文件详情<ul>
+<li><code>svn info</code></li>
+</ul>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;将文件checkout到本地&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn checkout &amp;lt;path&amp;gt;&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn co &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加新的文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn add &amp;lt;file&amp;gt;&lt;/code&gt;: 添加名为file的文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn add *.m&lt;/code&gt;: 添加后缀为.m的所有文&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提交到版本库&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn commit -m &amp;#39;message&amp;#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn ci&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更新到某个版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn update -r m &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn update&lt;/code&gt;:将当前目录以及子目录下的所有文件都更新到最新版本。 &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svn up&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="命令" scheme="https://yuxiang.ren/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="命令" scheme="https://yuxiang.ren/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Terminal命令之wget用法</title>
@@ -1308,94 +1388,6 @@
 &lt;h2 id=&quot;二、搭建过程&quot;&gt;&lt;a href=&quot;#二、搭建过程&quot; class=&quot;headerlink&quot; title=&quot;二、搭建过程&quot;&gt;&lt;/a&gt;二、搭建过程&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;搭建分为两个部分:一部分在本机(Mac)进行，另一部分则在服务端(VPS)进行，大致需要完成的工作是在本机和服务器各安装一次Hexo和Git，并在服务器上安装Nginx服务器、配置Git Hooks以实现更新.并且全程使用终端命令完成。&lt;/p&gt;
 &lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程 Hexo" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B-Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo安装huno主题</title>
-    <link href="https://yuxiang.ren/2016/12/02/install-huno-theme/"/>
-    <id>https://yuxiang.ren/2016/12/02/install-huno-theme/</id>
-    <published>2016-12-02T01:40:39.000Z</published>
-    <updated>2017-04-28T08:38:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Huno"><a href="#Huno" class="headerlink" title="Huno"></a>Huno</h1><p>Huno是为<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>编写的一个响应式的主题，该主题基于<a href="https://github.com/daleanthony/uno/" target="_blank" rel="external">Uno</a>。</p>
-<a id="more"></a>
-<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><a href="https://yuxiang.ren">Huno’s demo</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone git://github.com/someus/huno.git themes/huno</div></pre></td></tr></table></figure>
-<p>修改Hexo的配置文件<code>_config.xml</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: huno</div></pre></td></tr></table></figure>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>在Hexo 3.1.1测试正常。</p>
-<h2 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a>配置示例</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"># Header</div><div class="line">menu:</div><div class="line">  博客: /#blog</div><div class="line">  归档: /archive</div><div class="line">  关于: /about</div><div class="line">  主页: # your home page</div><div class="line"></div><div class="line"># Site favicon</div><div class="line">favicon: /images/favicon.ico</div><div class="line"></div><div class="line"># 头像</div><div class="line">avatar: /images/avatar.jpg</div><div class="line"></div><div class="line"># apple touch icon</div><div class="line">appleTouchIcon: /images/apple-touch-icon.png</div><div class="line"></div><div class="line"># Enable Mathjax</div><div class="line">mathjax: true</div><div class="line"></div><div class="line"># Enable awesome-toc</div><div class="line">awesome_toc: true</div><div class="line"></div><div class="line"># Enable githubRepoWidget</div><div class="line">github_repo_widget: false</div></pre></td></tr></table></figure>
-<p>menu中定义<code>/#blog</code>是必须的，示例中的<code>/about</code>和<code>/archive</code>是两个页面。<code>/archive</code>会在下面的<strong>归档页面</strong>中介绍。</p>
-<p><strong>mathjax:</strong></p>
-<p>数学公式支持。其设置（layout/_scripts/mathjax.ejs）如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    MathJax.Hub.Config(&#123; </div><div class="line">        tex2jax: &#123;inlineMath: [[&apos;[latex]&apos;,&apos;[/latex]&apos;], [&apos;\\(&apos;,&apos;\\)&apos;]]&#125; </div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>官网：<a href="https://www.mathjax.org/" target="_blank" rel="external">mathjax</a></p>
-<p><strong>awesome_toc:</strong></p>
-<p>为文章生成目录。</p>
-<p>官网：<a href="https://github.com/someus/awesome-toc" target="_blank" rel="external">awesome-toc</a></p>
-<p><strong>github_repo_widget:</strong></p>
-<p>可视化显示github中的项目。</p>
-<p>官网：<a href="https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget" target="_blank" rel="external">GitHub-jQuery-Repo-Widget</a></p>
-<h2 id="侧边栏图片"><a href="#侧边栏图片" class="headerlink" title="侧边栏图片"></a>侧边栏图片</h2><p>侧边栏图片URL定义在<code>source/css/uno.css</code>中下面的这段代码中：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.panel-cover</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">position</span>: fixed;</div><div class="line">  <span class="attribute">z-index</span>: <span class="number">900</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">max-width</span>: none;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(../images/background-cover.jpg) top left no-repeat <span class="number">#666666</span>;</div><div class="line">  <span class="attribute">background-size</span>: cover; &#125;</div></pre></td></tr></table></figure>
-<p>可以看出图片路径是<code>source/images/background-cover.jpg</code>。可以根据需要替换成不同的图片，或者修改图片URL。例如修改成CDN中的某个图片（<a href="https://github.com/someus/huno/pull/28" target="_blank" rel="external">#28</a>）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: url(&quot;http://ww4.sinaimg.cn/mw690/6a80ef0fgw1fac749wvfij21hc0xch6b.jpg&quot;) top left no-repeat #666666;</div></pre></td></tr></table></figure>
-<h2 id="归档页面"><a href="#归档页面" class="headerlink" title="归档页面"></a>归档页面</h2><p>归档页面会显示分类、标签云以及基于日期的归档。</p>
-<p>在主题的配置文件<code>_config.yml</code>中：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header</span></div><div class="line"><span class="attr">menu:</span></div><div class="line">  <span class="string">首页:</span> <span class="string">/#blog</span></div><div class="line">  <span class="string">归档:</span> <span class="string">/archive</span></div><div class="line">  <span class="string">关于:</span> <span class="string">/about</span></div></pre></td></tr></table></figure>
-<p>创建新的page：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo new page archive</div><div class="line">$ cd source/archive</div><div class="line">$ vim index.md</div></pre></td></tr></table></figure>
-<p>内容修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: 归档</div><div class="line">layout: page-archive</div><div class="line">---</div></pre></td></tr></table></figure>
-<blockquote>
-<p>!! hexo 默认有一个<code>/archives</code>，如果您认为归档页面的url（<code>/archive</code>）和这个冲突，可以选更加合适的名称:blush:。</p>
-</blockquote>
-<h2 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h2><p>支持Disqus和多说，在Hexo配置文件<code>_config.yml</code>中设置名称即可，例如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Disqus</span></div><div class="line"><span class="attr">disqus_shortname:</span> <span class="string">letian</span></div><div class="line"></div><div class="line"><span class="comment"># Duoshuo</span></div><div class="line"><span class="attr">duoshuo_shortname:</span> <span class="string">letian</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>!!! 如果两个都设置，则两个评论工具都会显示。</p>
-</blockquote>
-<h2 id="Social-Icon"><a href="#Social-Icon" class="headerlink" title="Social Icon"></a>Social Icon</h2><p>默认提供了Github的图标，Github用户名请在Hexo的配置文件<code>_config.yml</code>中配置，例如：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Social</span></div><div class="line"><span class="attr">social:</span></div><div class="line"><span class="attr">  github:</span> <span class="string">someus</span></div></pre></td></tr></table></figure>
-<p>可以根据需要在<code>layout/_partials/social.ejs</code>中添加更多的图标。</p>
-<h2 id="China-Social-Icon"><a href="#China-Social-Icon" class="headerlink" title="China Social Icon"></a>China Social Icon</h2><blockquote>
-<p>这套字体来自 <a href="http://www.zcool.com.cn/gfx/ZMzM1MjEy.html" target="_blank" rel="external">设计素材：国内常用社交图标的web字体</a>， 版权归原作者所有。在huno中CSS文件做了些修改。</p>
-</blockquote>
-<p>这套字体和上面<code>Social Icon</code>的设计得并不一样，如果混用，排版效果会略差。例如，在<code>layout/_partials/social.ejs</code>加上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;li class=&quot;navigation__item&quot;&gt;</div><div class="line">  &lt;a href=&quot;&quot; title=&quot;&quot;&gt;</div><div class="line">    &lt;i class=&apos;icon cs-icon-douban&apos;&gt;&lt;/i&gt;</div><div class="line">    &lt;span class=&quot;label&quot;&gt;Douban&lt;/span&gt;</div><div class="line">  &lt;/a&gt;</div><div class="line">&lt;/li&gt;</div><div class="line"></div><div class="line">&lt;li class=&quot;navigation__item&quot;&gt;</div><div class="line">  &lt;a href=&quot;&quot; title=&quot;&quot;&gt;</div><div class="line">    &lt;i class=&apos;icon cs-icon-weibo&apos;&gt;&lt;/i&gt;</div><div class="line">    &lt;span class=&quot;label&quot;&gt;Weibo&lt;/span&gt;</div><div class="line">  &lt;/a&gt;</div><div class="line">&lt;/li&gt;</div></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><img src="./cs-icon.png" alt=""></p>
-<p>字体文件位于<code>source/fonts/china-social/</code>中，对应的css文件是<code>source/css/china-social-icon.css</code>。</p>
-<h2 id="网站统计"><a href="#网站统计" class="headerlink" title="网站统计"></a>网站统计</h2><p>将网站统计（如Google analysis、CNZZ、百度统计等）代码放入<code>layout/_scripts/site-analytics.ejs</code>即可。</p>
-<h2 id="如何将Huno生成的静态网站放在某网站子目录"><a href="#如何将Huno生成的静态网站放在某网站子目录" class="headerlink" title="如何将Huno生成的静态网站放在某网站子目录"></a>如何将Huno生成的静态网站放在某网站子目录</h2><p>例如要将其放入<code>http://hi.letiantian.me/huno/</code>下，则需要：</p>
-<p><strong>修改Hexo配置文件<code>_config.yml</code>:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="attr">url:</span> <span class="attr">http://hi.letiantian.me/huno</span></div><div class="line"><span class="attr">root:</span> <span class="string">/huno/</span></div></pre></td></tr></table></figure>
-<p><strong>修改主题的配置文件<code>_config.yml</code>:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header</span></div><div class="line"><span class="attr">menu:</span></div><div class="line">  <span class="string">首页:</span> <span class="string">/huno/#blog</span></div><div class="line">  <span class="string">关于:</span> <span class="string">/huno/about</span></div><div class="line">  <span class="string">归档:</span> <span class="string">/huno/archive</span></div><div class="line"></div><div class="line"><span class="comment"># Site favicon</span></div><div class="line"><span class="attr">favicon:</span> <span class="string">/huno/favicon.png</span></div></pre></td></tr></table></figure>
-<p><strong>修改<code>huno/source/js/main.js</code>:</strong></p>
-<p>将</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.location.pathname != <span class="string">"/"</span>) &#123;</div><div class="line">  $(<span class="string">'.panel-cover'</span>).addClass(<span class="string">'panel-cover--collapsed'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.location.pathname != <span class="string">"/huno/"</span>) &#123;</div><div class="line">  $(<span class="string">'.panel-cover'</span>).addClass(<span class="string">'panel-cover--collapsed'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>修改<code>huno/layout/_partials/side-panel.ejs</code>:</strong></p>
-<p>将</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;% for (var i in theme.menu)&#123; %&gt;</div><div class="line">  &lt;%</div><div class="line">    if (theme.menu[i]+&apos;&apos; == &apos;/#blog&apos;) &#123;</div><div class="line">      nav_btn_class = &apos;blog-button&apos;;</div><div class="line">    &#125; else &#123;</div><div class="line">      nav_btn_class = &apos;&apos;;</div><div class="line">    &#125;</div><div class="line">  %&gt;</div></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;% for (var i in theme.menu)&#123; %&gt;</div><div class="line">  &lt;%</div><div class="line">    if (theme.menu[i]+&apos;&apos; == &apos;/huno/#blog&apos;) &#123;</div><div class="line">      nav_btn_class = &apos;blog-button&apos;;</div><div class="line">    &#125; else &#123;</div><div class="line">      nav_btn_class = &apos;&apos;;</div><div class="line">    &#125;</div><div class="line">  %&gt;</div></pre></td></tr></table></figure>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>如果在中国大陆使用该主题后，访问速度变慢，可以考虑注释掉<code>source/css/uno.css</code>的第一行。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Huno&quot;&gt;&lt;a href=&quot;#Huno&quot; class=&quot;headerlink&quot; title=&quot;Huno&quot;&gt;&lt;/a&gt;Huno&lt;/h1&gt;&lt;p&gt;Huno是为&lt;a href=&quot;http://hexo.io/&quot;&gt;Hexo&lt;/a&gt;编写的一个响应式的主题，该主题基于&lt;a href=&quot;https://github.com/daleanthony/uno/&quot;&gt;Uno&lt;/a&gt;。&lt;/p&gt;
     
     </summary>
     
