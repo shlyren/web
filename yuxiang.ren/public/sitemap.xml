@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yuxiang.ren/about/index.html</loc>
+    
+    <lastmod>2017-05-25T03:58:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yuxiang.ren/2017/05/22/javaScript%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2017-05-22T02:37:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yuxiang.ren/2017/05/16/SVN%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2017-05-16T01:18:41.000Z</lastmod>
@@ -180,13 +194,6 @@
     <loc>https://yuxiang.ren/2017/01/28/2017/</loc>
     
     <lastmod>2017-04-28T08:33:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yuxiang.ren/about/index.html</loc>
-    
-    <lastmod>2017-04-28T08:28:47.000Z</lastmod>
     
   </url>
   

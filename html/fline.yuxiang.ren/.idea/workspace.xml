@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf1ba2f8-f981-4630-8d85-cd55fb267bd7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/themes/maupassant" afterPath="$PROJECT_DIR$/../../yuxiang.ren/themes/maupassant" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../README.md" afterPath="$PROJECT_DIR$/../../README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/_config.yml" afterPath="$PROJECT_DIR$/../../yuxiang.ren/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/db.json" afterPath="$PROJECT_DIR$/../../yuxiang.ren/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/18/多线程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/18/多线程/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/利用pods给你的程序添加第三方库/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/利用pods给你的程序添加第三方库/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/命令安装Mac系统/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/命令安装Mac系统/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/IOS学习之作业篇(OC)/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/IOS学习之作业篇(OC)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/const-static-extern简介/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/const-static-extern简介/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/runtime/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/runtime/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/01/着手写一个APP/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/01/着手写一个APP/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/23/Swift学习笔记01/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/23/Swift学习笔记01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/24/Swift学习笔记02/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/24/Swift学习笔记02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/26/Swift学习笔记03/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/26/Swift学习笔记03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/05/23/面试题-01/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/05/23/面试题-01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/03/https使用网易音乐外链播放器无法播放/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/03/https使用网易音乐外链播放器无法播放/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/很久以前/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/很久以前/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/撩妹招数/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/撩妹招数/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-hexo-on-vps-and-update-with-git/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-hexo-on-vps-and-update-with-git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-huno-theme/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-huno-theme/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/use-gem-update-with-error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/use-gem-update-with-error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/08/short-haired-girl-is-also-good/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/08/short-haired-girl-is-also-good/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/16/install-VPN-on-your-vps/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/16/install-VPN-on-your-vps/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/28/2017/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/28/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/09/learn-Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/09/learn-Android/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/10/Android-Activity/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/10/Android-Activity/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/Android-fragment/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/Android-fragment/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/android-基本概念/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/android-基本概念/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/C语言的几种排序方法/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/C语言的几种排序方法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/OC基本概念/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/OC基本概念/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/Ubuntu更新Nginx服务/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/Ubuntu更新Nginx服务/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/install-shadowsocks-on-your-vps/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/install-shadowsocks-on-your-vps/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/在Mac上配置Rect-Native开发环境/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/在Mac上配置Rect-Native开发环境/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/31/linux常用命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/31/linux常用命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/12/命令给安卓程序打包/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/12/命令给安卓程序打包/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/24/use-hexo-on-aliyun-and-update-with-git/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/24/use-hexo-on-aliyun-and-update-with-git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/27/Terminal命令之wget用法/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/27/Terminal命令之wget用法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/05/16/SVN常用命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/05/16/SVN常用命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/about/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/archive/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/archive/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/archives/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/Android/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/C语言/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/C语言/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/IOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/IOS/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/iOS/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/iOS/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/杂碎/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/杂碎/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/3/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/4/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/5/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Android/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/CocoaPods/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/CocoaPods/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/C语言/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/C语言/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/MacOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/MacOS/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Objective-C/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Objective-C/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Swift/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Swift/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Xcode/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Xcode/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/情感/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/情感/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-Hexo/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-Hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-MacOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-MacOS/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-翻墙/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-翻墙/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/杂碎/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/杂碎/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/themes/apollo/layout/partial/copyright.jade" afterPath="$PROJECT_DIR$/../../yuxiang.ren/themes/apollo/layout/partial/copyright.jade" />
+    </list>
+    <ignored path="Fline88.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Fline88" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="4.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/industrycase/4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>id=&quot;content&quot;</find>
+      <find>content</find>
+      <find>style=&quot;font-family: 楷体 ;font-weight:bold; font-size:28px&quot;</find>
+      <find>style=&quot;font-family: 楷体 ;font-weight:bold; font-size:28p</find>
+      <find>http://</find>
+      <find>http:</find>
+      <find>nav-content</find>
+      <find>p</find>
+      <find>suojin</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/industrycase2.html" />
+        <option value="$PROJECT_DIR$/industrycase3.html" />
+        <option value="$PROJECT_DIR$/industrycase4.html" />
+        <option value="$PROJECT_DIR$/industrycase5.html" />
+        <option value="$PROJECT_DIR$/solution1.html" />
+        <option value="$PROJECT_DIR$/solution2.html" />
+        <option value="$PROJECT_DIR$/solution3.html" />
+        <option value="$PROJECT_DIR$/solution4.html" />
+        <option value="$PROJECT_DIR$/solution5.html" />
+        <option value="$PROJECT_DIR$/solution6.html" />
+        <option value="$PROJECT_DIR$/product.html" />
+        <option value="$PROJECT_DIR$/industrycase.html" />
+        <option value="$PROJECT_DIR$/solution.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/bootstrap/js/bootstrap.js" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/solution/1.html" />
+        <option value="$PROJECT_DIR$/solution/2.html" />
+        <option value="$PROJECT_DIR$/solution/3.html" />
+        <option value="$PROJECT_DIR$/solution/4.html" />
+        <option value="$PROJECT_DIR$/solution/5.html" />
+        <option value="$PROJECT_DIR$/solution/6.html" />
+        <option value="$PROJECT_DIR$/solution/index.html" />
+        <option value="$PROJECT_DIR$/artificialIntelligenceall.html" />
+        <option value="$PROJECT_DIR$/customers.html" />
+        <option value="$PROJECT_DIR$/economic.html" />
+        <option value="$PROJECT_DIR$/header.html" />
+        <option value="$PROJECT_DIR$/qyjc.html" />
+        <option value="$PROJECT_DIR$/tzpt.html" />
+        <option value="$PROJECT_DIR$/zhihuijt.html" />
+        <option value="$PROJECT_DIR$/industrycase/1.html" />
+        <option value="$PROJECT_DIR$/industrycase/2.html" />
+        <option value="$PROJECT_DIR$/industrycase/3.html" />
+        <option value="$PROJECT_DIR$/industrycase/4.html" />
+        <option value="$PROJECT_DIR$/industrycase/5.html" />
+        <option value="$PROJECT_DIR$/industrycase/index.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/1.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/2.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/3.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/4.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/5.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/6.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/7.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/8.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/9.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/10.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/11.html" />
+        <option value="$PROJECT_DIR$/js/custom.js" />
+        <option value="$PROJECT_DIR$/gsbdproduct/index.html" />
+        <option value="$PROJECT_DIR$/about.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="80" />
+    <option name="y" value="153" />
+    <option name="width" value="1250" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="industrycase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fline.yuxiang.ren" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/industrycase" />
+      <recent name="$PROJECT_DIR$/solution" />
+      <recent name="$PROJECT_DIR$/gsbdproduct" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/fline.yuxiang.ren/index.html">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf1ba2f8-f981-4630-8d85-cd55fb267bd7" name="Default" comment="" />
+      <created>1494819124452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1494819124452</updated>
+      <workItem from="1494819127178" duration="7010000" />
+      <workItem from="1494834340908" duration="4209000" />
+      <workItem from="1494892487476" duration="1167000" />
+      <workItem from="1494894377433" duration="65000" />
+      <workItem from="1494894550430" duration="4469000" />
+      <workItem from="1494900684596" duration="17959000" />
+      <workItem from="1494924997444" duration="388000" />
+      <workItem from="1494925796540" duration="432000" />
+      <workItem from="1494981111964" duration="8682000" />
+      <workItem from="1494989899716" duration="5208000" />
+      <workItem from="1494997447528" duration="11979000" />
+      <workItem from="1495010240212" duration="383000" />
+      <workItem from="1495011507487" duration="1534000" />
+      <workItem from="1495071710453" duration="5763000" />
+      <workItem from="1495085711618" duration="72000" />
+      <workItem from="1495085813198" duration="7398000" />
+      <workItem from="1495156226118" duration="329000" />
+      <workItem from="1495157712812" duration="2643000" />
+      <workItem from="1495160496540" duration="3418000" />
+      <workItem from="1495509088461" duration="3073000" />
+      <workItem from="1495527478491" duration="575000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="86756000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="80" y="153" width="1250" height="777" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17087063" sideWeight="0.4948905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5033058" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.4966942" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32629728" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39854014" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15089285" sideWeight="0.5051095" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add fline.yuxiang.ren" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fline.yuxiang.ren" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/productyudao.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/productjx.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/gsbdproduct072.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.11.3.min.js" />
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3463">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="707" column="22" lean-forward="false" selection-start-line="707" selection-start-column="22" selection-end-line="707" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/fline.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/jquery-1.11.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/map2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23172">
+          <caret line="370" column="38" lean-forward="true" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="93451" lean-forward="true" selection-start-line="6" selection-start-column="93451" selection-end-line="6" selection-end-column="93451" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="136" column="5" lean-forward="false" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artificialIntelligenceall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/economic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1131">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qyjc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tzpt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihuijt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/html5shiv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/jquery-1.11.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="8226" column="4" lean-forward="false" selection-start-line="8226" selection-start-column="4" selection-end-line="8226" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom.js" />
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="183" column="29" lean-forward="false" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1495527632000" expanded="true" signature="6079:6219" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="68" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="243" column="38" lean-forward="false" selection-start-line="243" selection-start-column="38" selection-end-line="243" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="57" column="70" lean-forward="false" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

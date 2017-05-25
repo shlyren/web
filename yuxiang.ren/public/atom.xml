@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-05-16T01:18:41.000Z</updated>
+  <updated>2017-05-22T02:37:01.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -14,6 +14,74 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javaScript基础</title>
+    <link href="https://yuxiang.ren/2017/05/22/javaScript%E5%9F%BA%E7%A1%80/"/>
+    <id>https://yuxiang.ren/2017/05/22/javaScript基础/</id>
+    <published>2017-05-22T01:00:05.000Z</published>
+    <updated>2017-05-22T02:37:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、函数"><a href="#一、函数" class="headerlink" title="一、函数"></a>一、函数</h1><h2 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1. 函数的定义"></a>1. 函数的定义</h2><ol>
+<li><p>使用<code>function</code>定义</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"hello world"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>匿名函数的方式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义函数</span></div><div class="line"><span class="keyword">var</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">"hello wordl"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 执行</span></div><div class="line">fun();</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>new Function</code>(不常用)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fun = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"msg"</span>, <span class="string">"alert(msg)"</span>);</div><div class="line">fun(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数调用</p>
+<ul>
+<li>调用函数的时候是通过函数名调用的,</li>
+<li>定义函数的时候不能聪明.</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+<h2 id="2-函数劫持"><a href="#2-函数劫持" class="headerlink" title="2. 函数劫持"></a>2. 函数劫持</h2><p>改变<code>javascript</code>的函数预定义好的功能</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.alert = <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>) </span>&#123;</div><div class="line">  	<span class="built_in">document</span>.write(msg)</div><div class="line">&#125;</div><div class="line">alert(<span class="string">"hello world"</span>);</div></pre></td></tr></table></figure>
+<h2 id="3-全局函数"><a href="#3-全局函数" class="headerlink" title="3. 全局函数"></a>3. 全局函数</h2><ol>
+<li><code>isNaN</code>: 是不是一个数字, 返回true不是数字</li>
+<li><code>parseInt</code>, <code>parsetFloat</code></li>
+<li><code>eval</code>: <ul>
+<li>主要执行字符串,奖结果转换为数字</li>
+<li>将<code>json</code>格式的字符串转换为<code>json</code></li>
+</ul>
+</li>
+</ol>
+<p># </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、函数&quot;&gt;&lt;a href=&quot;#一、函数&quot; class=&quot;headerlink&quot; title=&quot;一、函数&quot;&gt;&lt;/a&gt;一、函数&lt;/h1&gt;&lt;h2 id=&quot;1-函数的定义&quot;&gt;&lt;a href=&quot;#1-函数的定义&quot; class=&quot;headerlink&quot; title=&quot;1. 函数的定义&quot;&gt;&lt;/a&gt;1. 函数的定义&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用&lt;code&gt;function&lt;/code&gt;定义&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;fun&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  alert(&lt;span class=&quot;string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;匿名函数的方式&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 定义函数&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; fun = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  alert(&lt;span class=&quot;string&quot;&gt;&quot;hello wordl&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 执行&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;fun();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;new Function&lt;/code&gt;(不常用)&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; fun = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Function&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;msg&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;alert(msg)&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;fun(&lt;span class=&quot;string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函数调用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用函数的时候是通过函数名调用的,&lt;/li&gt;
+&lt;li&gt;定义函数的时候不能聪明.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="HTMl" scheme="https://yuxiang.ren/categories/HTMl/"/>
+    
+    
+      <category term="javaScript html" scheme="https://yuxiang.ren/tags/javaScript-html/"/>
+    
+  </entry>
   
   <entry>
     <title>SVN常用命令</title>
@@ -1286,115 +1354,6 @@
       <category term="命令" scheme="https://yuxiang.ren/tags/%E5%91%BD%E4%BB%A4/"/>
     
       <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在vps上安装hexo并且使用git更新</title>
-    <link href="https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/"/>
-    <id>https://yuxiang.ren/2016/12/02/install-hexo-on-vps-and-update-with-git/</id>
-    <published>2016-12-02T03:28:17.000Z</published>
-    <updated>2017-04-28T08:38:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h4 id="VPS-amp-域名"><a href="#VPS-amp-域名" class="headerlink" title="VPS&amp;域名"></a>VPS&amp;域名</h4><p>请自行购买服务器以及域名.</p>
-<h2 id="二、搭建过程"><a href="#二、搭建过程" class="headerlink" title="二、搭建过程"></a>二、搭建过程</h2><blockquote>
-<p>搭建分为两个部分:一部分在本机(Mac)进行，另一部分则在服务端(VPS)进行，大致需要完成的工作是在本机和服务器各安装一次Hexo和Git，并在服务器上安装Nginx服务器、配置Git Hooks以实现更新.并且全程使用终端命令完成。</p>
-</blockquote>
-<a id="more"></a>
-<h4 id="本地电脑配置"><a href="#本地电脑配置" class="headerlink" title="本地电脑配置"></a>本地电脑配置</h4><ol>
-<li>安装Homebrew</li>
-</ol>
-<ul>
-<li><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
-</ul>
-<ol>
-<li>安装Node.js</li>
-</ol>
-<ul>
-<li><code>brew install node</code></li>
-</ul>
-<ol>
-<li>创建网站目录</li>
-</ol>
-<ul>
-<li>在任意位置创建一个文件夹，作为网站目录，并通过 cd 命令进入文件夹。</li>
-</ul>
-<ol>
-<li>本地电脑安装hexo</li>
-</ol>
-<ul>
-<li><code>npm install -g hexo-cli</code></li>
-<li><code>hexo init</code></li>
-<li><code>npm install</code></li>
-<li><code>hexo d -fg</code></li>
-<li><code>hexo serve</code> <em>简洁写法:<code>hexo s</code></em></li>
-</ul>
-<p>然后访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 如果看到网页表示Hexo配置成功</p>
-<h4 id="远程服务器配置-VPS"><a href="#远程服务器配置-VPS" class="headerlink" title="远程服务器配置(VPS)"></a>远程服务器配置(VPS)</h4><p><strong>下文中的<code>yuxiang.ren(这是我的域名)</code>,<code>45.32.249.14(这是我的主机ip)</code>…请自行替换</strong></p>
-<ol>
-<li>此处为Debian/Ubuntu在root用户下的操作:</li>
-</ol>
-<ul>
-<li>执行<code>ssh root@你的vps地址</code>进入主机</li>
-<li>依次执行以下命令 (安装hexo服务)<br>  ​            <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$apt</span>-get update &amp;&amp; apt-get upgrade -y</div><div class="line"><span class="variable">$apt</span>-get install git-core -y</div><div class="line"><span class="variable">$curl</span> <span class="_">-s</span>L https://deb.nodesource.com/setup | bash</div><div class="line"><span class="variable">$apt</span>-get install nodejs -y</div><div class="line"><span class="variable">$apt</span>-get install nginx -y</div><div class="line"><span class="variable">$cd</span> /etc/nginx/sites-available</div><div class="line"><span class="variable">$rm</span> -rf default</div><div class="line"><span class="variable">$touch</span> yuxiang.ren <span class="comment">#根据自己情况替换</span></div><div class="line"><span class="variable">$vi</span> yuxiang.ren <span class="comment">#根据自己情况替换</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li><p>上面的最后一条命令输入完成后会进入编辑页面,将下面代码复制到里面(通过按i进入编辑模式)。(host监听)</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    listen <span class="number">45.32</span>.<span class="number">249.14</span><span class="symbol">:</span><span class="number">80</span>; <span class="comment">#监听80端口</span></div><div class="line">    server_name yuxiang.ren; <span class="comment"># 域名</span></div><div class="line">    access_log  /var/log/nginx/yuxiang_access.log;</div><div class="line">    error_log   /var/log/nginx/yuxiang_error.log;</div><div class="line">    location ~* ^.+\.(ico<span class="params">|gif|</span>jpg<span class="params">|jpeg|</span>png)$ &#123;</div><div class="line">            root /var/www/yuxiang.ren/public;</div><div class="line">            access_log   off;</div><div class="line">            expires      <span class="number">1</span>d;</div><div class="line">        &#125;</div><div class="line">    location ~* ^.+\.(css<span class="params">|js|</span>txt<span class="params">|xml|</span>swf<span class="params">|wav)$ &#123;</span></div><div class="line">        root /var/www/yuxiang.ren/public;</div><div class="line">        access_log   off;</div><div class="line">        expires      10m;</div><div class="line">    &#125;</div><div class="line">    location / &#123;</div><div class="line">        root /var/www/yuxiang.ren/public;</div><div class="line">        <span class="keyword">if</span> (-f $request_filename) &#123;</div><div class="line">            rewrite ^/(.*)$  /$1 <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><em>也可再本地编辑好后上传到服务器</em></p>
-</li>
-<li><p>确认无误后按下esc键,之后再按下:wq!退出. 然后执行下面命令, 注意<code>yuxiang.ren</code>的替换。(配置git仓库)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ln <span class="_">-s</span> /etc/nginx/sites-available/yuxiang.ren /etc/nginx/sites-enabled/`</div><div class="line"><span class="built_in">cd</span> ~</div><div class="line">mkdir repos &amp;&amp; <span class="built_in">cd</span> repos</div><div class="line">mkdir yuxiang.ren.git &amp;&amp; <span class="built_in">cd</span> yuxiang.ren.git</div><div class="line">git init --bare</div><div class="line"><span class="built_in">cd</span> hooks</div><div class="line">touch post-receive</div><div class="line">vi post-receive`</div></pre></td></tr></table></figure>
-</li>
-<li><p>在出现的编辑页面中输入以下内容,注意<code>yuxiang.ren</code>的替换,然后保存退出。(hexo 部署)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/bash -l</span></div><div class="line">GIT_REPO=<span class="variable">$HOME</span>/repos/yuxiang.ren.git</div><div class="line">TMP_GIT_CLONE=<span class="variable">$HOME</span>/tmp/git/renyuxiang.ren</div><div class="line">PUBLIC_WWW=/var/www/yuxiang.ren</div><div class="line">rm -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span></div><div class="line">git <span class="built_in">clone</span> <span class="variable">$GIT_REPO</span> <span class="variable">$TMP_GIT_CLONE</span></div><div class="line">rm -rf <span class="variable">$&#123;PUBLIC_WWW&#125;</span>/*</div><div class="line">cp -rf <span class="variable">$&#123;TMP_GIT_CLONE&#125;</span>/* <span class="variable">$&#123;PUBLIC_WWW&#125;</span></div><div class="line"><span class="built_in">cd</span> ~</div><div class="line"><span class="comment">#cd $&#123;PUBLIC_WWW&#125;</span></div><div class="line"><span class="comment">#hexo d -fg</span></div><div class="line"><span class="built_in">cd</span> ~</div><div class="line"><span class="built_in">exit</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>依次执行下面命令</p>
-</li>
-</ol>
-<ul>
-<li><code>chmod +x post-receive</code></li>
-<li><code>cd ~</code></li>
-<li><code>service nginx restart</code></li>
-</ul>
-<h4 id="回到本地电脑"><a href="#回到本地电脑" class="headerlink" title="回到本地电脑"></a>回到本地电脑</h4><ol>
-<li>首先进入网站根目录。</li>
-<li>执行以下命令, 注意替换</li>
-</ol>
-<ul>
-<li><code>git clone root@45.32.249.14:repos/yuxiang.ren.git</code>; 把之前再服务器创建的仓库clone到本地</li>
-<li><code>git add .</code></li>
-<li><code>git commit -m &quot;commit message&quot;</code></li>
-<li><code>push</code></li>
-</ul>
-<h2 id="三、Blog更新"><a href="#三、Blog更新" class="headerlink" title="三、Blog更新"></a>三、Blog更新</h2><h4 id="1-创建-m文件"><a href="#1-创建-m文件" class="headerlink" title="1. 创建.m文件"></a>1. 创建<code>.m</code>文件</h4><p>有两种方法</p>
-<ol>
-<li>直接创建</li>
-<li>通过命令(推荐)</li>
-</ol>
-<ul>
-<li>进入网站目录</li>
-<li><code>hexo new 文章名字</code></li>
-<li>用MarkDown编辑器编辑创建的文件(<code>/source/_posts/</code>下)</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">title: title  #文章的标题</div><div class="line">date: yyyy-mm-dd #创建时间</div><div class="line">categories: category #分类</div><div class="line">tags: tag #标签</div><div class="line">   </div><div class="line"><span class="section">#多标签请这样写：tags: [tag1,tag2,tag3]</span></div><div class="line"><span class="section">#或者这样写： </span></div><div class="line"> #tags: </div><div class="line">   #- tag1</div><div class="line">   #- tag2 </div><div class="line">   #- tag3 </div><div class="line">---  </div><div class="line">  </div><div class="line"><span class="section">#正文</span></div></pre></td></tr></table></figure>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>进入网站根目录<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo d -fg</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"操作内容"</span></div><div class="line">git push</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一、准备工作&quot;&gt;&lt;a href=&quot;#一、准备工作&quot; class=&quot;headerlink&quot; title=&quot;一、准备工作&quot;&gt;&lt;/a&gt;一、准备工作&lt;/h2&gt;&lt;h4 id=&quot;VPS-amp-域名&quot;&gt;&lt;a href=&quot;#VPS-amp-域名&quot; class=&quot;headerlink&quot; title=&quot;VPS&amp;amp;域名&quot;&gt;&lt;/a&gt;VPS&amp;amp;域名&lt;/h4&gt;&lt;p&gt;请自行购买服务器以及域名.&lt;/p&gt;
-&lt;h2 id=&quot;二、搭建过程&quot;&gt;&lt;a href=&quot;#二、搭建过程&quot; class=&quot;headerlink&quot; title=&quot;二、搭建过程&quot;&gt;&lt;/a&gt;二、搭建过程&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;搭建分为两个部分:一部分在本机(Mac)进行，另一部分则在服务端(VPS)进行，大致需要完成的工作是在本机和服务器各安装一次Hexo和Git，并在服务器上安装Nginx服务器、配置Git Hooks以实现更新.并且全程使用终端命令完成。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://yuxiang.ren/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程 Hexo" scheme="https://yuxiang.ren/tags/%E6%95%99%E7%A8%8B-Hexo/"/>
     
   </entry>
   

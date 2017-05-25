@@ -1,0 +1,139 @@
+body{
+    font-family: frutigernext_medium,frutigernext,"Microsoft YaHei",Arial,Helvetica,sans-serif;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color:#222;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 30px;
+    font-family: 'Raleway',sans-serif;
+}
+
+dl, dt, dd, ol, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 100px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: 楷体;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.content .suojin {
+    text-indent:2em
+}
+
+.footer {
+    padding-bottom: 20px;
+    background: #ddd;
+    margin-bottom: -30px;
+}
+.footer .line {
+    background: #bebebe;
+    height: 5px;
+    margin-bottom: 30px
+
+}
+.footer .copyright {
+
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+}
+
+.navbar {
+    /*height: 90px;*/
+}
+
+.navbar-header .nav-desc-img {
+    margin-top: 10px;
+    margin-left: 0;
+    opacity: 0.8;
+    display: inline;
+    height: 40px;
+}
+
+.navbar-header .nav-logo-img {
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 40px
+}
+
+.navbar-right li {
+    font-family: 楷体 ;
+    font-weight:bold;
+    font-size:25px
+}
+
+.top-img {
+    margin-top: 93px;
+    width:100%;
+}
+
+
+/*响应式*/
+@media screen and (max-width: 1100px){
+    .nav-desc-img {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .navbar-right li {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 50px;
+        padding-top: 20px;
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .content {
+        padding: 15px;
+        padding-top: 10px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .navbar-header .nav-logo-img {
+        height: 40px;
+        margin-left: 15px
+    }
+
+    h2 {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .clearfix .col-md-2 {
+        text-align: center;
+    }
+
+    .clearfix .col-md-10 h4{
+        text-align: center;
+    }
+
+}
