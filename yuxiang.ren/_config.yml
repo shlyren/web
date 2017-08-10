@@ -77,8 +77,8 @@ social:
 
 
 # 头像
-avatar: https://yuxiang.ren/favicon.ico
-apple_touch_icon: https://yuxiang.ren/apple-touch-icon.png
+avatar: source/favicon.ico
+apple_touch_icon: source/apple-touch-icon.png
 
 baidushare: true
 baidu_analytics: e8f9e28039f9f75405d07e7e7bbad3b6

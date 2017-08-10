@@ -407,7 +407,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本文基于&lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt; 博客框架. 基于Node.js&lt;/p&gt;
+      &lt;p&gt;本文基于&lt;a href=&quot;https://hexo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://hexo.io&lt;/a&gt; 博客框架. 基于Node.js&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;本文在&lt;a href=&quot;/2016/12/02/install-hexo-on-vps-and-update-with-git/&quot;&gt;原文&lt;/a&gt;基础上加以修改完善&lt;/li&gt;
 &lt;li&gt;本文所使用的阿里云服务器系统为: &lt;code&gt;Ubuntu 16.04.2 LTS&lt;/code&gt;&lt;/li&gt;
@@ -1273,9 +1273,9 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;其实, 短发姑娘也好看…&lt;br&gt;&lt;a href=&quot;https://zy.yuxiang.ren&quot;&gt;https://zy.yuxiang.ren&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实, 短发姑娘也好看…&lt;br&gt;&lt;a href=&quot;https://zy.yuxiang.ren&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zy.yuxiang.ren&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/65e4f1e6gw1fajlrwunrsj20pm0zkwgl.jpg&quot; width = &quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/65e4f1e6gw1fajlrwunrsj20pm0zkwgl.jpg&quot; width=&quot;300&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;长发的时候&quot;&gt;&lt;a href=&quot;#长发的时候&quot; class=&quot;headerlink&quot; title=&quot;长发的时候&quot;&gt;&lt;/a&gt;长发的时候&lt;/h2&gt;
     
     </summary>
@@ -1315,7 +1315,7 @@
 &lt;p&gt;[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法&lt;br&gt;[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg&quot; width = &quot;600&quot;/&gt;&lt;br&gt;就是普通的僵尸对象错误, 可是解决就不是那么简单了…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg&quot; width=&quot;600&quot;&gt;&lt;br&gt;就是普通的僵尸对象错误, 可是解决就不是那么简单了…&lt;/p&gt;
 &lt;p&gt;我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在&lt;code&gt;UIScrollView&lt;/code&gt;分类重写了&lt;code&gt;dealloc&lt;/code&gt;方法导致.&lt;/p&gt;
     
     </summary>
