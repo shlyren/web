@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>任玉祥</title>
-  <subtitle>iOS developer.</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yuxiang.ren/"/>
-  <updated>2017-05-22T02:37:01.000Z</updated>
+  <updated>2017-08-15T05:14:52.000Z</updated>
   <id>https://yuxiang.ren/</id>
   
   <author>
@@ -14,6 +14,95 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谁记得</title>
+    <link href="https://yuxiang.ren/2017/08/15/%E8%B0%81%E8%AE%B0%E5%BE%97/"/>
+    <id>https://yuxiang.ren/2017/08/15/谁记得/</id>
+    <published>2017-08-15T05:09:09.000Z</published>
+    <updated>2017-08-15T05:14:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=35040810&auto=1&height=66"></iframe>
+
+<a id="more"></a>
+<p>他说的我们到底算是什么<br>难道听到的感觉都是错的<br>暧昧与溺爱总是差了什么<br>明明彼此笑了 却又不见了</p>
+<p>你不在的世界里都是阴天<br>思念像太用力会扯断的线<br>沉默却压抑着燃烧的我们<br>该死的勇气 到底在哪里</p>
+<p>我记得那瞬间<br>相拥一起不會疲倦<br>说好彼此想念<br>却变成背对背怀念</p>
+<p>谁记得那瞬间<br>我们像永恒的画面<br>按下了暂停键<br>想念一直停在指尖</p>
+<p>错爱过痛哭过却不想放手<br>难道我们还抱着回忆享受<br>放过我也想要你放过自己<br>爱就要说出口 别假装朋友</p>
+<p>我记得那瞬间<br>相拥一起不會疲倦<br>说好彼此想念<br>却变成背对背怀念</p>
+<p>谁记得那瞬间<br>我们像永恒的画面<br>按下了暂停键<br>想念一直停在指尖<br>我记得那瞬间<br>相拥一起不會疲倦<br>说好彼此想念<br>却变成背对背怀念</p>
+<p>谁记得那瞬间<br>我们像永恒的画面<br>按下了暂停键<br>想念一直停在指尖<br>按下了暂停键<br>想念一直停在指尖</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=35040810&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+      <category term="Music" scheme="https://yuxiang.ren/categories/Music/"/>
+    
+    
+      <category term="Music" scheme="https://yuxiang.ren/tags/Music/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ViewController滚动标题</title>
+    <link href="https://yuxiang.ren/2017/08/10/ViewController%E6%BB%9A%E5%8A%A8%E6%A0%87%E9%A2%98/"/>
+    <id>https://yuxiang.ren/2017/08/10/ViewController滚动标题/</id>
+    <published>2017-08-10T09:20:52.000Z</published>
+    <updated>2017-08-11T01:16:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>默认情况下控制器标题过长导致无法全部显示, 解决此问题就要让标题可以滚动.</p>
+<p>实现很简单, 只要把<code>navigationItem.titleView</code>赋值一个<code>UIScrollView</code>, 并且让这个<code>UIScrollView</code>自动滚动就可以了.</p>
+<a id="more"></a>
+<h1 id="一-定义一个创建一个继承与UIScrollerView的类"><a href="#一-定义一个创建一个继承与UIScrollerView的类" class="headerlink" title="一. 定义一个创建一个继承与UIScrollerView的类"></a>一. 定义一个创建一个继承与UIScrollerView的类</h1><ol>
+<li><p>头文件</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">CTScrollTitleView</span> : <span class="title">UIScrollView</span></span></div><div class="line"></div><div class="line">  <span class="comment">/** 文字 */</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>, <span class="keyword">readonly</span>) <span class="built_in">NSString</span> *title;</div><div class="line"></div><div class="line"><span class="comment">/** 实例化对象 */</span></div><div class="line">+ (<span class="keyword">instancetype</span>)titleViewWithTitle:(<span class="built_in">NSString</span> *)title;</div><div class="line">- (<span class="keyword">instancetype</span>)initWithTitle:(<span class="built_in">NSString</span> *)title;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>.m文件</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">CTScrollTitleView</span></span></div><div class="line"></div><div class="line">+ (<span class="keyword">instancetype</span>)titleViewWithTitle:(<span class="built_in">NSString</span> *)title</div><div class="line">&#123;</div><div class="line">   <span class="keyword">return</span> [[<span class="keyword">self</span> alloc] initWithTitle:title];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">instancetype</span>)initWithTitle:(<span class="built_in">NSString</span> *)title</div><div class="line">&#123;</div><div class="line">   <span class="keyword">if</span> (title==<span class="literal">nil</span>) <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line"></div><div class="line">   <span class="keyword">if</span> (<span class="keyword">self</span> = [<span class="keyword">super</span> initWithFrame:<span class="built_in">CGRectZero</span>]) &#123;</div><div class="line"></div><div class="line">       _title = title;</div><div class="line">       <span class="keyword">self</span>.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, screenWidth<span class="number">-128</span>, <span class="number">44</span>);</div><div class="line">       <span class="keyword">self</span>.scrollEnabled = <span class="literal">false</span>;</div><div class="line">       <span class="keyword">self</span>.showsVerticalScrollIndicator = <span class="literal">false</span>;</div><div class="line">       <span class="keyword">self</span>.showsHorizontalScrollIndicator = <span class="literal">false</span>;</div><div class="line"></div><div class="line">       <span class="built_in">UILabel</span> *label = [<span class="built_in">UILabel</span> new];</div><div class="line">       label.font = [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">16</span>];</div><div class="line">       label.frame = <span class="keyword">self</span>.bounds;</div><div class="line">       label.textAlignment = <span class="built_in">NSTextAlignmentCenter</span>;</div><div class="line">       label.text = title;</div><div class="line">       [<span class="keyword">self</span> addSubview: label];</div><div class="line"></div><div class="line">     <span class="comment">// 计算文字的宽度</span></div><div class="line">   <span class="built_in">CGFloat</span> width = [label.text boundingRectWithSize:<span class="built_in">CGSizeMake</span>(MAXFLOAT, label.height)</div><div class="line">                                            options:</div><div class="line">                     <span class="built_in">NSStringDrawingTruncatesLastVisibleLine</span> |</div><div class="line">                     <span class="built_in">NSStringDrawingUsesLineFragmentOrigin</span> |</div><div class="line">                     <span class="built_in">NSStringDrawingUsesFontLeading</span></div><div class="line">                                         attributes:@&#123;<span class="built_in">NSFontAttributeName</span>: label.font&#125;</div><div class="line">                                            context:<span class="literal">nil</span>].size.width;</div><div class="line">     <span class="comment">// 只有文字宽度大于scrollview的宽度才需要滚动</span></div><div class="line">       <span class="keyword">if</span> (width &gt; <span class="keyword">self</span>.frame.size.width) &#123; </div><div class="line">           <span class="built_in">CGRect</span> frame = label.frame;</div><div class="line">           frame.size.width = width;</div><div class="line">           label.frame = frame;</div><div class="line"></div><div class="line">           <span class="built_in">CGSize</span> contentSize = <span class="keyword">self</span>.contentSize;</div><div class="line">           contentSize.width = width;</div><div class="line">           <span class="keyword">self</span>.contentSize = contentSize;</div><div class="line"></div><div class="line">           [<span class="keyword">self</span> startAnimate];</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/** 滚动动画 */</span></div><div class="line">- (<span class="keyword">void</span>)startAnimate &#123;</div><div class="line"></div><div class="line">   <span class="built_in">NSTimeInterval</span> time = <span class="keyword">self</span>.contentSize.width * <span class="number">0.01</span>;</div><div class="line"></div><div class="line">   <span class="built_in">CGPoint</span> offset = <span class="keyword">self</span>.contentOffset;</div><div class="line">   offset.x = <span class="keyword">self</span>.contentSize.width - <span class="keyword">self</span>.frame.size.width;</div><div class="line"></div><div class="line">   __<span class="keyword">weak</span> <span class="keyword">typeof</span>(<span class="keyword">self</span>)weakSelf = <span class="keyword">self</span>;</div><div class="line"> <span class="comment">// 从左向右</span></div><div class="line">   [<span class="built_in">UIView</span> animateWithDuration:time </div><div class="line">                         delay:<span class="number">2.0</span> </div><div class="line">                       options:<span class="number">0</span> 		</div><div class="line">                    animations:^&#123;</div><div class="line">       weakSelf.contentOffset = offset;</div><div class="line">                  &#125; completion:^(<span class="built_in">BOOL</span> finished) &#123;</div><div class="line">       <span class="comment">// 从右向左</span></div><div class="line">       [<span class="built_in">UIView</span> animateWithDuration:time </div><div class="line">                             delay:<span class="number">2.0</span></div><div class="line">                           options:<span class="number">0</span> 															  animations:^&#123;</div><div class="line">          weakSelf.contentOffset = <span class="built_in">CGPointZero</span>;</div><div class="line"></div><div class="line">                      &#125; completion:^(<span class="built_in">BOOL</span> finished) &#123;</div><div class="line">           [weakSelf startAnimate];</div><div class="line">       &#125;];</div><div class="line"></div><div class="line">   &#125;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)dealloc&#123;</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="二-使用"><a href="#二-使用" class="headerlink" title="二. 使用"></a>二. 使用</h1><ol>
+<li><p>导入头文件 </p>
+</li>
+<li><p>实例化<code>CTScrollTitleView</code>并赋值给<code>navigationItem.titleView</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.navigationItem.titleView = [<span class="built_in">CTScrollTitleView</span> titleViewWithTitle:<span class="string">@"标题标题标题标题标题标题标题标题"</span>];</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="三-简化版"><a href="#三-简化版" class="headerlink" title="三. 简化版"></a>三. 简化版</h1><ol>
+<li><p>为了开发方便, 比如直接谁用 self.scrollTitle = @”标题标题标题标题标题标题标题标题标题标题”, 可做以下处理</p>
+</li>
+<li><p>创建<code>UIViewController</code>分类: <code>UIViewController+ScrollTitle.h</code></p>
+</li>
+<li><p>在头文件声明</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIViewController</span> (<span class="title">ScrollTitle</span>)</span></div><div class="line"><span class="comment">/** 滚动标题 */</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSString</span> *zy_scrollTitle;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>.m文件实现</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;objc/runtime.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"CTScrollTitleView.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">UIViewController</span>()</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="built_in">CTScrollTitleView</span> *zy_titleView;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">UIViewController</span> (<span class="title">ScrollTitle</span>)</span></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)setZy_scrollTitle:(<span class="built_in">NSString</span> *)zy_scrollTitle</div><div class="line">&#123;</div><div class="line">    <span class="built_in">CTScrollTitleView</span> *titleView = [<span class="built_in">CTScrollTitleView</span> titleViewWithTitle:zy_scrollTitle];</div><div class="line">    <span class="keyword">self</span>.navigationItem.titleView = titleView;</div><div class="line">    <span class="keyword">self</span>.zy_titleView = titleView;</div><div class="line">&#125;</div><div class="line">- (<span class="built_in">NSString</span> *)zy_scrollTitle</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>.zy_titleView.title;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keyword">char</span> ZYScrollTitleViewKey = <span class="string">'\0'</span>;</div><div class="line">- (<span class="keyword">void</span>)setZy_titleView:(<span class="built_in">CTScrollTitleView</span> *)zy_titleView</div><div class="line">&#123;</div><div class="line">    objc_setAssociatedObject(<span class="keyword">self</span>, &amp;ZYScrollTitleViewKey, zy_titleView, OBJC_ASSOCIATION_ASSIGN);</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="built_in">CTScrollTitleView</span> *)zy_titleView</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> objc_getAssociatedObject(<span class="keyword">self</span>, &amp;ZYScrollTitleViewKey);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>直接使用<code>self.zy_scrollTitle</code>即可</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;默认情况下控制器标题过长导致无法全部显示, 解决此问题就要让标题可以滚动.&lt;/p&gt;
+&lt;p&gt;实现很简单, 只要把&lt;code&gt;navigationItem.titleView&lt;/code&gt;赋值一个&lt;code&gt;UIScrollView&lt;/code&gt;, 并且让这个&lt;code&gt;UIScrollView&lt;/code&gt;自动滚动就可以了.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Objective-C" scheme="https://yuxiang.ren/categories/Objective-C/"/>
+    
+    
+      <category term="Objective-C" scheme="https://yuxiang.ren/tags/Objective-C/"/>
+    
+  </entry>
   
   <entry>
     <title>javaScript基础</title>
@@ -775,7 +864,7 @@
 </ol>
 <h3 id="四-创建RReact-Native工程"><a href="#四-创建RReact-Native工程" class="headerlink" title="四. 创建RReact Native工程"></a>四. 创建<code>RReact Native</code>工程</h3><ul>
 <li><p>react-native init demo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">react-native init demo</div></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">react-native <span class="keyword">init</span> demo</div></pre></td></tr></table></figure>
 </li>
 <li><p>可能需要等待一段时间</p>
 <p><img src="https://ww1.sinaimg.cn/mw690/6a80ef0fgw1f4a4q7xtxij20v404ywfr.jpg" alt=""></p>
@@ -1284,76 +1373,6 @@
     
     
       <category term="杂碎" scheme="https://yuxiang.ren/tags/%E6%9D%82%E7%A2%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重写UIScrollView分类dealloc错误</title>
-    <link href="https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/"/>
-    <id>https://yuxiang.ren/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/</id>
-    <published>2016-12-06T01:25:01.000Z</published>
-    <updated>2017-04-13T07:51:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&gt; 错误解决方法<br>[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此</p>
-</blockquote>
-<p>今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:</p>
-<p><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg" width="600"><br>就是普通的僵尸对象错误, 可是解决就不是那么简单了…</p>
-<p>我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在<code>UIScrollView</code>分类重写了<code>dealloc</code>方法导致.</p>
-<a id="more"></a>
-<p>于是我去项目里看一下<code>UIScrollView</code>的分类. 果真, 这个第三方重写了<code>dealoc</code>, 把它注释掉果然没有出现僵尸对象了.</p>
-<p>可是问题又来了,这个分类是在<code>dealloc</code>里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsjlodobj20qw04ywfe.jpg" width="500"></p>
-<p>我想到了<code>MJRefresh</code>使用的也是同样的原理, 于是我去看了他的代码,他是再这里移除监听的<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsl6oopij210a07yacr.jpg" width="500"></p>
-<p>那我们就学着他<br><img src="https://ww4.sinaimg.cn/large/65e4f1e6gw1fagslu9vecj20zk0ba41t.jpg" width="500"></p>
-<p>重新运行程序, 问题解决.</p>
-<p>然而, 又有新的问题出现, 就是通知移除的问题, 为了彻底解决自己写了个.<br>代码地址:<a href="https://github.com/shlyren/ZYScaleHeader" target="_blank" rel="external">https://github.com/shlyren/ZYScaleHeader</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;[UIScrollView _systemGestureStateChanged:]: message sent to deallocated instance&amp;gt; 错误解决方法&lt;br&gt;[UITableViewWrapperView _systemGestureStateChanged] 解决亦是如此&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;今天一个朋友自己的程序出现了一个bug, 不知道怎么解决, 他把报错内容给我, 报错内容如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://ww4.sinaimg.cn/large/65e4f1e6gw1fagsd983rsj21g60ggjyt.jpg&quot; width=&quot;600&quot;&gt;&lt;br&gt;就是普通的僵尸对象错误, 可是解决就不是那么简单了…&lt;/p&gt;
-&lt;p&gt;我翻边了各大国内过外网站, 终于再一个不显眼的地方看到了大致是因为在&lt;code&gt;UIScrollView&lt;/code&gt;分类重写了&lt;code&gt;dealloc&lt;/code&gt;方法导致.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="error" scheme="https://yuxiang.ren/categories/error/"/>
-    
-    
-      <category term="Xcode" scheme="https://yuxiang.ren/tags/Xcode/"/>
-    
-      <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用gem更新报错的问题</title>
-    <link href="https://yuxiang.ren/2016/12/02/use-gem-update-with-error/"/>
-    <id>https://yuxiang.ren/2016/12/02/use-gem-update-with-error/</id>
-    <published>2016-12-02T06:01:01.000Z</published>
-    <updated>2017-04-13T08:01:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="gem-install-cocoapods"><a href="#gem-install-cocoapods" class="headerlink" title="gem install cocoapods"></a>gem install cocoapods</h2><p>使用<code>gem install cocoapods</code>更新报<code>You don&#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory</code>错.<br>解决方法: 使用<code>sudo gem install cocoapods</code> 更新</p>
-<a id="more"></a>
-<h2 id="sudo-gem-install-cocoapods"><a href="#sudo-gem-install-cocoapods" class="headerlink" title="sudo gem install cocoapods"></a>sudo gem install cocoapods</h2><p>使用<code>sudo gem install cocoapods</code>更新报<code>Operation not permitted - /usr/bin/pod</code>错</p>
-<p>解决方法: 使用<code>sudo gem install -n /usr/local/bin cocoapods</code></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;gem-install-cocoapods&quot;&gt;&lt;a href=&quot;#gem-install-cocoapods&quot; class=&quot;headerlink&quot; title=&quot;gem install cocoapods&quot;&gt;&lt;/a&gt;gem install cocoapods&lt;/h2&gt;&lt;p&gt;使用&lt;code&gt;gem install cocoapods&lt;/code&gt;更新报&lt;code&gt;You don&amp;#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory&lt;/code&gt;错.&lt;br&gt;解决方法: 使用&lt;code&gt;sudo gem install cocoapods&lt;/code&gt; 更新&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="error" scheme="https://yuxiang.ren/categories/error/"/>
-    
-    
-      <category term="命令" scheme="https://yuxiang.ren/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-      <category term="error" scheme="https://yuxiang.ren/tags/error/"/>
     
   </entry>
   
