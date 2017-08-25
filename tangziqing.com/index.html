@@ -1,112 +1,115 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>柒柒:斗鱼最萌声优QAQ~</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>程序员也有浪漫的时候</title>
 
-		<meta name="description" content="LOL女主播" />
-		<meta name="keywords" content="丨柠萌酱丶 小柒柒呀灬 carry柒柒柒 柒柒 萌 斗鱼 熊猫 LOL 女主播 最萌声优" />
-		<meta name="baidu-site-verification" content="lpHrZo2GAZ" />
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
 
-	<!-- 	<style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 
-		body {
-			padding: 10px;
-			background: #fff;
-		}
+</head>
 
-		div {
-			text-align: center;
-		}
+<body>
 
-		@media screen and (max-width: 1500px){
-			#player {
-				width: 1280px;
-				height:720px;
-			}
-		}
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">* 2017-8-28</span><br />
+			<span class="space"/><span class="comments">* 爱你的人</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+				
+			我能抽象出整个世界．．． <br />
+			但是我不能抽象出你．．． <br />
+			因为你在我心中是那么的具体．．． <br />
+			所以我的世界并不完整．．． <br />
+			我可以重载甚至覆盖这个世界里的任何一种方法．．． <br />
+			但是我却不能重载对你的思念．．． <br />
+			也许命中注定了 你在我的世界里永远的烙上了静态的属性．．．<br /> 
+			而我不慎调用了爱你这个方法．．． <br />
+			当我义无返顾的把自己作为参数传进这个方法时．．． <br />
+			我才发现爱上你是一个死循环．．． <br />
+			它不停的返回对你的思念压入我心里的堆栈．．． <br />
+			在这无尽的黑夜中．．． <br />
+			我的内存里已经再也装不下别人．．． <br />
+			我不停的向系统申请空间．．． <br />
+			但却捕获一个异常－－－你爱的人不爱我．．． <br />
+			为了解决这个异常．．． <br />
+			我愿意虚拟出最后一点内存．．． <br />
+			把所有我能实现的方法地址压入堆栈．．． <br />
+			并且在栈尾压入最后一个方法－－ <br />
+			－将字符串＂我爱你，你爱我吗？＂传递给你．．． <br />
+			如果返回值为真－－我将用尽一生去爱你．．． <br />
+			否则－－我将释放掉所有系统资源<br />
+			
+			
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，我愿陪你度过每一分每一秒。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 爱你的人</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+				
+		</div>
+	</div>
+</div>
 
-		@media screen and (max-width: 1300px){
-			#player {
-				width: 1100px;
-				height:619px;
-			}
-		}
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 5, 20);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
 
-		@media screen and (max-width: 1200px){
-			#player {
-				width: 1000px;
-				height:563px;
-			}
-		}
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
 
-		@media screen and (max-width: 1100px){
-			#player {
-				width: 900px;
-				height:507px;;
-			}
-		}
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
 
-		@media screen and (max-width: 1000px){
-			#player {
-				width: 900px;
-				height:507px;
-			}
-		}
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
 
-		/*!*0.5625*!*/
-		@media screen and (max-width: 900px){
-			#player {
-				width: 800px;
-				height:450px;
-			}
-		}
-
-		/*!*0.5625*!*/
-		@media screen and (max-width: 800px){
-			#player {
-				width: 700px;
-				height:394px;
-			}
-		}
-
-		@media screen and (max-width: 700px){
-			#player {
-				width: 600px;
-				height:338px;
-			}
-		}
-
-
-		@media screen and (max-width: 600px){
-			#player {
-				width: 500px;
-				height: 282px;
-			}
-		}
-
-		@media screen and (max-width: 500px){
-			#player {
-				width: 400px;
-				height: 225px;
-			}
-		}
-
-		@media screen and (max-width: 400px){
-			#player {
-				width: 300px;
-				height:169px;
-			}
-		}
-		</style> -->
-	</head>
-
-	<body >
-		<embed allowscriptaccess="always" src="https://staticlive.douyucdn.cn/common/share/play.swf?room_id=1460960" type="application/x-shockwave-flash" style="width: 100%;">
-
-
-	</body>
-
-
+</body>
 </html>
