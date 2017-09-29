@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>程序员也有浪漫的时候</title>
+<title>柒柒呀</title>
 
 <style type="text/css">
 @font-face {
@@ -19,6 +18,15 @@
 </head>
 
 <body>
+
+<audio style="width: 100%;" 
+	autoplay="autoplay" 
+	controls="controls" 
+		loop="loop" 
+	 preload="auto" 
+	 src="./love-is-easy.mp3">
+	 	
+</audio>
 
 <div id="mainDiv">
 	<div id="content">
@@ -58,6 +66,7 @@
 			I want to say:<br />
 			Baby, I love you forever;<br />
 		</div>
+
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
@@ -72,35 +81,37 @@
 			</div>
 		</div>
 		<div id="copyright">
-				
+			<!-- <a href="https://yuxiang.ren" target="_blank">@任玉祥</a> -->
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript">
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2016, 5, 20);
-together.setHours(0);
-together.setMinutes(0);
-together.setSeconds(0);
-together.setMilliseconds(0);
 
 if (!document.createElement('canvas').getContext) {
+	let errmsg = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
 	var msg = document.createElement("div");
 	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	msg.innerHTML = errmsg;
 	document.body.appendChild(msg);
 	$("#code").css("display", "none")
 	$("#copyright").css("position", "absolute");
 	$("#copyright").css("bottom", "10px");
 	document.execCommand("stop");
+	alert(errmsg);
 } else {
 	setTimeout(function () {
 		startHeartAnimation();
-	}, 5000);
-
+	}, 7000);
+	
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	together.setFullYear(2016, 5, 20);
+	together.setHours(0);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
 	timeElapse(together);
 	setInterval(function () {
 		timeElapse(together);
