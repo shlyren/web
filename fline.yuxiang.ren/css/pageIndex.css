@@ -1,0 +1,19 @@
+body p {
+    font-size: 18px;
+    font-family: 楷体;
+}
+
+.clearfix {
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+.col-md-2 {
+    margin-top: 15px;
+}
+
+.col-md-10 {
+    margin-top: 10px;
+}
+
+

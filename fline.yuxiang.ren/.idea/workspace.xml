@@ -1,81 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf1ba2f8-f981-4630-8d85-cd55fb267bd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/themes/maupassant" afterPath="$PROJECT_DIR$/../../yuxiang.ren/themes/maupassant" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../README.md" afterPath="$PROJECT_DIR$/../../README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/_config.yml" afterPath="$PROJECT_DIR$/../../yuxiang.ren/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/db.json" afterPath="$PROJECT_DIR$/../../yuxiang.ren/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/18/多线程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/18/多线程/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/利用pods给你的程序添加第三方库/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/利用pods给你的程序添加第三方库/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/命令安装Mac系统/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/21/命令安装Mac系统/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/IOS学习之作业篇(OC)/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/IOS学习之作业篇(OC)/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/const-static-extern简介/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/const-static-extern简介/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/runtime/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/03/26/runtime/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/01/着手写一个APP/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/01/着手写一个APP/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/23/Swift学习笔记01/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/23/Swift学习笔记01/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/24/Swift学习笔记02/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/24/Swift学习笔记02/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/26/Swift学习笔记03/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/04/26/Swift学习笔记03/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/05/23/面试题-01/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/05/23/面试题-01/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/03/https使用网易音乐外链播放器无法播放/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/03/https使用网易音乐外链播放器无法播放/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/很久以前/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/很久以前/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/撩妹招数/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/06/05/撩妹招数/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-hexo-on-vps-and-update-with-git/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-hexo-on-vps-and-update-with-git/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-huno-theme/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/install-huno-theme/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/use-gem-update-with-error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/02/use-gem-update-with-error/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/06/UIScrollView-Category-error-message-with-deallocated-instance/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/08/short-haired-girl-is-also-good/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2016/12/08/short-haired-girl-is-also-good/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/16/install-VPN-on-your-vps/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/16/install-VPN-on-your-vps/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/28/2017/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/01/28/2017/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/09/learn-Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/09/learn-Android/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/10/Android-Activity/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/02/10/Android-Activity/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/Android-fragment/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/Android-fragment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/android-基本概念/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/24/android-基本概念/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/C语言的几种排序方法/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/C语言的几种排序方法/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/OC基本概念/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/OC基本概念/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/Ubuntu更新Nginx服务/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/Ubuntu更新Nginx服务/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/install-shadowsocks-on-your-vps/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/install-shadowsocks-on-your-vps/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/在Mac上配置Rect-Native开发环境/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/30/在Mac上配置Rect-Native开发环境/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/31/linux常用命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/03/31/linux常用命令/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/12/命令给安卓程序打包/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/12/命令给安卓程序打包/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/24/use-hexo-on-aliyun-and-update-with-git/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/24/use-hexo-on-aliyun-and-update-with-git/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/27/Terminal命令之wget用法/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/04/27/Terminal命令之wget用法/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/05/16/SVN常用命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/2017/05/16/SVN常用命令/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/about/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/archive/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/archive/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/archives/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/archives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/Android/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/C语言/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/C语言/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/IOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/IOS/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/error/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/iOS/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/iOS/page/2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/命令/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/教程/page/2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/杂碎/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/categories/杂碎/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/2/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/3/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/4/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/4/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/page/5/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/page/5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Android/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Android/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/CocoaPods/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/CocoaPods/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/C语言/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/C语言/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/MacOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/MacOS/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Objective-C/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Objective-C/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Swift/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Swift/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Xcode/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/Xcode/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/error/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/error/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/命令/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/命令/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/情感/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/情感/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-Hexo/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-Hexo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-MacOS/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-MacOS/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-翻墙/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程-翻墙/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/教程/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/杂碎/index.html" afterPath="$PROJECT_DIR$/../../yuxiang.ren/public/tags/杂碎/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../yuxiang.ren/themes/apollo/layout/partial/copyright.jade" afterPath="$PROJECT_DIR$/../../yuxiang.ren/themes/apollo/layout/partial/copyright.jade" />
-    </list>
+    <list default="true" id="bf1ba2f8-f981-4630-8d85-cd55fb267bd7" name="Default" comment="" />
     <ignored path="Fline88.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -97,12 +23,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="4.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/industrycase/4.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="-258">
+              <caret line="170" column="25" lean-forward="true" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="878">
+              <caret line="212" column="45" lean-forward="true" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1516250532806" expanded="true" signature="6105:6245" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/industrycase/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="150" column="10" lean-forward="true" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#hr#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1516250143392" expanded="false" signature="1110:1126" ph="..." />
+                <marker date="1516250143392" expanded="false" signature="1735:1770" ph="..." />
+                <marker date="1516250143392" expanded="false" signature="3198:3235" ph="..." />
+                <marker date="1516250143392" expanded="false" signature="3442:3454" ph="..." />
+                <marker date="1516250143392" expanded="false" signature="3560:3577" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/industrycase/nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <marker date="1516248366820" expanded="true" signature="487:503" ph="..." />
+                <marker date="1516248366820" expanded="true" signature="1353:1388" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,6 +118,11 @@
       <find>nav-content</find>
       <find>p</find>
       <find>suojin</find>
+      <find>clearfix</find>
+      <find>class=&quot;col-md-2&quot;</find>
+      <find>small-thumbs</find>
+      <find>style=&quot;padding-top: 20px; padding-left: 20px&quot;</find>
+      <find>col-md-10</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,43 +131,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/industrycase2.html" />
-        <option value="$PROJECT_DIR$/industrycase3.html" />
-        <option value="$PROJECT_DIR$/industrycase4.html" />
-        <option value="$PROJECT_DIR$/industrycase5.html" />
-        <option value="$PROJECT_DIR$/solution1.html" />
-        <option value="$PROJECT_DIR$/solution2.html" />
-        <option value="$PROJECT_DIR$/solution3.html" />
-        <option value="$PROJECT_DIR$/solution4.html" />
-        <option value="$PROJECT_DIR$/solution5.html" />
         <option value="$PROJECT_DIR$/solution6.html" />
         <option value="$PROJECT_DIR$/product.html" />
         <option value="$PROJECT_DIR$/industrycase.html" />
         <option value="$PROJECT_DIR$/solution.html" />
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/bootstrap/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/css/custom.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/solution/1.html" />
-        <option value="$PROJECT_DIR$/solution/2.html" />
-        <option value="$PROJECT_DIR$/solution/3.html" />
-        <option value="$PROJECT_DIR$/solution/4.html" />
-        <option value="$PROJECT_DIR$/solution/5.html" />
-        <option value="$PROJECT_DIR$/solution/6.html" />
-        <option value="$PROJECT_DIR$/solution/index.html" />
-        <option value="$PROJECT_DIR$/artificialIntelligenceall.html" />
-        <option value="$PROJECT_DIR$/customers.html" />
-        <option value="$PROJECT_DIR$/economic.html" />
         <option value="$PROJECT_DIR$/header.html" />
-        <option value="$PROJECT_DIR$/qyjc.html" />
-        <option value="$PROJECT_DIR$/tzpt.html" />
-        <option value="$PROJECT_DIR$/zhihuijt.html" />
-        <option value="$PROJECT_DIR$/industrycase/1.html" />
-        <option value="$PROJECT_DIR$/industrycase/2.html" />
-        <option value="$PROJECT_DIR$/industrycase/3.html" />
-        <option value="$PROJECT_DIR$/industrycase/4.html" />
-        <option value="$PROJECT_DIR$/industrycase/5.html" />
-        <option value="$PROJECT_DIR$/industrycase/index.html" />
+        <option value="$PROJECT_DIR$/js/custom.js" />
+        <option value="$PROJECT_DIR$/js/base.js" />
+        <option value="$PROJECT_DIR$/css/pageIndex.css" />
+        <option value="$PROJECT_DIR$/css/pageNav.css" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/gsbdproduct/nav.html" />
+        <option value="$PROJECT_DIR$/gsbdproduct/nav.js" />
+        <option value="$PROJECT_DIR$/js/const.js" />
+        <option value="$PROJECT_DIR$/industrycase/nav.js" />
+        <option value="$PROJECT_DIR$/solution/nav.js" />
+        <option value="$PROJECT_DIR$/js/footer.js" />
         <option value="$PROJECT_DIR$/gsbdproduct/1.html" />
         <option value="$PROJECT_DIR$/gsbdproduct/2.html" />
         <option value="$PROJECT_DIR$/gsbdproduct/3.html" />
@@ -185,9 +160,28 @@
         <option value="$PROJECT_DIR$/gsbdproduct/9.html" />
         <option value="$PROJECT_DIR$/gsbdproduct/10.html" />
         <option value="$PROJECT_DIR$/gsbdproduct/11.html" />
-        <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/gsbdproduct/index.html" />
+        <option value="$PROJECT_DIR$/industrycase/2.html" />
+        <option value="$PROJECT_DIR$/industrycase/3.html" />
+        <option value="$PROJECT_DIR$/industrycase/4.html" />
+        <option value="$PROJECT_DIR$/industrycase/5.html" />
+        <option value="$PROJECT_DIR$/industrycase/index.html" />
+        <option value="$PROJECT_DIR$/solution/1.html" />
+        <option value="$PROJECT_DIR$/solution/2.html" />
+        <option value="$PROJECT_DIR$/solution/3.html" />
+        <option value="$PROJECT_DIR$/solution/4.html" />
+        <option value="$PROJECT_DIR$/solution/5.html" />
+        <option value="$PROJECT_DIR$/solution/6.html" />
+        <option value="$PROJECT_DIR$/solution/index.html" />
+        <option value="$PROJECT_DIR$/artificialIntelligenceall.html" />
+        <option value="$PROJECT_DIR$/economic.html" />
+        <option value="$PROJECT_DIR$/customers.html" />
+        <option value="$PROJECT_DIR$/qyjc.html" />
+        <option value="$PROJECT_DIR$/tzpt.html" />
+        <option value="$PROJECT_DIR$/zhihuijt.html" />
         <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/industrycase/1.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -204,12 +198,14 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="153" />
-    <option name="width" value="1250" />
+    <option name="x" value="50" />
+    <option name="y" value="23" />
+    <option name="width" value="1231" />
     <option name="height" value="777" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -249,67 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="solution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fline.yuxiang.ren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="industrycase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fline.yuxiang.ren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fline.yuxiang.ren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fline.yuxiang.ren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,7 +254,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -330,13 +266,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/solution" />
+      <recent name="$PROJECT_DIR$/industrycase" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/industrycase" />
-      <recent name="$PROJECT_DIR$/solution" />
-      <recent name="$PROJECT_DIR$/gsbdproduct" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/img/about" />
+      <recent name="$PROJECT_DIR$/img/industrycase" />
+      <recent name="$PROJECT_DIR$/img/solution" />
+      <recent name="$PROJECT_DIR$/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -459,17 +399,21 @@
       <workItem from="1495160496540" duration="3418000" />
       <workItem from="1495509088461" duration="3073000" />
       <workItem from="1495527478491" duration="575000" />
+      <workItem from="1516237111699" duration="4218000" />
+      <workItem from="1516241394834" duration="2095000" />
+      <workItem from="1516243511889" duration="3308000" />
+      <workItem from="1516246860271" duration="3821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86756000" />
+    <option name="totallyTimeSpent" value="100198000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="153" width="1250" height="777" extended-state="0" />
+    <frame x="50" y="23" width="1231" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17087063" sideWeight="0.4948905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21735537" sideWeight="0.4948905" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5033058" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -536,355 +480,530 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/productyudao.jpg">
+    <entry file="file://$PROJECT_DIR$/img/cases/zhihuijt2.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/productjx.jpg">
+    <entry file="file://$PROJECT_DIR$/img/about/ren2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/gsbdproduct/gsbdproduct072.png">
+    <entry file="file://$PROJECT_DIR$/img/about/ren1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.11.3.min.js" />
-    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.css">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3463">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="300" column="18" lean-forward="false" selection-start-line="300" selection-start-column="18" selection-end-line="300" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="707" column="22" lean-forward="false" selection-start-line="707" selection-start-column="22" selection-end-line="707" selection-end-column="22" />
+          <caret line="291" column="18" lean-forward="false" selection-start-line="291" selection-start-column="18" selection-end-line="291" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/fline.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/js/jquery-1.11.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/map2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23172">
-          <caret line="370" column="38" lean-forward="true" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap-theme.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="93451" lean-forward="true" selection-start-line="6" selection-start-column="93451" selection-end-line="6" selection-end-column="93451" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="136" column="5" lean-forward="false" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artificialIntelligenceall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/economic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1131">
-          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="546">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qyjc.html">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+        <state relative-caret-position="115">
+          <caret line="1702" column="3" lean-forward="true" selection-start-line="1702" selection-start-column="3" selection-end-line="1702" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tzpt.html">
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+          <caret line="18" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhihuijt.html">
+    <entry file="file://$PROJECT_DIR$/css/pageIndex.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="53" column="70" lean-forward="false" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/industrycase/1.html">
+    <entry file="file://$PROJECT_DIR$/js/const.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/industrycase/2.html">
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/nav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        <state relative-caret-position="15">
+          <caret line="3" column="74" lean-forward="false" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+            <marker date="1516248087159" expanded="true" signature="487:503" ph="..." />
+            <marker date="1516248087159" expanded="true" signature="1336:1371" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/industrycase/3.html">
+    <entry file="file://$PROJECT_DIR$/css/pageNav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="50" column="70" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/industrycase/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        <state relative-caret-position="15">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gsbdproduct/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        <state relative-caret-position="516">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="87" selection-end-column="39" />
+          <folding>
+            <marker date="1516250057868" expanded="false" signature="1106:1122" ph="..." />
+            <marker date="1516250057868" expanded="false" signature="1714:1749" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gsbdproduct/2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/11.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/10.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/9.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/8.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        <state relative-caret-position="531">
+          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding>
+            <marker date="1516250057872" expanded="true" signature="832:2255" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="874:2241" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="924:1596" ph="..." />
+            <marker date="1516250057872" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="1071:1332" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="1405:1573" ph="..." />
+            <marker date="1516250057872" expanded="false" signature="1679:1714" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="1715:2223" ph="..." />
+            <marker date="1516250057872" expanded="true" signature="1782:2201" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gsbdproduct/3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+        <state relative-caret-position="516">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <marker date="1516250062184" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250062184" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/js/html5shiv.js">
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+          <folding>
+            <marker date="1516250068416" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250068416" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="75" column="39" lean-forward="false" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112429" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250112429" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="143" column="39" lean-forward="false" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112459" expanded="false" signature="1257:1273" ph="..." />
+            <marker date="1516250112459" expanded="false" signature="1882:1917" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112452" expanded="false" signature="1053:1069" ph="..." />
+            <marker date="1516250112452" expanded="false" signature="1678:1713" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112464" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250112464" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="87" column="39" lean-forward="false" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112424" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250112424" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112447" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250112447" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3877">
+          <caret line="270" column="39" lean-forward="false" selection-start-line="270" selection-start-column="39" selection-end-line="270" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#9;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding>
+            <marker date="1516250143376" expanded="false" signature="1053:1069" ph="..." />
+            <marker date="1516250143376" expanded="false" signature="1678:1713" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <folding>
+            <marker date="1516250143361" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250143361" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gsbdproduct/11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+          <folding>
+            <marker date="1516250112436" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250112436" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="70" column="39" lean-forward="false" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <folding>
+            <marker date="1516250168770" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250168770" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="72" column="39" lean-forward="false" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+          <folding>
+            <marker date="1516250219594" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250219594" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="83" column="39" lean-forward="false" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+          <folding>
+            <marker date="1516250219580" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250219580" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <marker date="1516250219610" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250219610" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="73" column="39" lean-forward="false" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+          <folding>
+            <marker date="1516250219605" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250219605" expanded="false" signature="1680:1715" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/js/jquery-1.11.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="8226" column="4" lean-forward="false" selection-start-line="8226" selection-start-column="4" selection-end-line="8226" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom.js" />
-    <entry file="file://$PROJECT_DIR$/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="183" column="29" lean-forward="false" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="29" />
+          <caret line="77" column="7" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="77" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495527632000" expanded="true" signature="6079:6219" ph="..." />
+            <marker date="1516250219587" expanded="false" signature="1055:1071" ph="..." />
+            <marker date="1516250219587" expanded="false" signature="1680:1715" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="68" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gsbdproduct/index.html">
+    <entry file="file://$PROJECT_DIR$/solution/nav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="243" column="38" lean-forward="false" selection-start-line="243" selection-start-column="38" selection-end-line="243" selection-end-column="38" />
+        <state relative-caret-position="390">
+          <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1516248603449" expanded="true" signature="487:503" ph="..." />
+            <marker date="1516248603449" expanded="true" signature="1353:1388" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artificialIntelligenceall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="128" column="19" lean-forward="false" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/economic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1145">
+          <caret line="175" column="39" lean-forward="false" selection-start-line="175" selection-start-column="39" selection-end-line="175" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1516250219572" expanded="false" signature="1110:1126" ph="..." />
+            <marker date="1516250219572" expanded="false" signature="1735:1770" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="54" column="204" lean-forward="false" selection-start-line="54" selection-start-column="204" selection-end-line="54" selection-end-column="204" />
+          <folding>
+            <marker date="1516250720035" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250720035" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+          <folding>
+            <marker date="1516250143387" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250143387" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <marker date="1516250143381" expanded="false" signature="1054:1070" ph="..." />
+            <marker date="1516250143381" expanded="false" signature="1679:1714" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihuijt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tzpt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="170" column="25" lean-forward="true" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qyjc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="212" column="45" lean-forward="true" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1516250532806" expanded="true" signature="6105:6245" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/industrycase/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <marker date="1516248366820" expanded="true" signature="487:503" ph="..." />
+            <marker date="1516248366820" expanded="true" signature="1353:1388" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/industrycase/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="57" column="70" lean-forward="false" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="55" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/industrycase/4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="411">
+          <caret line="150" column="10" lean-forward="true" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1516250143392" expanded="false" signature="1110:1126" ph="..." />
+            <marker date="1516250143392" expanded="false" signature="1735:1770" ph="..." />
+            <marker date="1516250143392" expanded="false" signature="3198:3235" ph="..." />
+            <marker date="1516250143392" expanded="false" signature="3442:3454" ph="..." />
+            <marker date="1516250143392" expanded="false" signature="3560:3577" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
