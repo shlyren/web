@@ -1,5 +1,6 @@
 /**
  * Created by yuxiang on 2018/1/18.
+ * 成功案列 头部
  */
 document.writeln("<link href=\'../css/pageNav.css\' rel=\'stylesheet\'>");
 document.writeln("<nav class=\'navbar navbar-default navbar-fixed-top\' role=\'navigation\' >");
@@ -21,10 +22,10 @@ document.writeln("        </div>");
 document.writeln("");
 document.writeln("        <div class=\'collapse navbar-collapse navbar-ex1-collapse\' style=\'margin-top: 20px;margin-right: 10px\'>");
 document.writeln("            <ul class=\'nav navbar navbar-nav navbar-right\'>");
-document.writeln("                <li><a href=\'../index.html\' >首页</a></li>");
-document.writeln("                <li><a href=\'../gsbdproduct/index.html\' >产品</a></li>");
-document.writeln("                <li><a href=\'../solution/index.html\' >解决方案</a></li>");
-document.writeln("                <li><a href=\'../industrycase/index.html\'><div class=\'nav-menu-title\'>成功案例</div></a></li>");
+document.writeln("                <li><a href=\'..\' >首页</a></li>");
+document.writeln("                <li><a href=\'../gsbdproduct\' >产品</a></li>");
+document.writeln("                <li><a href=\'../solution\' >解决方案</a></li>");
+document.writeln("                <li><a href=\'../industrycase\'><div class=\'nav-menu-title\'>成功案例</div></a></li>");
 document.writeln("                <li><a href=\'../about.html\' >关于我们</a></li>");
 document.writeln("            </ul>");
 document.writeln("        </div>");
